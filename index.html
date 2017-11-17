@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>PyCon Kyushu - Coming Soon 2018 Summer</title>
+  <!-- Google Fonts -->
+  <link href='//fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300' rel='stylesheet' type='text/css'>
+  <!-- CSS -->
+  <!-- Bootstrap core CSS -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <!-- Font Awesome CSS -->
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+  <!-- Animate css -->
+  <link href="assets/css/animate.css" rel="stylesheet" media="screen">
+  <!-- Custom styles CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status"></div>
+  </div>
+  <div class="wrapper">
+    <div id="coming-soon" class="coming-soon">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="site-title">
+              <h1>PyCon Kyushu</h1>
+            </div>
+          </div>
+          <div class="col-md-8 col-md-offset-2">
+            <div class="site-lead">
+              <p>2018年、夏 Python の大型イベントが九州に
+                <br>In 2018, a large event of Python in summer arrived in Kyushu</p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div id="countdown"></div>
+          </div>
+          <div class="col-md-12">
+            <p><a class="scroll-down" href="#about"><i class="fa fa-angle-double-down"></i></a></p>
+          </div>
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- #coming-soon -->
+    <div id="about" class="section light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">
+              <h2>Overview</h2>
+            </div>
+          </div>
+          <div class="col-md-6 wow slideInLeft animated">
+            <!-- TODO: 紹介用のムービーをはめ込みたい -->
+            <!-- <div class="video"> -->
+            <!-- <iframe src="//player.vimeo.com/video/15486292?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+            <!-- </div> -->
+          </div>
+          <div class="col-md-6 wow slideInRight animated">
+            <h3>Do you all know Pycon?</h3>
+            <p>みなさんは PyCon というイベントをしっていますか？</p>
+          </div>
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- #about -->
+    <div id="faq" class="section dark faq">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 wow fadeInDown animated">
+            <h2>FAQ</h2>
+            <p> PyCon Kyushu とはなんでしょうか、どんなイベントにしたいですか？ 一緒にイベントを作り上げませんか</p>
+          </div>
+          <div class="col-md-6 wow fadeInUp animated">
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" data-target="#panel1"> イベント開催までの定例会 </a> </h4>
+                </div>
+                <div id="panel1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>月に一度の定例会を行なっています、スケジュールは下記リンクを参考
+                      <br>
+                      <br>
+                      <a href="//pycon-kyushu.connpass.com/" target="_blank">PyCon Kyushu</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" data-target="#panel2"> 運営スタッフを体験 </a> </h4>
+                </div>
+                <div id="panel2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>イベントを手伝っていただけるスタッフを募集しています、下記リンク先フォームより入力できます
+                      <br>
+                      <br>
+                      <a href="//goo.gl/forms/Iu3Frqjh0DCWtcy03" target="_blank">スタッフ申し込みフォーム</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" data-target="#panel3"> 貴重な交流の場所 </a> </h4>
+                </div>
+                <div id="panel3" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>Python は日本より海外の方が圧倒的ユーザー、支持者が存在します、このイベントは国際的な交流が期待できます</p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" data-target="#panel4"> 最先端のソフトウェア開発技術 </a> </h4>
+                </div>
+                <div id="panel4" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>過去100年の間にハードウェア大量生産の技術力は飛躍的に進化しました、ともないハードウェアをコントロールするソフトウェアの開発技術は日進月歩です、最先端に触れる絶好のイベントとなります</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .panel-group -->
+          </div>
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- #faq -->
+    <div id="features" class="section light features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">
+              <h2>Sponsor</h2>
+            </div>
+          </div>
+          <!-- TODO: アイコンはイメージに最適なものに後日変更 -->
+          <div class="col-md-6 col-sm-6">
+            <div class="feature wow fadeInUp animated">
+              <div class="feature-icon">
+                <i class="fa fa-eye"></i>
+              </div>
+              <h3 class="title-desc">熱意だけではイベントの実行は難しい</h3>
+              <div class="content">
+                <p>集客するための広告、楽しんでいただく会場、イベントを盛り上げるアメニティーなど、皆様のご協力とご支援が必要です</p>
+              </div>
+            </div>
+            <!-- TODO: 予備 -->
+<!--             <div class="feature wow fadeInUp animated"> -->
+<!--               <div class="feature-icon"> -->
+<!--                 <i class="fa fa-users"></i> -->
+<!--               </div> -->
+<!--               <h3 class="title-desc">Lorem ipsum dolor sit amet</h3> -->
+<!--               <div class="content"> -->
+<!--                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere, libero dolor molestie mi, vitae rutrum odio urna non dui.</p> -->
+<!--               </div> -->
+<!--             </div> -->
+<!--             <div class="feature wow fadeInUp animated"> -->
+<!--               <div class="feature-icon"> -->
+<!--                 <i class="fa fa-cloud-upload"></i> -->
+<!--               </div> -->
+<!--               <h3 class="title-desc">Lorem ipsum dolor sit amet</h3> -->
+<!--               <div class="content"> -->
+<!--                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere, libero dolor molestie mi, vitae rutrum odio urna non dui.</p> -->
+<!--               </div> -->
+<!--             </div> -->
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="feature wow fadeInUp animated">
+              <div class="feature-icon">
+                <i class="fa fa-cog"></i>
+              </div>
+              <h3 class="title-desc">様々な形でのご協力を募っています</h3>
+              <div class="content">
+                <p>企業様、個人様、もしくは会場を盛り上げていただく催しごとの形での協力など</p>
+              </div>
+            </div>
+            <!-- TODO: 予備 -->
+<!--             <div class="feature wow fadeInUp animated"> -->
+<!--               <div class="feature-icon"> -->
+<!--                 <i class="fa fa-trophy"></i> -->
+<!--               </div> -->
+<!--               <h3 class="title-desc">Lorem ipsum dolor sit amet</h3> -->
+<!--               <div class="content"> -->
+<!--                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere, libero dolor molestie mi, vitae rutrum odio urna non dui.</p> -->
+<!--               </div> -->
+<!--             </div> -->
+<!--             <div class="feature wow fadeInUp animated"> -->
+<!--               <div class="feature-icon"> -->
+<!--                 <i class="fa fa-coffee"></i> -->
+<!--               </div> -->
+<!--               <h3 class="title-desc">Lorem ipsum dolor sit amet</h3> -->
+<!--               <div class="content"> -->
+<!--                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere, libero dolor molestie mi, vitae rutrum odio urna non dui.</p> -->
+<!--               </div> -->
+<!--             </div> -->
+          </div>
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- #features -->
+    <div id="testimonials" class="section dark testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 wow fadeInUp animated">
+            <h2>Support of<br/>personal remarks</h2>
+            <p>各個人の声 SNS などでの拡散という形でも</p>
+          </div>
+          <!-- TODO: 著名な方のコメントなど表示したい -->
+          <div class="col-md-6 wow fadeInDown animated">
+            <div id="carousel-tyumen" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+<!--               <ol class="carousel-indicators"> -->
+<!--                 <li data-target="#carousel-tyumen" data-slide-to="0" class="active"></li> -->
+<!--                 <li data-target="#carousel-tyumen" data-slide-to="1"></li> -->
+<!--                 <li data-target="#carousel-tyumen" data-slide-to="2"></li> -->
+<!--               </ol> -->
+<!--               <div class="carousel-inner"> -->
+<!--                 <div class="item active"> -->
+<!--                   <div class="carousel-caption"> -->
+<!--                     <div class="avatar"> -->
+<!--                       <img src="//s3.amazonaws.com/uifaces/faces/twitter/g3d/128.jpg" alt=""> -->
+<!--                     </div> -->
+<!--                     <blockquote> -->
+<!--                       <h4>Jack Woods</h4> -->
+<!--                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque nisl in accumsan faucibus. Suspendisse sem augue, sollicitudin at tincidunt sit amet, aliquet sit amet massa.</p> -->
+<!--                     </blockquote> -->
+<!--                   </div> -->
+<!--                 </div> -->
+<!--                 <div class="item"> -->
+<!--                   <div class="carousel-caption"> -->
+<!--                     <div class="avatar"> -->
+<!--                       <img src="//s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" alt=""> -->
+<!--                     </div> -->
+<!--                     <blockquote> -->
+<!--                       <h4>Martin</h4> -->
+<!--                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque nisl in accumsan faucibus. Suspendisse sem augue, sollicitudin at tincidunt sit amet, aliquet sit amet massa.</p> -->
+<!--                     </blockquote> -->
+<!--                   </div> -->
+<!--                 </div> -->
+<!--                 <div class="item"> -->
+<!--                   <div class="carousel-caption"> -->
+<!--                     <div class="avatar"> -->
+<!--                       <img src="//s3.amazonaws.com/uifaces/faces/twitter/eesates/128.jpg" alt=""> -->
+<!--                     </div> -->
+<!--                     <blockquote> -->
+<!--                       <h4>Twister</h4> -->
+<!--                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque nisl in accumsan faucibus. Suspendisse sem augue, sollicitudin at tincidunt sit amet, aliquet sit amet massa.</p> -->
+<!--                     </blockquote> -->
+<!--                   </div> -->
+<!--                 </div> -->
+<!--               </div> -->
+              <!-- .carousel-inner -->
+            </div>
+            <!-- .carousel-tyumen -->
+          </div>
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- #testimonials -->
+    <div id="contact" class="section light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">
+              <h2>Coming Soon 2018 Summer</h2>
+            </div>
+          </div>
+          <!-- TODO: お問い合わせフォーム -->
+<!--           <form class="contact-form" role="form"> -->
+<!--             <div class="col-md-6 wow fadeInDown animated"> -->
+<!--               <div class="form-group"> -->
+<!--                 <label class="sr-only" for="name-contact">Name</label> -->
+<!--                 <input type="text" class="form-control input-lg" id="name-contact" placeholder="Name"> -->
+<!--               </div> -->
+<!--               <div class="form-group"> -->
+<!--                 <label class="sr-only" for="email-contact">Email address</label> -->
+<!--                 <input type="email" class="form-control input-lg" id="email-contact" placeholder="E-mail"> -->
+<!--               </div> -->
+<!--               <div class="form-group"> -->
+<!--                 <label class="sr-only" for="subject">Subject</label> -->
+<!--                 <input type="text" class="form-control input-lg" id="subject" placeholder="Subject"> -->
+<!--               </div> -->
+<!--             </div> -->
+<!--             <div class="col-md-6 wow fadeInUp animated"> -->
+<!--               <textarea class="form-control input-lg" rows="7" placeholder="Your message"></textarea> -->
+<!--             </div> -->
+<!--             <div class="col-md-3 col-md-offset-9"> -->
+<!--               <button type="submit" class="btn btn-default btn-lg btn-wide">Send it</button> -->
+<!--             </div> -->
+<!--           </form> -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- .section light -->
+    <div class="section gmap">
+      <div class="subscribe wow fadeInUp animated">
+        <div class="container">
+          <div class="row">
+          <!-- TODO: メールフォーム拡張 -->
+<!--             <form class="sb-form" role="form"> -->
+<!--               <div class="form-group"> -->
+<!--                 <label class="sr-only" for="email">Email address</label> -->
+<!--                 <input type="email" class="form-control" id="email" placeholder="Enter your email"> -->
+<!--               </div> -->
+<!--               <button type="submit" class="btn btn-default">Subscribe</button> -->
+<!--             </form> -->
+          </div>
+        </div>
+      </div>
+      <!-- TODO: 場所が確定後 map を表示 -->
+      <!-- <div id="map"></div> -->
+    </div>
+    <!-- .section gmap -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>© PyCon Kyushu - Coming Soon 2018 Summer</p>
+          </div>
+        </div>
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- .footer -->
+  </div>
+  <!-- .wrapper -->
+  <!-- Javascript files -->
+  <!-- jQuery -->
+  <script src="assets/js/jquery-1.11.1.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Countdown -->
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <!-- Resp. video -->
+  <script src="assets/js/jquery.fitvids.js"></script>
+  <!-- Backstretch - Fullscreen Backgrounds and Slideshows -->
+  <script src="assets/js/jquery.backstretch.min.js"></script>
+  <!-- WOW - Reveal Animations When You Scroll -->
+  <script src="assets/js/wow.min.js"></script>
+  <!-- Google Maps -->
+  <script src="//maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="assets/js/gmaps.js"></script>
+  <!-- Custom scripts -->
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
