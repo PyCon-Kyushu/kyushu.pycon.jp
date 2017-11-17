@@ -1,0 +1,582 @@
+/**
+ * Name: Tyumen - Coming Soon Template
+ * Version: 1.0
+ * Author: web-master72
+**/
+
+/* ---------------------------------------------- /*
+ * General styles
+/* ---------------------------------------------- */
+
+body {
+	background: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	color: #888;
+}
+
+a, a > * {
+	outline: none;
+	cursor: pointer;
+	color: #BB9977;
+}
+
+a:hover {
+	color: #A38668;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Selections and placeholders
+------------------------------------------------- */
+
+::selection {
+	color: #FFFFFF;
+	background: #BB9977;
+}
+
+::-webkit-selection {
+	color: #FFFFFF;
+	background: #BB9977;
+}
+
+::-moz-selection {
+	color: #FFFFFF;
+	background: #BB9977;
+}
+
+.subscribe input::-webkit-input-placeholder {
+	color: #FFFFFF;
+}
+
+.subscribe input::-moz-placeholder {
+	color: #FFFFFF;
+}
+
+
+/* Transition elsements
+------------------------------------------------- */
+
+.form-control, .feature-icon, .scroll-down {
+	-webkit-transition: all 0.4s ease-in-out;
+	   -moz-transition: all 0.4s ease-in-out;
+		-ms-transition: all 0.4s ease-in-out;
+		 -o-transition: all 0.4s ease-in-out;
+			transition: all 0.4s ease-in-out;
+}
+
+.feature-icon i, .scroll-down i {
+	-webkit-transition: all 0.8s ease-in-out;
+	   -moz-transition: all 0.8s ease-in-out;
+		-ms-transition: all 0.8s ease-in-out;
+		 -o-transition: all 0.8s ease-in-out;
+			transition: all 0.8s ease-in-out;
+}
+
+/* Rotate elsements
+------------------------------------------------- */
+
+.scroll-down, .scroll-down:hover i, .feature-icon, .feature:hover > .feature-icon i, .testimonials .avatar, .carousel-indicators li {
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		 -o-transform: rotate(45deg);
+			transform: rotate(45deg);
+}
+
+.scroll-down:hover, .scroll-down i, .feature-icon i, .feature:hover > .feature-icon, .testimonials .avatar img {
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		 -o-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+}
+
+/* Border-radius
+------------------------------------------------- */
+
+.form-control, .btn-default, .scroll-down, .feature-icon, .video, .panel-group .panel, .carousel-inner, .testimonials .avatar, .testimonials .avatar img, .testimonials .carousel-indicators li, .sb-form .form-group {
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+		 -o-border-radius: 3px;
+			border-radius: 3px;
+}
+
+/* Inputs styles
+------------------------------------------------- */
+
+.form-control {
+	border: 1px solid #EEEEEE;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+}
+
+.form-control:hover, .form-control:focus {
+	border: 1px solid #BB9977;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+}
+
+/* Default button style
+------------------------------------------------- */
+
+.btn-default {
+	background: #BB9977;
+	border: 0;
+	padding: 5px 16px;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+	color: #FFFFFF;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+	background: #A38668;
+	color: #FFFFFF;
+}
+
+.btn-default:active {
+
+}
+
+.btn-default:focus {
+	outline: none !important;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+	padding: 11px 16px;
+}
+
+.btn-wide {
+	width: 100%;
+}
+
+/* ---------------------------------------------- /*
+ * Typography
+/* ---------------------------------------------- */
+
+h1, h2, h3, h4 {
+	font-family: 'Bitter', serif;
+	font-weight: 700;
+	color: #BB9977;
+	margin: 0 0 15px;
+}
+
+h3, h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+h1 { font-size: 40px; }
+
+h2 { font-size: 50px; }
+
+h3 { font-size: 24px; }
+
+h4 { font-size: 18px; }
+
+.site-title h1 {
+	color: #FFFFFF;
+}
+
+.dark h2 {
+	text-transform: uppercase;
+}
+
+.light h3, .light h4 {
+	color: #888;
+}
+
+/* ---------------------------------------------- /*
+ * Basic Structure
+/* ---------------------------------------------- */
+
+.wrapper {
+	background: url(../images/bg.png);
+}
+
+.wrapper > .section:first-child {
+	padding-top: 40px;
+}
+
+.coming-soon {
+	padding: 120px 0 180px;
+	position: relative;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.section, .footer {
+	position: relative;
+	margin: 0;
+}
+
+.light {
+	padding: 90px 0 90px;
+}
+
+.light:after {
+	top: 100%;
+	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, #FFFFFF), color-stop(0.25, #FFFFFF));
+	background-image:
+		linear-gradient(135deg, rgba(255,255,255,1) 25%, transparent 25%),
+		linear-gradient(225deg, rgba(255,255,255,1) 25%, transparent 25%);
+	background-position: 50%;
+
+}
+
+.light:before, .light:after {
+	right: 0;
+	left: 0;
+	z-index: 10;
+	display: block;
+	height: 90px;
+	background-size: 50px 100%;
+}
+
+.light:before, .light:after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+
+.dark {
+	background: rgba(0,0,0,.5);
+	padding: 120px 0 90px;
+	color: #FFFFFF;
+}
+
+.footer {
+	padding: 25px 0 25px;
+	text-align: center;
+}
+
+.light, .footer {
+	background: #FFFFFF;
+}
+
+/* ---------------------------------------------- /*
+ * Coming Soon
+/* ---------------------------------------------- */
+
+.site-title h1 {
+	font-size: 64px;
+}
+
+.site-lead {
+	font-size: 22px;
+}
+
+.scroll-down {
+	background: rgba(0,0,0,.5);
+	border: 2px solid #BB9977;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 10px 0 0 11px;
+	font-size: 26px;
+	line-height: 45px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.title {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+/* ---------------------------------------------- /*
+ * About
+/* ---------------------------------------------- */
+
+.video {
+	background: #EEEEEE;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+
+.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+	border: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* ---------------------------------------------- /*
+ * Features
+/* ---------------------------------------------- */
+
+.feature {
+	margin: 0 0 50px;
+}
+
+.feature-icon {
+	border: 2px solid #585858;
+	display: inline-block;
+	margin: 10px 0 0 11px;
+	float: left;
+	width: 50px;
+	height: 50px;
+	font-size: 26px;
+	line-height: 45px;
+	text-align: center;
+	color: #585858;
+}
+
+.feature:hover .feature-icon {
+	border: 2px solid  #BB9977;
+}
+
+.feature:hover .feature-icon i {
+	color: #BB9977;
+}
+
+.title-desc, .feature > .content {
+	padding: 0 0 0 95px;
+}
+
+.feature > .content {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+/* ---------------------------------------------- /*
+ * Subscribe and Contact Form
+/* ---------------------------------------------- */
+
+.subscribe {
+	position: absolute;
+	top: 90px;
+	width: 100%;
+	z-index: 9;
+}
+
+.sb-form {
+	position: relative;
+	overflow: hidden;
+}
+
+.sb-form .form-group {
+	background: rgba(0,0,0,.5);
+	padding: 10px;
+	margin: 0 15px;
+}
+
+.sb-form .form-control {
+	background: transparent;
+	border: 0;
+	color: #FFFFFF;
+}
+
+.sb-form .btn {
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	padding: 7px 16px;
+}
+
+.contact-form, .sb-form {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.contact-form .form-control {
+	margin-bottom: 20px;
+}
+
+.contact-form textarea.form-control {
+	height: 178px;
+}
+
+/* ---------------------------------------------- /*
+ * FAQ
+/* ---------------------------------------------- */
+
+.panel {
+	background: transparent;
+	border: 0;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+}
+
+.panel-title > a {
+	color: #BB9977;
+}
+
+.panel-default > .panel-heading, .panel-collapse {
+	background: rgba(0,0,0,.5);
+}
+
+.panel-group .panel-heading+.panel-collapse .panel-body {
+	border: 0;
+}
+
+.panel-body {
+	font-size: 15px;
+}
+
+/* ---------------------------------------------- /*
+ * Testimonials
+/* ---------------------------------------------- */
+
+.carousel-inner {
+	background: rgba(0,0,0,.5);
+}
+
+.testimonials .carousel-caption {
+	position: relative;
+	bottom: 0;
+	left: auto;
+	right: auto;
+	padding: 10px;
+	text-align: left;
+	text-shadow: none;
+}
+
+.testimonials blockquote {
+	border: 0;
+	padding-left: 100px;
+	margin: 0;
+	font-size: 15px;
+}
+
+.testimonials .avatar {
+	border: 2px solid #BB9977;
+	display: inline-block;
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-top: 25px;
+	margin-left: 25px;
+	overflow: hidden;
+}
+
+.testimonials .avatar img {
+	width: 140%;
+	max-width: 68px;
+	margin: -10px 0 0 -10px;
+}
+
+.testimonials .carousel-indicators {
+	bottom: -45px;
+}
+
+.carousel-indicators li {
+	border: 1px solid #BB9977;
+}
+
+.carousel-indicators .active {
+	background: #BB9977;
+}
+
+/* ---------------------------------------------- /*
+ * Countdown
+/* ---------------------------------------------- */
+
+#countdown {
+	margin: 60px 0 50px;
+	line-height: 1;
+}
+
+#countdown > div {
+	display: inline-block;
+	margin: 0 35px 15px;
+}
+
+#countdown > div > div {
+	padding: 0 5px;
+	margin-bottom: 10px;
+	font-size: 110px;
+}
+
+#countdown > div > i {
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+/* ---------------------------------------------- /*
+ * Map
+/* ---------------------------------------------- */
+
+.gmap {
+	padding: 0;
+	width: 100%;
+	height: 450px;
+	position: relative;
+	overflow: hidden;
+}
+
+#map {
+	width: 100%;
+	height: 450px;
+}
+
+/* ---------------------------------------------- /*
+ * Preloader
+/* ---------------------------------------------- */
+
+#preloader {
+	background-color: #fff;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 999;
+}
+
+#status {
+	background-image: url(../images/Preloader_1.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 200px;
+	left: 50%;
+	margin: -100px 0 0 -100px;
+	position: absolute;
+	top: 50%;
+	width: 200px;
+}
+
+/* ---------------------------------------------- /*
+ * Media
+/* ---------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.feature {
+		text-align: center;
+	}
+
+	.feature-icon {
+		float: none;
+		margin: 10px 0 20px;
+	}
+
+	.title-desc, .feature > .content {
+		padding: 0;
+	}
+
+}
+
+@media (max-width: 479px) {
+
+	#countdown > div {
+		margin: 0 15px 15px;
+	}
+
+}
+
+@media (max-width: 320px) {
+
+	#countdown > div {
+		margin: 0 0 15px;
+	}
+
+}
