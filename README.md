@@ -1,6 +1,6 @@
 # NAME
 
-pycon kyushu - 2018年夏開催pyのイベント
+PyCon Kyushu - 2018年夏開催の Python カンファレンスイベント
 
 # SYNOPSIS
 
