@@ -31,6 +31,25 @@ $ git push
 
 # DESCRIPTION
 
+## DESIGN
+
+### デザインテンプレートについて
+
+```
+ダウンロードデータは
+/doc/WB08F5R94.zip
+元データは
+/doc/Tyumen-v1.0.org
+になります。
+オリジナルテンプレートは書き換えない様にしてください。
+デザインの例は
+/doc/Tyumen-v1.0.org/index.html
+を表示してみてください。
+テンプレートは Bootstrap v3.3.1 ベースでできています。
+/assets
+配下を書き換えてデザインの変更をしてください。
+```
+
 # TODO
 
 - ~~ドメイン `http://...pycon.jp` のような形にしたい~~
