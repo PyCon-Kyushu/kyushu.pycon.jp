@@ -27,7 +27,7 @@
     /*
      * Background slideshow
      */
-    $.backstretch('assets/images/bg6.jpg');
+    $.backstretch('assets/images/bg_hukuoka.jpg');
 
     /*
      * Countdown
