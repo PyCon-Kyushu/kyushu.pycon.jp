@@ -22,11 +22,11 @@
 </head>
 
 <body>
-  <!-- Preloader -->
+  <div id="fb-root"></div>
   <div id="preloader">
     <div id="status"></div>
   </div>
-  <div class="wrapper">
+  <!-- <div class="wrapper"> -->
     <div id="coming-soon" class="coming-soon">
       <div class="container">
         <div class="row">
@@ -44,9 +44,10 @@
             <div class="site-title">
               <h1>@LINE Fukuoka<br>2018-06-30</h1>
             </div>
-          <div class="col-md-12">
+
+          <!-- <div class="col-md-12 .visible-md .visible-lg">
             <div id="countdown"></div>
-          </div>
+          </div> -->
           <div class="col-md-12">
             <p><a class="scroll-down" href="#about"><i class="fa fa-angle-double-down"></i></a></p>
           </div>
@@ -70,13 +71,22 @@
             <!-- <iframe src="//player.vimeo.com/video/15486292?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
             <!-- </div> -->
           <!-- </div> -->
-          <div class="col-md-10 col-md-offset-1 col-sm-12 animated">
+          <!-- PC -->
+          <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 animated visible-md visible-lg">
             ここ数年、機械学習やディープラーニングなどで注目が高まっている<br>
             プログラミング言語Pythonをテーマとした九州で初めてのカンファレンスとなります。<br>
             今回のテーマは、 <b>プロローグ</b>です。<br>
             九州初のイベントですので、九州という地域の序章という意味を込めさせていただきました。<br>
             Python初心者の方から上級者まで、参加していただく方全員にとっての序章・始まりのきっかけになるような <br>
             有意義なイベントを目指してスタッフ一同、鋭意準備を進めております。<br>
+          </div>
+          <!-- PC -->
+          <div class="col-sm-12 col-xs-12 animated visible-sm visible-xs">
+            機械学習やDeepLearningなどで注目が高まっているプログラミング言語Pythonをテーマとした九州で初めてのカンファレンスとなります。<br>
+            テーマは、<b>プロローグ</b>です。<br>
+            九州初のイベントですので、九州という地域の序章という意味を込めさせていただきました。
+            Python初心者の方から上級者まで、参加していただく方全員にとっての序章・始まりのきっかけになるような
+            有意義なイベントを目指してスタッフ一同、鋭意準備を進めております。
           </div>
         </div>
         <!-- .row -->
@@ -89,14 +99,19 @@
         <div class="row">
           <div class="col-md-12">
             <div class="title">
-              <h2>CfP (トーク)</h2>
+              <h2>CfP</h2>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
             <div class="feature wow fadeInUp animated">
               <h3 class="title-desc">スピーカー募集</h3>
-              <div class="content">
+              <div class="content visible-md visible-lg">
                 <p>こちらの<a href="https://docs.google.com/forms/d/1Sk-jNIv1u1zB0y2XEBJo9O3rfcpap1JmyN7tV4_-vEs/viewform" target="_blank">申し込みフォーム</a>からご応募ください。<br>たくさんのご応募お待ちしております！！</p>
+                <!-- <a >応募フォーム</a> -->
+              </div>
+              <div class="content visible-sm visible-xs">
+                <p>こちらの<a href="https://docs.google.com/forms/d/1Sk-jNIv1u1zB0y2XEBJo9O3rfcpap1JmyN7tV4_-vEs/viewform" target="_blank">申し込みフォーム</a>から<br>ご応募ください。<br>
+                  たくさんのご応募<br>お待ちしております！！</p>
                 <!-- <a >応募フォーム</a> -->
               </div>
             </div>
@@ -132,12 +147,17 @@
               <div class="feature-icon">
                 <i class="fa fa-eye"></i>
               </div>
-              <h3 class="title-desc">下記の要領で、スポンサーしていただける企業様を募集しています。<br>We need your support to hold this event </h3>
-              <div class="content">
-                <p>お申込み・詳細な資料は<a href="https://pycon-kyushu.connpass.com/event/84062/">こちら</a>から</p>
+              <h3 class="title-desc">スポンサーしていただける企業様を募集しています。<br>We need your support to hold this event </h3>
+              <div class="content sponsor-table visible-sm visible-xs">
+                <p>詳細な資料は<a href="https://pycon-kyushu.connpass.com/event/84062/">こちらから</a> 今すぐ応募する際は<a href="https://docs.google.com/forms/d/e/1FAIpQLSccJOiUJcv6RIMIgtofA1pPovrNHAoo6hsv_4lIdaEC3W8TsA/viewform">こちら</a>からどうぞ</p>
+                <p>詳細は、上記ページでご確認ください。</p>
+              </div>
+              <div class="content sponsor-table visible-md visible-lg">
+                <p>詳細な資料は<a href="https://pycon-kyushu.connpass.com/event/84062/">こちらから</a><br> 今すぐ応募する際は<a href="https://docs.google.com/forms/d/e/1FAIpQLSccJOiUJcv6RIMIgtofA1pPovrNHAoo6hsv_4lIdaEC3W8TsA/viewform">こちら</a>からどうぞ</p>
                 <p>掲載しているもの以外にもスポンサー特典をご用意しております。</p>
+                <p>詳細は、上記ページでご確認ください。</p>
 
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped sponsor-table">
                   <thead>
                   <tr>
                       <th></th>
@@ -150,13 +170,13 @@
                   <tbody>
                     <tr>
                       <td>金額</td>
-                      <td>￥100,000</td>
-                      <td>￥50,000</td>
-                      <td>￥30,000</td>
-                      <td>￥10,000</td>
+                      <td>10万円</td>
+                      <td>5万円</td>
+                      <td>3万円</td>
+                      <td>1万円</td>
                     </tr>
                     <tr>
-                      <td>オフィシャルサイトへの<br>スポンサー名・ロゴ掲載</td>
+                      <td>会社名・ロゴ掲載</td>
                       <td>特大</td>
                       <td>大</td>
                       <td>中</td>
@@ -299,9 +319,9 @@
               </div>
               <h3 class="title-desc">詳しい情報は Facebook Page</h3>
               <div class="content">
-                <p> PyCon Kyushu ページをいいねしよう </p>
-                <a href="https://www.facebook.com/kyushu.pycon.jp/" target="_blank">https://www.facebook.com/kyushu.pycon.jp/</a>
+                <p> PyCon Kyushu ページを<a href="https://www.facebook.com/kyushu.pycon.jp/">いいね</a>しよう </p>
               </div>
+
             </div>
           </div>
         </div>
