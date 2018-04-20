@@ -8,6 +8,12 @@
  * General styles
 /* ---------------------------------------------- */
 
+.keynote-image {
+	border-radius: 30px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+}
+
 body {
 	background: #FFFFFF;
 	font-family: 'Open Sans', sans-serif;
