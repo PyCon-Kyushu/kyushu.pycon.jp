@@ -1,0 +1,106 @@
+body > header {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+body > header > .container {
+  position: relative;
+  height: 100%;
+}
+
+body > header .island {
+  position: absolute;
+  background-image: url(images/island.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body > header h1 {
+  position: absolute;
+  background-image: url(images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(3px 3px 1px rgba(0,0,0,.3));
+}
+
+body > header time {
+  position: absolute;
+  background-image: url(images/date.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(3px 3px 1px rgba(0,0,0,.3));
+}
+
+body > header h1 > span,
+body > header time > span {
+  display: none;
+}
+
+/* SP */
+@media screen and (max-width: 959px) {
+  body > header {
+    height: 600px;
+    background-image: url(images/bg_sp.png);
+  }
+
+  body > header .island,
+  body > header h1,
+  body > header time {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  body > header .island {
+    top: 220px;
+    width: 360px;
+    height: 209px;
+  }
+
+  body > header h1 {
+    top: 60px;
+    width: 200px;
+    height: 176px;
+  }
+
+  body > header time {
+    bottom: 150px;
+    width: 240px;
+    height: 68px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  body > header {
+    height: 600px;
+    background-image: url(images/bg_pc.png);
+  }
+
+  body > header .island {
+    top: 170px;
+    left: 250px;
+    height: 320px;
+    width: 552px;
+  }
+
+  body > header h1 {
+    width: 240px;
+    height: 211px;
+    top: 180px;
+    left: 100px;
+  }
+
+  body > header time {
+    bottom: 80px;
+    left: 360px;
+    width: 300px;
+    height: 84px;
+  }
+}
