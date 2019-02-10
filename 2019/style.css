@@ -1,5 +1,7 @@
 body {
   font-family: sans-serif;
+  color: #333;
+  line-height: 1.5em;
 }
 
 body > header {
@@ -92,8 +94,32 @@ body > header .buttons > a.fa-facebook-f {
   color: #3b5998;
 }
 
+body > footer {
+  background-color: #6CC3E0;
+  color: #fff;
+  text-align: center;
+  margin-top: 2em;
+  padding: 2em 0;
+}
+
+section > h2 {
+  font-size: 2em;
+  color: #80B659;
+  margin: 2em 0 1em;
+}
+section > h2 > small {
+  color: #ccc;
+  font-size: .5em;
+  display: block;
+  margin-top: .2em;
+}
+
 /* SP */
 @media screen and (max-width: 959px) {
+  .container {
+    padding: 0 1em;
+  }
+
   body > header {
     height: 600px;
     background-image: url(images/bg_sp.png);
@@ -154,6 +180,8 @@ body > header .buttons > a.fa-facebook-f {
   .container {
     width: 960px;
     margin: 0 auto;
+    padding: 0 100px;
+    box-sizing: border-box;
   }
 
   body > header {
