@@ -1,3 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+
 body > header {
   background-size: auto 100%;
   background-position: center;
@@ -38,6 +42,56 @@ body > header time > span {
   display: none;
 }
 
+body > header .buttons {
+  position: absolute;
+}
+
+body > header .buttons > header {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4em;
+  display: table;
+  color: #fff;
+  background-color: #F77E3C;
+  text-align: center;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+body > header .buttons > header > span {
+  display: table-cell;
+  vertical-align: middle;
+  border: 2px #fff solid;
+  border-radius: 50%;
+}
+
+body > header .buttons > a {
+  position: absolute;
+  font-size: 30px;
+  padding: .5em;
+  height: 1em;
+  width: 1em;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+}
+
+body > header .buttons > a.fa-twitter {
+  color: #1da1f2;
+}
+
+body > header .buttons > a.fa-facebook-f {
+  color: #3b5998;
+}
+
 /* SP */
 @media screen and (max-width: 959px) {
   body > header {
@@ -69,6 +123,29 @@ body > header time > span {
     bottom: 150px;
     width: 240px;
     height: 68px;
+  }
+
+  body > header .buttons {
+    width: 260px;
+    margin: 0 auto;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+  }
+
+  body > header .buttons > header {
+    bottom: 0;
+    left: 0;
+  }
+
+  body > header .buttons > a.fa-twitter {
+    bottom: 20px;
+    left: 120px;
+  }
+  
+  body > header .buttons > a.fa-facebook-f {
+    bottom: 20px;
+    left: 200px;
   }
 }
 
@@ -103,5 +180,25 @@ body > header time > span {
     left: 360px;
     width: 300px;
     height: 84px;
+  }
+
+  body > header .buttons {
+    top: 130px;
+    right: 80px;
+  }
+
+  body > header .buttons > header {
+    top: 0;
+    right: 0;
+  }
+
+  body > header .buttons > a.fa-twitter {
+    top: 120px;
+    right: 20px;
+  }
+  
+  body > header .buttons > a.fa-facebook-f {
+    top: 200px;
+    right: 20px;
   }
 }
