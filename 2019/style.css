@@ -4,6 +4,10 @@ body {
   line-height: 1.5em;
 }
 
+a:link, a:visited, a:hover, a:active {
+  color: #F77E3C;
+}
+
 body > header {
   background-size: auto 100%;
   background-position: center;
