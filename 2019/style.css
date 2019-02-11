@@ -102,8 +102,27 @@ body > footer {
   background-color: #6CC3E0;
   color: #fff;
   text-align: center;
-  margin-top: 2em;
+  margin-top: 4em;
   padding: 2em 0;
+}
+
+body > nav > div {
+  background-color: #fff;
+}
+
+body > nav a {
+  display: block;
+  text-decoration: none;
+}
+
+body > nav a:link,
+body > nav a:visited {
+  color: #999;
+}
+
+body > nav a:hover,
+body > nav a:active {
+  color: #F77E3C;
 }
 
 section > h2 {
@@ -177,6 +196,10 @@ section > h2 > small {
     bottom: 20px;
     left: 200px;
   }
+
+  body > nav {
+    display: none; /* not implemented yet */
+  }
 }
 
 /* PC */
@@ -232,5 +255,28 @@ section > h2 > small {
   body > header .buttons > a.fa-facebook-f {
     top: 200px;
     right: 20px;
+  }
+
+  body > nav {
+    height: 4em;
+  }
+
+  body > nav.fixed > div {
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  }
+
+  body > nav > div > ul {
+    display: table;
+    table-layout: fixed;
+  }
+
+  body > nav > div > ul > li {
+    display: table-cell;
+    text-align: center;
+    line-height: 4em;
   }
 }
