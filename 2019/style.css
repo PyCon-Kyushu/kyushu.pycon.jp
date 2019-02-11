@@ -1,0 +1,282 @@
+body {
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.5em;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #F77E3C;
+}
+
+body > header {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+body > header > .container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+body > header .island {
+  position: absolute;
+  background-image: url(images/island.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body > header h1 {
+  position: absolute;
+  background-image: url(images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(3px 3px 1px rgba(0,0,0,.3));
+}
+
+body > header time {
+  position: absolute;
+  background-image: url(images/date.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(3px 3px 1px rgba(0,0,0,.3));
+}
+
+body > header h1 > span,
+body > header time > span {
+  display: none;
+}
+
+body > header .buttons {
+  position: absolute;
+}
+
+body > header .buttons > header {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4em;
+  display: table;
+  color: #fff;
+  background-color: #F77E3C;
+  text-align: center;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+body > header .buttons > header > span {
+  display: table-cell;
+  vertical-align: middle;
+  border: 2px #fff solid;
+  border-radius: 50%;
+}
+
+body > header .buttons > a {
+  position: absolute;
+  font-size: 30px;
+  padding: .5em;
+  height: 1em;
+  width: 1em;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+}
+
+body > header .buttons > a.fa-twitter {
+  color: #1da1f2;
+}
+
+body > header .buttons > a.fa-facebook-f {
+  color: #3b5998;
+}
+
+body > footer {
+  background-color: #6CC3E0;
+  color: #fff;
+  text-align: center;
+  margin-top: 4em;
+  padding: 2em 0;
+}
+
+body > nav > div {
+  background-color: #fff;
+}
+
+body > nav a {
+  display: block;
+  text-decoration: none;
+}
+
+body > nav a:link,
+body > nav a:visited {
+  color: #999;
+}
+
+body > nav a:hover,
+body > nav a:active {
+  color: #F77E3C;
+}
+
+section > h2 {
+  font-size: 2em;
+  color: #80B659;
+  margin: 2em 0 1em;
+}
+section > h2 > small {
+  color: #ccc;
+  font-size: .5em;
+  display: block;
+  margin-top: .2em;
+}
+
+/* SP */
+@media screen and (max-width: 959px) {
+  .container {
+    padding: 0 1em;
+  }
+
+  body > header {
+    height: 600px;
+    background-image: url(images/bg_sp.png);
+  }
+
+  body > header .island,
+  body > header h1,
+  body > header time {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  body > header .island {
+    top: 220px;
+    width: 360px;
+    height: 209px;
+  }
+
+  body > header h1 {
+    top: 60px;
+    width: 200px;
+    height: 176px;
+  }
+
+  body > header time {
+    bottom: 150px;
+    width: 240px;
+    height: 68px;
+  }
+
+  body > header .buttons {
+    width: 260px;
+    margin: 0 auto;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+  }
+
+  body > header .buttons > header {
+    bottom: 0;
+    left: 0;
+  }
+
+  body > header .buttons > a.fa-twitter {
+    bottom: 20px;
+    left: 120px;
+  }
+  
+  body > header .buttons > a.fa-facebook-f {
+    bottom: 20px;
+    left: 200px;
+  }
+
+  body > nav {
+    display: none; /* not implemented yet */
+  }
+}
+
+/* PC */
+@media screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 100px;
+    box-sizing: border-box;
+  }
+
+  body > header {
+    height: 600px;
+    background-image: url(images/bg_pc.png);
+  }
+
+  body > header .island {
+    top: 170px;
+    left: 250px;
+    height: 320px;
+    width: 552px;
+  }
+
+  body > header h1 {
+    width: 240px;
+    height: 211px;
+    top: 180px;
+    left: 100px;
+  }
+
+  body > header time {
+    bottom: 80px;
+    left: 360px;
+    width: 300px;
+    height: 84px;
+  }
+
+  body > header .buttons {
+    top: 130px;
+    right: 80px;
+  }
+
+  body > header .buttons > header {
+    top: 0;
+    right: 0;
+  }
+
+  body > header .buttons > a.fa-twitter {
+    top: 120px;
+    right: 20px;
+  }
+  
+  body > header .buttons > a.fa-facebook-f {
+    top: 200px;
+    right: 20px;
+  }
+
+  body > nav {
+    height: 4em;
+  }
+
+  body > nav.fixed > div {
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  }
+
+  body > nav > div > ul {
+    display: table;
+    table-layout: fixed;
+  }
+
+  body > nav > div > ul > li {
+    display: table-cell;
+    text-align: center;
+    line-height: 4em;
+  }
+}
