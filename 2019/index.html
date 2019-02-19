@@ -13,12 +13,13 @@
 
     <link rel="icon" type="image/png" href="images/icon.png">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/brands.css" integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.hotolab.net/puremodal/v1.0.0/puremodal.css" integrity="sha384-eL6wVAI7OXTJ130QmQYqhCeSRm3VSIGqFROBbJgcvNBBjTOjXtDlVuDtrhxruGVv" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134272616-1"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-134272616-1')</script>
     <script src="//cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.2.1/dist/smooth-scroll.min.js"></script>
+    <script src="//cdn.hotolab.net/puremodal/v1.0.0/puremodal.js" integrity="sha384-xrSecVekR/WMcwyFbfVbSzSq7J1cR+shalZSekEVzEUbTug1dml+YZx0ov3IM9iK" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -39,7 +40,7 @@
       </div>
     </header>
     <nav>
-      <div>
+      <div id="nav-bar">
         <ul class="container">
           <li><a href="#">トップ</a></li>
           <li><a href="#overview">概要</a></li>
@@ -47,6 +48,19 @@
           <li><a href="#cfp">スピーカー募集</a></li>
           <li><a href="#sponsors">スポンサー募集</a></li>
         </ul>
+      </div>
+      <a id="nav-button-open" class="nav-button fas fa-bars"></a>
+      <div id="nav-modal" class="puremodal">
+        <div class="window">
+          <a class="nav-button fas fa-times close"></a>
+          <ul class="close">
+            <li><a href="#">トップ</a></li>
+            <li><a href="#overview">概要</a></li>
+            <li><a href="#keynote">キーノート</a></li>
+            <li><a href="#cfp">スピーカー募集</a></li>
+            <li><a href="#sponsors">スポンサー募集</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main>

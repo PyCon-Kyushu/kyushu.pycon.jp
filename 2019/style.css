@@ -106,10 +106,6 @@ body > footer {
   padding: 2em 0;
 }
 
-body > nav > div {
-  background-color: #fff;
-}
-
 body > nav a {
   display: block;
   text-decoration: none;
@@ -123,6 +119,42 @@ body > nav a:visited {
 body > nav a:hover,
 body > nav a:active {
   color: #F77E3C;
+}
+
+body > nav > #nav-bar {
+  background-color: #fff;
+}
+
+body > nav .nav-button {
+  position: fixed;
+  top: .5em;
+  right: .5em;
+  font-size: 30px;
+  padding: .5em;
+  height: 1em;
+  width: 1em;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+}
+
+body > nav > #nav-modal ul {
+  margin: 3em 0 1em;
+  padding: 0;
+}
+
+body > nav > #nav-modal li:first-child {
+  border-top: 1px #eee solid;
+}
+
+body > nav > #nav-modal li {
+  list-style-type: none;
+  font-size: larger;
+  padding: 1em;
+  border-bottom: 1px #eee solid;
 }
 
 section > h2 {
@@ -197,8 +229,8 @@ section > h2 > small {
     left: 200px;
   }
 
-  body > nav {
-    display: none; /* not implemented yet */
+  body > nav > #nav-bar {
+    display: none;
   }
 }
 
@@ -261,6 +293,10 @@ section > h2 > small {
     height: 4em;
   }
 
+  body > nav > #nav-button-open {
+    display: none;
+  }
+
   body > nav.fixed > div {
     position: fixed;
     top: 0;
@@ -269,12 +305,12 @@ section > h2 > small {
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
   }
 
-  body > nav > div > ul {
+  body > nav > #nav-bar > ul {
     display: table;
     table-layout: fixed;
   }
 
-  body > nav > div > ul > li {
+  body > nav > #nav-bar > ul > li {
     display: table-cell;
     text-align: center;
     line-height: 4em;
