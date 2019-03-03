@@ -158,15 +158,31 @@ body > nav > #nav-modal li {
 }
 
 section > h2 {
-  font-size: 2em;
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
   color: #80B659;
-  margin: 2em 0 1em;
+  margin: 3em 0 2em;
+  padding-bottom: .7em;
 }
-section > h2 > small {
-  color: #ccc;
-  font-size: .5em;
+
+section > h2::after {
+  content: '';
   display: block;
-  margin-top: .2em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 4em;
+  height: .1em;
+  background-color: #666;
+}
+
+section > h2 > small {
+  color: #666;
+  font-size: .4em;
+  display: block;
 }
 
 /* SP */
