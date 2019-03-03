@@ -185,6 +185,26 @@ section > h2 > small {
   display: block;
 }
 
+#keynote > div {
+  text-align: center;
+}
+
+#keynote img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: .2em #80B659 solid;
+  box-sizing: border-box;
+}
+
+#keynote h3 {
+  font-size: 1.5em;
+}
+
+#keynote p {
+  text-align: left;
+}
+
 /* SP */
 @media screen and (max-width: 959px) {
   .container {
@@ -247,6 +267,10 @@ section > h2 > small {
 
   body > nav > #nav-bar {
     display: none;
+  }
+
+  #keynote h3 > small {
+    display: block;
   }
 }
 
@@ -331,5 +355,31 @@ section > h2 > small {
     display: table-cell;
     text-align: center;
     line-height: 4em;
+  }
+
+  #keynote > div::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  #keynote > div > div {
+    float: left;
+  }
+
+  #keynote > div > div:first-child {
+    width: 240px;
+  }
+
+  #keynote > div > div:last-child {
+    margin-left: -240px;
+    padding-left: 300px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #keynote h3 {
+    text-align: left;
+    margin-top: 0;
   }
 }
