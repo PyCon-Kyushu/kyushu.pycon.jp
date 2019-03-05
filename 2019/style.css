@@ -226,6 +226,47 @@ section > h2 > small {
   text-align: left;
 }
 
+#sponsors > div {
+  text-align: center;
+}
+
+#sponsors > div h3 {
+  color: #2c9abc;
+  margin: 2em 0 1em;
+}
+
+
+#sponsors > div ul {
+  padding: 0;
+}
+
+#sponsors > div li {
+  list-style-type: none;
+  display: inline-block;
+  border: .2em #80B659 solid;
+  margin: .5em;
+  border-radius: 1em;
+  cursor: pointer;
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#sponsors > div .platinum li {
+  width: 10em;
+  height: 10em;
+}
+#sponsors > div .gold li {
+  width: 8em;
+  height: 8em;
+}
+
+#sponsors > div .silver li {
+  width: 6em;
+  height: 6em;
+}
+
 /* SP */
 @media screen and (max-width: 959px) {
   .container {

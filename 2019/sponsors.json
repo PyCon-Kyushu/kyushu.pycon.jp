@@ -1,0 +1,62 @@
+{
+  "platinum": [
+    {
+      "name": "ちゅらデータ株式会社",
+      "logo": "churadata.png",
+      "url": "https://churadata.okinawa/",
+      "description": "texttexttext\ntexttexttext\n\ntexttext"
+    }
+  ],
+  "gold": [
+    {
+      "name": "Pythonエンジニア育成推進協会",
+      "logo": "pythonic-exam.png",
+      "url": "https://www.pythonic-exam.com/",
+      "description": "一般社団法人Pythonエンジニア育成推進協会はPython市場が広がる際に、Pythonicを理解した人材が育成されるよう、 学習の指針となる試験と教材認定とスクール認定を行い、 健全なPython人材育成を支援するべく、設立いたしました。現在、全国200か所の試験会場で基礎的な文法に関して出題するPython 3 エンジニア認定基礎試験を実施しています。この試験の教材は、オライリー・ジャパン「Pythonチュートリアル 第3版」です。本年半ばには「Python 3 エンジニア認定データ分析試験」を実施する予定でいます。"
+    },
+    {
+      "name": "株式会社Hugkun",
+      "logo": "hugkun.png",
+      "url": "https://hugkun.com/",
+      "description": "学業で培った技術を早く社会に役立てたいと思っている学生や技術力が高い学生たちが、企業のなかで挑戦できる環境を作っていきたい、Hugkunはそこから生まれました。\n私たちHugkunは、学生たちと企業との間に立ち、両方の間に入ることで様々な不安を解消し、学生が社会のなかで活躍していける環境を構築していくことを目指しています。\n実践的な経験を積みたい学生に、チャレンジ出来る場所を提供する。理解のある企業さんと学生を繋ぐのがHugkunです。"
+    },
+    {
+      "name": "株式会社fluct",
+      "logo": "fluct.png",
+      "url": "https://corp.fluct.jp/",
+      "description": "株式会社fluctは「メディアの成長を共創する」というミッションのもと、数多くのメディア様の広告リクエストをお預かりしています。\nミッションの遂行のためにはテクノロジーの活用とチームによる開発が必須であり、いっしょにミッションを遂行してくださる仲間を募集しています(https://corp.fluct.jp/recruit/)。\nその一環として沖縄支社でも採用を強化中です！給与体系などは東京本社とほぼ変わりません。\n沖縄で働きたい方は企業ブースにてお待ちしております！！"
+    },
+    {
+      "name": "シーサー株式会社",
+      "logo": "seesaa.png",
+      "url": "https://www.seesaa.co.jp/",
+      "description": ""
+    },
+    {
+      "name": "クラスメソッド株式会社",
+      "logo": "classmethod.svg",
+      "url": "https://classmethod.jp/",
+      "description": "クラスメソッドは「すべての人々の創造活動に貢献し続ける」という理念のもと、クラウド、ビッグデータ、モバイル、センサー、音声認識の企業向け技術支援を展開しています。コンサルティングやシステム設計開発に加え、国内有数の情報量を誇る技術メディア「Developers.IO」での技術共有も積極的に行っています。"
+    }
+  ],
+  "silver": [
+    {
+      "name": "株式会社SQUEEZE",
+      "logo": "squeeze.svg",
+      "url": "https://squeeze-inc.co.jp/",
+      "description": ""
+    },
+    {
+      "name": "株式会社ビープラウド",
+      "logo": "beproud.png",
+      "url": "https://www.beproud.jp/",
+      "description": ""
+    },
+    {
+      "name": "Supership株式会社",
+      "logo": "supership.svg",
+      "url": "https://supership.jp/",
+      "description": ""
+    }
+  ]
+}
