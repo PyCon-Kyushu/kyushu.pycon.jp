@@ -61,3 +61,23 @@ axios.get('sponsors.json').then(function(res) {
     }
   }
 });
+
+// スタッフ
+axios.get('staff.json').then(function(res) {
+  var ul = document.querySelector('#staff > ul');
+  for (var staff of res.data) {
+    var li = document.createElement('li');
+    li.style.backgroundImage = 'url(images/staff/' + staff.icon + ')';
+    li.classList.add('staff-icon');
+    ul.appendChild(li);
+    var a = document.createElement('a');
+    a.href = staff.url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    li.append(a);
+    var span = document.createElement('span');
+    span.classList.add('tooltip');
+    span.textContent = staff.name;
+    li.append(span);
+  }
+});
