@@ -153,8 +153,11 @@ body > nav > #nav-modal li:first-child {
 body > nav > #nav-modal li {
   list-style-type: none;
   font-size: larger;
-  padding: 1em;
   border-bottom: 1px #eee solid;
+}
+
+body > nav > #nav-modal li a {
+  padding: 1em;
 }
 
 section > h2 {
