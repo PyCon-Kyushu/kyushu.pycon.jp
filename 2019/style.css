@@ -226,22 +226,25 @@ section > h2 > small {
   text-align: left;
 }
 
-#sponsors > div {
+#sponsors > ul {
   text-align: center;
 }
 
-#sponsors > div h3 {
+#sponsors h3 {
   color: #2c9abc;
   margin: 2em 0 1em;
 }
 
 
-#sponsors > div ul {
+#sponsors ul {
   padding: 0;
 }
 
-#sponsors > div li {
+#sponsors li {
   list-style-type: none;
+}
+
+#sponsors > ul > li > ul > li {
   display: inline-block;
   border: .2em #80B659 solid;
   margin: .5em;
@@ -253,18 +256,59 @@ section > h2 > small {
   background-position: center center;
 }
 
-#sponsors > div .platinum li {
+#sponsors > ul > li.platinum > ul > li {
   width: 10em;
   height: 10em;
 }
-#sponsors > div .gold li {
+#sponsors > ul > li.gold > ul > li {
   width: 8em;
   height: 8em;
 }
 
-#sponsors > div .silver li {
+#sponsors > ul > li.silver > ul > li {
   width: 6em;
   height: 6em;
+}
+
+#sponsor-modal > .window {
+  width: 90%;
+  height: 60%;
+  border-radius: .5em;
+  box-shadow: 0 0 3em rgba(0,0,0,.5);
+}
+
+#sponsor-modal > .window > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: #fff;
+  border-bottom: 1px #ccc solid;
+  line-height: 3em;
+  padding: 0 1em;
+  font-weight: bold;
+}
+
+#sponsor-modal > .window > div {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 4em 1em 1em;
+  box-sizing: border-box;
+}
+
+#sponsor-modal a.close {
+  font-size: 2em;
+  position: absolute;
+  top: .2em;
+  right: .5em;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+#sponsor-modal .sponsor-description {
+  margin-top: 0;
 }
 
 /* SP */
