@@ -273,6 +273,11 @@ section > h2 > small {
   height: 6em;
 }
 
+#sponsors > ul > li.community > ul > li {
+  width: 6em;
+  height: 6em;
+}
+
 #sponsor-modal > .window {
   width: 90%;
   height: 60%;

@@ -42,9 +42,10 @@ axios.get('sponsors.json').then(function(res) {
     'platinum': 'プラチナ',
     'gold': 'ゴールド',
     'silver': 'シルバー',
+    'community': 'コミュニティ',
   };
   var ul = document.querySelector('#sponsors > ul');
-  for (var rank of ['platinum', 'gold', 'silver']) {
+  for (var rank of ['platinum', 'gold', 'silver', 'community']) {
     var li = document.createElement('li');
     li.classList.add(rank);
     ul.appendChild(li);
