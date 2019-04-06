@@ -209,6 +209,11 @@ section > h2 > small {
   background-color: #F77E3C;
 }
 
+#the-day-staff > p {
+  text-align: center;
+  margin: 4em 0;
+}
+
 #keynote > div {
   text-align: center;
 }
