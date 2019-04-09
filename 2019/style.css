@@ -588,4 +588,12 @@ section > h2 > small {
     text-align: left;
     margin-top: 0;
   }
+
+  /**
+   * シルバースポンサーが7社の場合に1社だけ2行目になってしまって残念なので、
+   * ネガティブマージンを設定して無理やり1行に収める、という悪いハック
+   */
+  #sponsors > ul > li.silver > ul {
+    margin: auto -3em;
+  }
 }
