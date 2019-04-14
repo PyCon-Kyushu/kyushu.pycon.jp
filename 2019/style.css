@@ -340,10 +340,15 @@ section > h2 > small {
   background-position: center center;
 }
 
+#sponsors > ul > li > ul > li:hover {
+  border-color: #F77E3C;
+}
+
 #sponsors > ul > li.platinum > ul > li {
   width: 10em;
   height: 10em;
 }
+
 #sponsors > ul > li.gold > ul > li {
   width: 8em;
   height: 8em;
@@ -367,6 +372,10 @@ section > h2 > small {
   display: inline-block;
   border: .2em #80B659 solid;
   background-size: cover;
+}
+
+#sponsors > ul > li.patron > ul > li:hover {
+  border-color: #F77E3C;
 }
 
 #sponsors > ul > li.patron > ul > li > a {
@@ -442,6 +451,10 @@ section > h2 > small {
   border-radius: 50%;
   border: .2em #80B659 solid;
   background-size: cover;
+}
+
+#staff .staff-icon:hover {
+  border-color: #F77E3C;
 }
 
 #staff .staff-icon > a {
