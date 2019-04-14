@@ -34,6 +34,8 @@ function openTimetableModal(event) {
   timetableModal.elem.querySelector('.talk-description').innerHTML = this.description.replace(/\n/g, '<br />');
   timetableModal.elem.querySelector('.talk-language').textContent = '日本語';
   timetableModal.open();
+  // モダーダル内のスクロール位置をリセットする
+  timetableModal.elem.querySelector('.window > div').scrollTop = 0;
 }
 axios.get('talks.json').then(function(res) {
   var table = document.querySelector('#timetable table');
@@ -62,6 +64,8 @@ function openSponsorModal(event) {
   sponsorModal.elem.querySelector('.sponsor-link a').textContent = this.url;
   sponsorModal.elem.querySelector('.sponsor-link a').href = this.url;
   sponsorModal.open();
+  // モダーダル内のスクロール位置をリセットする
+  sponsorModal.elem.querySelector('.window > div').scrollTop = 0;
 }
 axios.get('sponsors.json').then(function(res) {
   var ranks = {
