@@ -25,6 +25,32 @@ window.document.getElementById('nav-button-open').addEventListener('click', func
   menuModal.open();
 });
 
+// タイムテーブル
+var timetableModal = new PureModal(window.document.getElementById('timetable-modal'));
+function openTimetableModal(event) {
+  timetableModal.elem.querySelector('.talk-title').textContent = this.title;
+  timetableModal.elem.querySelector('.talk-speaker').textContent = this.name;
+  if (this.url) timetableModal.elem.querySelector('.talk-speaker').href = this.url;
+  timetableModal.elem.querySelector('.talk-description').innerHTML = this.description.replace(/\n/g, '<br />');
+  timetableModal.elem.querySelector('.talk-language').textContent = '日本語';
+  timetableModal.open();
+}
+axios.get('talks.json').then(function(res) {
+  var table = document.querySelector('#timetable table');
+  for (var talk of res.data) {
+    var td = table.getElementsByClassName('talk-' + talk.id)[0];
+    if (!td) {
+      console.warn('Talk element "' + talk.id + '" is not found');
+      continue;
+    }
+    td.textContent = talk.title;
+    var small = document.createElement('small');
+    small.textContent = talk.name;
+    td.appendChild(small);
+    td.addEventListener('click', openTimetableModal.bind(talk));
+  }
+});
+
 // スポンサー
 var sponsorModal = new PureModal(window.document.getElementById('sponsor-modal'));
 function openSponsorModal(event) {

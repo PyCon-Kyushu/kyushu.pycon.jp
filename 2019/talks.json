@@ -1,0 +1,93 @@
+[
+  {
+    "id": "keynote",
+    "name": "大城 信晃",
+    "url": null,
+    "title": "キーノート",
+    "description": "TBD"
+  },
+  {
+    "id": "A1",
+    "name": "Manabu TERADA",
+    "url": "https://twitter.com/terapyon",
+    "title": "Python Webフレームワーク比較",
+    "description": "Pythonには多くのWebフレームワークが存在し、各フレームワークが持つ機能や特徴がそれぞれあります。フレームワークが持つ機能を分解し、機能ごとの役割を意識して、必要な機能がどのように提供されているかを確認しフレームワークを選ぶ必要があると考えています。\n\nこのトークでは、Webフレームワークが持つべき機能を紹介し、各Webフレームワークが提供している範囲を比較します。\n\nフレームワーク選択の一つの指標になることを目指し、目的別にフレームワークを選択できるようになります。"
+  },
+  {
+    "id": "A2",
+    "name": "Shinichi Nakagawa",
+    "url": "https://twitter.com/shinyorke",
+    "title": "スラスラ教える・教わるPython",
+    "description": "【概要】\nプログラミング初心者だったアナリストがHello WorldからPyDataライブラリ使いになるまで、メンターとしてやったことを「プログラミングを教えること・教わること」両方の視点で共有します.\n\n【こんな方に聞いてほしい】\n・プログラミング初心者もしくはこれからプログラミングをはじめる方\n・プログラミングを人に教える必要がある方（公私共に）\n\n【発表後に得られること】\n・プログラミングを学ぶ・学習するときのベストプラクティス\n・プログラミングを人に教える際の勘どころ\n\n【登場人物】\n・メンター（教える側）：エンジニア歴19年・Python歴8年の野球エンジニア（私）\n・アナリスト（教わる側）：同僚の若手アナリスト.昨年からPythonでプログラミングをはじめる.左投げ左打ち.\n\n【アウトライン（予定）】\n・アナリストがプログラミングをやる意義と意味\n・教材選び - なぜ「スラスラわかるPython」を選んだか\n・社内勉強会 - 自習と講義、ペアプロの繰り返し\n・外に出よう - もくもく会への参加とネットワーキング\n・まとめ"
+  },
+  {
+    "id": "A3",
+    "name": "八雲アナグラ",
+    "url": "https://twitter.com/AnaTofuZ",
+    "title": "レガシーPython散策",
+    "description": "みなさんが普段使用しているPythonのバージョンはいくつですか? Python3.7.3? それとも、まさかPython2系...!?Python3やPython2とバージョンが上がっているということは、つまりPython1が最初は存在していたということです。Python1の処理系のコードがもし存在していたら、ちょっと中身を見てみたくないでしょうか。そして現在のPython3のソースコードの内容も、ちょっと気になりますよね。このトークではPython1やその周辺のレガシーPythonの処理系のコードと、現在のPython3自体のCで書かれたソースコードを眺めながら、Python処理系の雰囲気を探ります。"
+  },
+  {
+    "id": "A4",
+    "name": "森永雄也",
+    "url": null,
+    "title": "“Similar-Dish” Function in SnapDish - Pythonを使った料理の意味検索 -",
+    "description": "料理写真カメラ・共有サービスSnapDishの最新機能である、\"Similar-Dish\"についてご紹介します。Similar-Dishは自然言語処理と画像処理の技術を組み合わせ、SnapDishの料理投稿を対象に、各料理投稿に似た別の料理投稿をサジェストする仕組みです。Similar-Dishはword2vec, GoogLeNet, Annoyを背景技術として用いています。word2vecとGoogLeNetを使って投稿情報を意味ベクトルに変換し、Annoyによって似た意味ベクトルを持つ投稿の検索を行います。これらの機構の詳細について説明し、各機構をどのようにしてSnapDish用に最適化したのかをお話しします。この発表を通じて、意味ベースの検索の面白さをお伝えできればと思っています。Pythonのライブラリのおかげで、技術的な敷居も高くありません。"
+  },
+  {
+    "id": "A5",
+    "name": "Tomoko Furuki",
+    "url": "https://twitter.com/komo_fr",
+    "title": "アイデアを小さく始めて、小さく育てていく方法 ～ ハッカソンで深層学習モデルを作って運用するまで",
+    "description": "「Pythonでこんなツールを作ってみたら役に立つ【かも】！」「深層学習でこんなことをやったら面白い【かも】！」\n頭の中でアイデアをめぐらすのは楽しいことです。しかし、アイデアを実際に形にするのはもっと楽しいことです。形にされないアイデアは、永遠に【かも】のまま。けれど、いざ作ろうとPCの画面に向かうと、手が止まってしまうことはありませんか？\n本トークでは「アイデアを形にしていく時に、実際にどういう風に進めていけばいいか」をPython初心者がイメージしやすくなるように、ハッカソンでの深層学習モデルのプロトタイピングの実例をもとに紹介します。また、実装に使った具体的な技術（Pythonのライブラリなど）を紹介します。\n\n▼ 対象\n① Pythonの深層学習ライブラリのチュートリアルをやった後、自分のアイデアを具体的に形にするためにはどう進めていけば良いのかわからない方\n② ハッカソンや、プロトタイピングに興味がある方"
+  },
+  {
+    "id": "A6",
+    "name": "関根裕紀",
+    "url": "https://twitter.com/checkpoint",
+    "title": "Pythonコミュニティを通じて学んだこと",
+    "description": "一人のエンジニアとして、Pythonに出会い、またPythonコミュニティに出会ってから多くの年月が経過しました。このセッションではPythonコミュニティを通じて、実際にどのような事を学び、考え、実践してきたかをお伝えします。"
+  },
+  {
+    "id": "B1",
+    "name": "鈴木康元",
+    "url": "https://www.facebook.com/yasuharu.suzuki.50",
+    "title": "沖縄Pythonコミュニティの紹介とtesseract-ocr ver.4(LSTM)を用いたオフラインOCRの改善・学習手法",
+    "description": "沖縄Pythonコミュニティの紹介\n・沖縄のコミュニティで学び、データ分析の仕事についた経験から学んだこと\n・PyData.OkinawaとPythonBeginners沖縄\n・学生とのコラボレーション\ntesseract-ocr ver.4(LSTM)を用いたオフラインOCRの改善・学習手法\n・tesseract-ocr ver.3との違い\n・LSTMについて\n・tesseract-ocr ver.4を用いたOCR（推論）\n・精度の改善\n・tesseract-ocr ver.4を使用した画像からの学習手法\n・tesseract-ocr ver.4を使用したフォントデータからの学習手法"
+  },
+  {
+    "id": "B2",
+    "name": "杉田 雅子",
+    "url": "https://twitter.com/ane45",
+    "title": "Pythonにおける並列処理プログラミング",
+    "description": "Pythonにおける並列処理プログラミングの概要と、GILの制限があっても有効なケースとして、concurrent.futuresのThreadPoolExecutorを紹介する内容です。\nconcurrent.futuresモジュールは、複数の処理を並列実行するための機能を提供しています。\nこのモジュールには抽象クラスとしてExecutorクラスがあり、実装クラスとして2つのクラスが提供されていますが、主に「ThreadPoolExecutor」に関して実例を交え詳しく紹介します。"
+  },
+  {
+    "id": "B3",
+    "name": "小田切篤",
+    "url": null,
+    "title": "Pythonでの開発を効率的に進めるためのツール設定",
+    "description": "Pythonでの開発を効率的に進めるためのツール設定\n- pypa tools\n- flake8\n- black/isort\n- mypy\n- pytestとアドオン"
+  },
+  {
+    "id": "B4",
+    "name": "hoto17296",
+    "url": "https://twitter.com/hoto17296",
+    "title": "試行錯誤のための Docker 活用術",
+    "description": "Docker はアプリケーション開発・運用だけではなく、データ分析や研究などの実験・検証を伴う試行錯誤のためのツールとしても非常に便利です。\n\nこのトークでは、Docker と Python を組み合わせて実験・検証を行うための様々なテクニックをご紹介します。\n\n・ Docker 概要\n・ Docker + Jupyter Notebook のベストプラクティス\n・ Docker と Anaconda を組み合わせる\n・ Docker で GPU コンピューティングを行う\n・ Docker で GUI アプリケーションを扱う\n・ Docker + TensorFlow を用いた深層強化学習 (デモ)"
+  },
+  {
+    "id": "B5",
+    "name": "吉田 花春",
+    "url": "https://twitter.com/kashew_nuts",
+    "title": "開発環境の垣根を超えるLanguage Server Protocol入門",
+    "description": ":TalkDescription:\n\nLSP (Language Server Protocol) をご存じですか？\n\nLSPとはこれまでエディタやIDEごとに実装されていたコード補完や、定義ジャンプ、エラーチェックなどの機能を、言語サーバーを用意して複数の開発ツールで使えるようにするためのものです。Microsoftがプロトコルの仕様を公開し、もはや定番となったVS Codeだけでなく、現在はVim, Emacs, Atomなど多岐に渡る開発ツールが活用できます。\n\n今回はそんなLSPについて取り上げていきます。\n\n:Contents:\n\n* LSPとは何か\n* どうしてLSPが取り入れられているのか\n* LSP導入方法\n* PythonのLSP実装について\n* LSPの未来\n* etc...\n\n:Target: 最新の開発環境事情について知りたい人"
+  },
+  {
+    "id": "B6",
+    "name": "中村真人",
+    "url": "https://www.twitter.com/masahito",
+    "title": "Pythonと型ヒントとその使い方",
+    "description": "1. TypeHintsとは何か\n2. TypeHintsの使い方\n3. 型付とチーム開発"
+  }
+]

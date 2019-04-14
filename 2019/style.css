@@ -234,6 +234,82 @@ section > h2 > small {
   text-align: left;
 }
 
+#timetable table {
+  font-size: smaller;
+  border-spacing: .5em;
+}
+
+#timetable table th,
+#timetable table td {
+  padding: .7em;
+}
+
+#timetable table th:first-child {
+  vertical-align: top;
+  padding: 0 .5em 0 0;
+}
+
+#timetable table th small {
+  font-weight: normal;
+  display: block;
+}
+
+#timetable table td {
+  border: 2px #eee solid;
+  border-radius: .5em;
+}
+
+#timetable table td.talk {
+  border-color: #80B659;
+  cursor: pointer;
+}
+
+#timetable table td.talk:hover {
+  border-color: #F77E3C;
+}
+
+#timetable table td small {
+  display: block;
+  color: #999;
+}
+
+#timetable-modal > .window {
+  width: 90%;
+  height: 60%;
+  border-radius: .5em;
+  box-shadow: 0 0 3em rgba(0,0,0,.5);
+}
+
+#timetable-modal > .window > div {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+#timetable-modal a.close {
+  font-size: 2em;
+  position: absolute;
+  top: .2em;
+  right: .5em;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+#timetable-modal dl {
+  margin: 0;
+}
+
+#timetable-modal dl > dt {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+#timetable-modal dl > dd {
+  margin-left: 1em;
+  font-size: smaller;
+}
+
 #sponsors > ul {
   text-align: center;
 }
