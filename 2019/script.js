@@ -54,6 +54,12 @@ axios.get('talks.json').then(function(res) {
     td.appendChild(small);
     td.addEventListener('click', openTimetableModal.bind(talk));
   }
+  // URL にトークの個別ページの hash がついていたら、そのトークのモーダルを開く
+  if (matched = location.hash.match(/^#(talk-.+)$/)) {
+    location.hash = '#timetable';
+    var td = table.getElementsByClassName(matched[1])[0];
+    if (td) td.click();
+  }
 });
 
 // スポンサー
