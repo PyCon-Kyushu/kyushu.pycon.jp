@@ -15,6 +15,8 @@ function StickyNavbar(elem, className) {
 new StickyNavbar(window.document.querySelector('body > nav'), "fixed");
 
 // ページ内リンクをスクロールするやつ
+if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+if (!Element.prototype.closest) Element.prototype.closest = function(s) { var el = this; do { if (el.matches(s)) return el; el = el.parentElement || el.parentNode; } while (el !== null && el.nodeType === 1); return null; };
 new SmoothScroll('a[href*="#"]', { offset: 100 });
 
 // スマホメニュー
@@ -42,7 +44,8 @@ function openTimetableModal(event) {
 }
 axios.get('talks.json').then(function(res) {
   var table = document.querySelector('#timetable table');
-  for (var talk of res.data) {
+  for (var i in res.data) {
+    var talk = res.data[i];
     var td = table.getElementsByClassName('talk-' + talk.id)[0];
     if (!td) {
       console.warn('Talk element "' + talk.id + '" is not found');
@@ -85,7 +88,9 @@ axios.get('sponsors.json').then(function(res) {
   };
   var ul = document.querySelector('#sponsors > ul');
   // 企業スポンサー
-  for (var rank of ['platinum', 'gold', 'silver', 'community']) {
+  var arr = ['platinum', 'gold', 'silver', 'community'];
+  for (var i in arr) {
+    var rank = arr[i];
     var li = document.createElement('li');
     li.classList.add(rank);
     ul.appendChild(li);
@@ -94,7 +99,8 @@ axios.get('sponsors.json').then(function(res) {
     li.appendChild(h3);
     var ul2 = document.createElement('ul');
     li.appendChild(ul2);
-    for (var sponsor of res.data[rank]) {
+    for (var j in res.data[rank]) {
+      var sponsor = res.data[rank][j];
       var li2 = document.createElement('li');
       li2.style.backgroundImage = 'url(images/sponsors/' + sponsor.logo + ')';
       li2.addEventListener('click', openSponsorModal.bind(sponsor));
@@ -110,7 +116,8 @@ axios.get('sponsors.json').then(function(res) {
   li.appendChild(h3);
   var ul2 = document.createElement('ul');
   li.appendChild(ul2);
-  for (var patron of res.data.patron) {
+  for (var i in res.data.patron) {
+    var patron = res.data.patron[i];
     var li2 = document.createElement('li');
     li2.style.backgroundImage = 'url(images/patron/' + patron.icon + ')';
     ul2.appendChild(li2);
@@ -118,18 +125,19 @@ axios.get('sponsors.json').then(function(res) {
     a.href = patron.url;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
-    li2.append(a);
+    li2.appendChild(a);
     var span = document.createElement('span');
     span.classList.add('tooltip');
     span.textContent = patron.name;
-    li2.append(span);
+    li2.appendChild(span);
   }
 });
 
 // スタッフ
 axios.get('staff.json').then(function(res) {
   var ul = document.querySelector('#staff > ul');
-  for (var staff of res.data) {
+  for (var i in res.data) {
+    var staff = res.data[i];
     var li = document.createElement('li');
     li.style.backgroundImage = 'url(images/staff/' + staff.icon + ')';
     li.classList.add('staff-icon');
@@ -138,10 +146,10 @@ axios.get('staff.json').then(function(res) {
     a.href = staff.url;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
-    li.append(a);
+    li.appendChild(a);
     var span = document.createElement('span');
     span.classList.add('tooltip');
     span.textContent = staff.name;
-    li.append(span);
+    li.appendChild(span);
   }
 });
