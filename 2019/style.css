@@ -4,7 +4,7 @@ body {
   line-height: 1.5em;
 }
 
-a:link, a:visited, a:hover, a:active {
+a[href]:link, a[href]:visited, a[href]:hover, a[href]:active {
   color: #F77E3C;
 }
 
@@ -111,13 +111,13 @@ body > nav a {
   text-decoration: none;
 }
 
-body > nav a:link,
-body > nav a:visited {
+body > nav a[href]:link,
+body > nav a[href]:visited {
   color: #999;
 }
 
-body > nav a:hover,
-body > nav a:active {
+body > nav a[href]:hover,
+body > nav a[href]:active {
   color: #F77E3C;
 }
 

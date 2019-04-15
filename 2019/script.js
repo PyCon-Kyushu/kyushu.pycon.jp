@@ -30,7 +30,10 @@ var timetableModal = new PureModal(window.document.getElementById('timetable-mod
 function openTimetableModal(event) {
   timetableModal.elem.querySelector('.talk-title').textContent = this.title;
   timetableModal.elem.querySelector('.talk-speaker').textContent = this.name;
-  if (this.url) timetableModal.elem.querySelector('.talk-speaker').href = this.url;
+  if (this.url)
+    timetableModal.elem.querySelector('.talk-speaker').href = this.url;
+  else
+    timetableModal.elem.querySelector('.talk-speaker').removeAttribute('href');
   timetableModal.elem.querySelector('.talk-description').innerHTML = this.description.replace(/\n/g, '<br />');
   timetableModal.elem.querySelector('.talk-language').textContent = '日本語';
   timetableModal.open();
