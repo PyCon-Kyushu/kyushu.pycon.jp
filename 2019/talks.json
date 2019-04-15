@@ -65,7 +65,7 @@
   {
     "id": "B3",
     "name": "小田切篤",
-    "url": null,
+    "url": "https://github.com/aodag",
     "title": "Pythonでの開発を効率的に進めるためのツール設定",
     "description": "Pythonでの開発を効率的に進めるためのツール設定\n- pypa tools\n- flake8\n- black/isort\n- mypy\n- pytestとアドオン"
   },
