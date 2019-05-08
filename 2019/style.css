@@ -643,13 +643,16 @@ section > h2 > small {
 
   body > nav > #nav-bar > ul {
     display: table;
-    table-layout: fixed;
   }
 
   body > nav > #nav-bar > ul > li {
     display: table-cell;
     text-align: center;
     line-height: 4em;
+  }
+
+  body > nav > #nav-bar > ul > li > a {
+    padding: 0 1em;
   }
 
   #keynote > div::after {
