@@ -38,6 +38,15 @@ function openTimetableModal(event) {
     timetableModal.elem.querySelector('.talk-speaker').removeAttribute('href');
   timetableModal.elem.querySelector('.talk-description').innerHTML = this.description.replace(/\n/g, '<br />');
   timetableModal.elem.querySelector('.talk-language').textContent = '日本語';
+  var talkSlide = timetableModal.elem.querySelector('.talk-slide');
+  if (this.slide) {
+    talkSlide.href = this.slide;
+    talkSlide.textContent = talkSlide.hostname;
+  }
+  else {
+    talkSlide.removeAttribute('href');
+    talkSlide.textContent = 'None';
+  }
   timetableModal.open();
   // モダーダル内のスクロール位置をリセットする
   timetableModal.elem.querySelector('.window > div').scrollTop = 0;
