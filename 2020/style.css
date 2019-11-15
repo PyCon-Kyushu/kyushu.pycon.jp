@@ -1,0 +1,701 @@
+body {
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.5em;
+}
+
+a[href]:link, a[href]:visited, a[href]:hover, a[href]:active {
+  color: #F77E3C;
+}
+
+body > header {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+body > header > .container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+body > header .island {
+  position: absolute;
+  background-image: url(images/island.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body > header h1 {
+  position: absolute;
+  background-image: url(images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(3px 3px 1px rgba(0,0,0,.3));
+}
+
+body > header time {
+  position: absolute;
+  background-image: url(images/date.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(3px 3px 1px rgba(0,0,0,.3));
+}
+
+body > header h1 > span,
+body > header time > span {
+  display: none;
+}
+
+body > header .buttons {
+  position: absolute;
+}
+
+body > header .buttons > header {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4em;
+  display: table;
+  color: #fff;
+  background-color: #F77E3C;
+  text-align: center;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+body > header .buttons > header > span {
+  display: table-cell;
+  vertical-align: middle;
+  border: 2px #fff solid;
+  border-radius: 50%;
+}
+
+body > header .buttons > a {
+  position: absolute;
+  font-size: 30px;
+  padding: .5em;
+  height: 1em;
+  width: 1em;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+}
+
+body > header .buttons > a.fa-twitter {
+  color: #1da1f2;
+}
+
+body > header .buttons > a.fa-facebook-f {
+  color: #3b5998;
+}
+
+body > footer {
+  background-color: #6CC3E0;
+  color: #fff;
+  text-align: center;
+  margin-top: 4em;
+  padding: 2em 0;
+}
+
+body > nav a {
+  display: block;
+  text-decoration: none;
+}
+
+body > nav a[href]:link,
+body > nav a[href]:visited {
+  color: #999;
+}
+
+body > nav a[href]:hover,
+body > nav a[href]:active {
+  color: #F77E3C;
+}
+
+body > nav > #nav-bar {
+  background-color: #fff;
+}
+
+body > nav .nav-button {
+  position: fixed;
+  top: .5em;
+  right: .5em;
+  font-size: 30px;
+  padding: .5em;
+  height: 1em;
+  width: 1em;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+}
+
+body > nav > #nav-modal ul {
+  margin: 3em 0 1em;
+  padding: 0;
+}
+
+body > nav > #nav-modal li:first-child {
+  border-top: 1px #eee solid;
+}
+
+body > nav > #nav-modal li {
+  list-style-type: none;
+  font-size: larger;
+  border-bottom: 1px #eee solid;
+}
+
+body > nav > #nav-modal li a {
+  padding: 1em;
+}
+
+section > h2 {
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
+  color: #80B659;
+  margin: 3em 0 2em;
+  padding-bottom: .7em;
+}
+
+section > h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 4em;
+  height: .1em;
+  background-color: #666;
+}
+
+section > h2 > small {
+  color: #666;
+  font-size: .4em;
+  display: block;
+}
+
+#ticket {
+  text-align: center;
+  padding-top: 2em;
+}
+
+#ticket > a {
+  display: inline-block;
+  background-color: #999;
+  color: #fff;
+  font-weight: bold;
+  padding: 1em;
+  border-radius: .5em;
+  text-decoration: none;
+  margin: .5em;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
+}
+
+#ticket > a:first-child {
+  background-color: #F77E3C;
+}
+
+#the-day-staff > p {
+  text-align: center;
+  margin: 4em 0;
+}
+
+#keynote > div {
+  text-align: center;
+}
+
+#keynote img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: .2em #80B659 solid;
+  box-sizing: border-box;
+}
+
+#keynote h3 {
+  font-size: 1.5em;
+}
+
+#keynote p {
+  text-align: left;
+}
+
+#timetable table {
+  font-size: smaller;
+  border-spacing: .5em;
+}
+
+#timetable table th,
+#timetable table td {
+  padding: .7em;
+}
+
+#timetable table th:first-child {
+  vertical-align: top;
+  padding: 0 .5em 0 0;
+}
+
+#timetable table th small {
+  font-weight: normal;
+  display: block;
+}
+
+#timetable table td {
+  border: 2px #eee solid;
+  border-radius: .5em;
+}
+
+#timetable table td.talk {
+  border-color: #80B659;
+  cursor: pointer;
+}
+
+#timetable table td.talk:hover {
+  border-color: #F77E3C;
+}
+
+#timetable table td small {
+  display: block;
+  color: #999;
+}
+
+#timetable-modal > .window {
+  width: 90%;
+  height: 60%;
+  border-radius: .5em;
+  box-shadow: 0 0 3em rgba(0,0,0,.5);
+}
+
+#timetable-modal > .window > div {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+#timetable-modal a.close {
+  font-size: 2em;
+  position: absolute;
+  top: .2em;
+  right: .5em;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+#timetable-modal dl {
+  margin: 0;
+}
+
+#timetable-modal dl > dt {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+#timetable-modal dl > dd {
+  margin-left: 1em;
+  font-size: smaller;
+}
+
+#sponsors > ul {
+  text-align: center;
+}
+
+#sponsors h3 {
+  color: #2c9abc;
+  margin: 2em 0 1em;
+}
+
+
+#sponsors ul {
+  padding: 0;
+}
+
+#sponsors li {
+  list-style-type: none;
+}
+
+#sponsors > ul > li > ul > li {
+  display: inline-block;
+  border: .2em #80B659 solid;
+  margin: .5em;
+  border-radius: 1em;
+  cursor: pointer;
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#sponsors > ul > li > ul > li:hover {
+  border-color: #F77E3C;
+}
+
+#sponsors > ul > li.platinum > ul > li {
+  width: 10em;
+  height: 10em;
+}
+
+#sponsors > ul > li.gold > ul > li {
+  width: 8em;
+  height: 8em;
+}
+
+#sponsors > ul > li.silver > ul > li {
+  width: 6em;
+  height: 6em;
+}
+
+#sponsors > ul > li.community > ul > li {
+  width: 6em;
+  height: 6em;
+}
+
+#sponsors > ul > li.patron > ul > li {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  border: .2em #80B659 solid;
+  background-size: cover;
+}
+
+#sponsors > ul > li.patron > ul > li:hover {
+  border-color: #F77E3C;
+}
+
+#sponsors > ul > li.patron > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#sponsors > ul > li.patron > ul > li > .tooltip {
+  position: absolute;
+  top: -2em;
+  display: none;
+  font-size: smaller;
+  color: #fff;
+  background-color: #333;
+  padding: .1em .5em;
+  border-radius: .3em;
+  text-align: center;
+}
+
+#sponsors > ul > li.patron > ul > li:hover > .tooltip {
+  display: block;
+}
+
+#sponsor-modal > .window {
+  width: 90%;
+  height: 60%;
+  border-radius: .5em;
+  box-shadow: 0 0 3em rgba(0,0,0,.5);
+}
+
+#sponsor-modal > .window > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: #fff;
+  border-bottom: 1px #ccc solid;
+  line-height: 3em;
+  padding: 0 1em;
+  font-weight: bold;
+}
+
+#sponsor-modal > .window > div {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 4em 1em 1em;
+  box-sizing: border-box;
+}
+
+#sponsor-modal a.close {
+  font-size: 2em;
+  position: absolute;
+  top: .2em;
+  right: .5em;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+#sponsor-modal .sponsor-description {
+  margin-top: 0;
+}
+
+#staff {
+  text-align: center;
+}
+
+#staff .staff-icon {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  border: .2em #80B659 solid;
+  background-size: cover;
+}
+
+#staff .staff-icon:hover {
+  border-color: #F77E3C;
+}
+
+#staff .staff-icon > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#staff .kiyota {
+  background-image: url(images/staff/kiyota.jpg);
+  width: 6em;
+  height: 6em;
+}
+
+#staff .kiyota:hover > .tooltip {
+  display: block;
+}
+
+#staff .intel {
+  background-image: url(images/staff/Intel0tw5727.jpg);
+  width: 6em;
+  height: 6em;
+}
+
+#staff .intel:hover > .tooltip {
+  display: block;
+}
+
+#staff > ul {
+  padding: 0;
+}
+
+#staff > ul > li {
+  list-style-type: none;
+  width: 4em;
+  height: 4em;
+  margin: .5em;
+}
+
+#staff .tooltip {
+  position: absolute;
+  top: -2em;
+  display: none;
+  font-size: smaller;
+  color: #fff;
+  background-color: #333;
+  padding: .1em .5em;
+  border-radius: .3em;
+  text-align: center;
+}
+
+#staff > ul > li:hover > .tooltip {
+  display: block;
+}
+
+/* SP */
+@media screen and (max-width: 959px) {
+  .container {
+    padding: 0 1em;
+  }
+
+  body > header {
+    height: 600px;
+    background-image: url(images/bg_sp.png);
+  }
+
+  body > header .island,
+  body > header h1,
+  body > header time {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  body > header .island {
+    top: 220px;
+    width: 360px;
+    height: 209px;
+  }
+
+  body > header h1 {
+    top: 60px;
+    width: 200px;
+    height: 176px;
+  }
+
+  body > header time {
+    bottom: 150px;
+    width: 240px;
+    height: 68px;
+  }
+
+  body > header .buttons {
+    width: 260px;
+    margin: 0 auto;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+  }
+
+  body > header .buttons > header {
+    bottom: 0;
+    left: 0;
+  }
+
+  body > header .buttons > a.fa-twitter {
+    bottom: 20px;
+    left: 120px;
+  }
+  
+  body > header .buttons > a.fa-facebook-f {
+    bottom: 20px;
+    left: 200px;
+  }
+
+  body > nav > #nav-bar {
+    display: none;
+  }
+
+  #keynote h3 > small {
+    display: block;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 100px;
+    box-sizing: border-box;
+  }
+
+  body > header {
+    height: 600px;
+    background-image: url(images/bg_pc.png);
+  }
+
+  body > header .island {
+    top: 170px;
+    left: 250px;
+    height: 320px;
+    width: 552px;
+  }
+
+  body > header h1 {
+    width: 240px;
+    height: 211px;
+    top: 180px;
+    left: 100px;
+  }
+
+  body > header time {
+    bottom: 80px;
+    left: 360px;
+    width: 300px;
+    height: 84px;
+  }
+
+  body > header .buttons {
+    top: 130px;
+    right: 80px;
+  }
+
+  body > header .buttons > header {
+    top: 0;
+    right: 0;
+  }
+
+  body > header .buttons > a.fa-twitter {
+    top: 120px;
+    right: 20px;
+  }
+  
+  body > header .buttons > a.fa-facebook-f {
+    top: 200px;
+    right: 20px;
+  }
+
+  body > nav {
+    height: 4em;
+  }
+
+  body > nav > #nav-button-open {
+    display: none;
+  }
+
+  body > nav.fixed > div {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  }
+
+  body > nav > #nav-bar > ul {
+    display: table;
+  }
+
+  body > nav > #nav-bar > ul > li {
+    display: table-cell;
+    text-align: center;
+    line-height: 4em;
+  }
+
+  body > nav > #nav-bar > ul > li > a {
+    padding: 0 1em;
+  }
+
+  #keynote > div::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  #keynote > div > div {
+    float: left;
+  }
+
+  #keynote > div > div:first-child {
+    width: 240px;
+  }
+
+  #keynote > div > div:last-child {
+    margin-left: -240px;
+    padding-left: 300px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #keynote h3 {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  /**
+   * シルバースポンサーが7社の場合に1社だけ2行目になってしまって残念なので、
+   * ネガティブマージンを設定して無理やり1行に収める、という悪いハック
+   */
+  #sponsors > ul > li.silver > ul {
+    margin: auto -3em;
+  }
+}
