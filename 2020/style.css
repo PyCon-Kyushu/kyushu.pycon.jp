@@ -1,11 +1,11 @@
 body {
   font-family: sans-serif;
-  color: #333;
+  color: #595757;
   line-height: 1.5em;
 }
 
 a[href]:link, a[href]:visited, a[href]:hover, a[href]:active {
-  color: #F77E3C;
+  color: #84060D;
 }
 
 body > header {
@@ -48,62 +48,16 @@ body > header time > span {
   display: none;
 }
 
-body > header .buttons {
-  position: absolute;
-}
-
-body > header .buttons > header {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.4em;
-  display: table;
-  color: #fff;
-  background-color: #F77E3C;
-  text-align: center;
-  border-radius: 50%;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
-  border-collapse: separate;
-  border-spacing: 4px;
-}
-
-body > header .buttons > header > span {
-  display: table-cell;
-  vertical-align: middle;
-  border: 2px #fff solid;
-  border-radius: 50%;
-}
-
-body > header .buttons > a {
-  position: absolute;
-  font-size: 30px;
-  padding: .5em;
-  height: 1em;
-  width: 1em;
-  display: block;
-  text-align: center;
-  background-color: #fff;
-  text-decoration: none;
-  border-radius: 50%;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.3));
-}
-
-body > header .buttons > a.fa-twitter {
-  color: #1da1f2;
-}
-
-body > header .buttons > a.fa-facebook-f {
-  color: #3b5998;
-}
-
 body > footer {
-  background-color: #6CC3E0;
+  background-color: #84060D;
   color: #fff;
   text-align: center;
   margin-top: 4em;
   padding: 2em 0;
+}
+
+body > footer a[href]:link, a[href]:visited, a[href]:hover, a[href]:active {
+  color: #fff;
 }
 
 body > nav a {
@@ -118,7 +72,7 @@ body > nav a[href]:visited {
 
 body > nav a[href]:hover,
 body > nav a[href]:active {
-  color: #F77E3C;
+  color: #84060D;
 }
 
 body > nav > #nav-bar {
@@ -164,7 +118,7 @@ section > h2 {
   position: relative;
   text-align: center;
   font-size: 1.5em;
-  color: #80B659;
+  color: #84060d;
   margin: 3em 0 2em;
   padding-bottom: .7em;
 }
@@ -177,13 +131,13 @@ section > h2::after {
   right: 0;
   left: 0;
   margin: auto;
-  width: 4em;
+  width: 8em;
   height: .1em;
-  background-color: #666;
+  background-color: #999;
 }
 
 section > h2 > small {
-  color: #666;
+  color: #84060d;
   font-size: .4em;
   display: block;
 }
@@ -206,12 +160,37 @@ section > h2 > small {
 }
 
 #ticket > a:first-child {
-  background-color: #F77E3C;
+  background-color: #84060D;
 }
 
-#the-day-staff > p {
+#the-day-staff > div > div > p {
   text-align: center;
-  margin: 4em 0;
+  font-size: 1.5em;
+}
+
+#the-day-staff > div {
+  position: relative;
+  width: 100%;
+  height: 3em;
+  color: #84060D;
+}
+
+#the-day-staff > div > div {
+  position: absolute;
+  top: 0;
+}
+
+#the-day-staff > div > div > a.fa-twitter {
+  color: #1da1f2;
+}
+
+#the-day-staff > div > div > a.fa-facebook-f {
+  color: #3b5998;
+}
+
+#overview h3 {
+  text-align: center;
+  margin-top: 0;
 }
 
 #keynote > div {
@@ -265,7 +244,7 @@ section > h2 > small {
 }
 
 #timetable table td.talk:hover {
-  border-color: #F77E3C;
+  border-color: #84060D;
 }
 
 #timetable table td small {
@@ -341,7 +320,7 @@ section > h2 > small {
 }
 
 #sponsors > ul > li > ul > li:hover {
-  border-color: #F77E3C;
+  border-color: #84060D;
 }
 
 #sponsors > ul > li.platinum > ul > li {
@@ -375,7 +354,7 @@ section > h2 > small {
 }
 
 #sponsors > ul > li.patron > ul > li:hover {
-  border-color: #F77E3C;
+  border-color: #84060D;
 }
 
 #sponsors > ul > li.patron > ul > li > a {
@@ -454,7 +433,7 @@ section > h2 > small {
 }
 
 #staff .staff-icon:hover {
-  border-color: #F77E3C;
+  border-color: #84060D;
 }
 
 #staff .staff-icon > a {
@@ -547,32 +526,20 @@ section > h2 > small {
     height: 68px;
   }
 
-  body > header .buttons {
-    width: 260px;
-    margin: 0 auto;
-    bottom: 20px;
-    right: 0;
-    left: 0;
-  }
-
-  body > header .buttons > header {
-    bottom: 0;
-    left: 0;
-  }
-
-  body > header .buttons > a.fa-twitter {
-    bottom: 20px;
-    left: 120px;
-  }
-  
-  body > header .buttons > a.fa-facebook-f {
-    bottom: 20px;
-    left: 200px;
-  }
-
   body > nav > #nav-bar {
     display: none;
   }
+
+  #the-day-staff > div > div.left {
+      position: absolute;
+      left: 2em;
+  }
+
+  #the-day-staff > div > div.right {
+      position: absolute;
+      right: 2em;
+  }
+
 
   #keynote h3 > small {
     display: block;
@@ -591,6 +558,8 @@ section > h2 > small {
   body > header {
     height: 600px;
     background-image: url(images/bg_pc.png);
+    background-repeat: no-repeat;
+    background-color: #84060D;
   }
 
   body > header .island {
@@ -612,26 +581,6 @@ section > h2 > small {
     left: 360px;
     width: 300px;
     height: 84px;
-  }
-
-  body > header .buttons {
-    top: 130px;
-    right: 80px;
-  }
-
-  body > header .buttons > header {
-    top: 0;
-    right: 0;
-  }
-
-  body > header .buttons > a.fa-twitter {
-    top: 120px;
-    right: 20px;
-  }
-  
-  body > header .buttons > a.fa-facebook-f {
-    top: 200px;
-    right: 20px;
   }
 
   body > nav {
@@ -665,6 +614,16 @@ section > h2 > small {
     padding: 0 1em;
   }
 
+  #the-day-staff > div > div.left {
+      position: absolute;
+      left: 4em;
+  }
+
+  #the-day-staff > div > div.right {
+      position: absolute;
+      right: 4em;
+  }
+
   #keynote > div::after {
     content: '';
     display: block;
@@ -689,13 +648,5 @@ section > h2 > small {
   #keynote h3 {
     text-align: left;
     margin-top: 0;
-  }
-
-  /**
-   * シルバースポンサーが7社の場合に1社だけ2行目になってしまって残念なので、
-   * ネガティブマージンを設定して無理やり1行に収める、という悪いハック
-   */
-  #sponsors > ul > li.silver > ul {
-    margin: auto -3em;
   }
 }
