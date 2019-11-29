@@ -20,29 +20,6 @@ body > header > .container {
   overflow: hidden;
 }
 
-body > header .island {
-  position: absolute;
-  background-image: url(images/island.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-body > header h1 {
-  position: absolute;
-  background-image: url(images/logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: drop-shadow(3px 3px 1px rgba(0,0,0,.3));
-}
-
-body > header time {
-  position: absolute;
-  background-image: url(images/date.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: drop-shadow(3px 3px 1px rgba(0,0,0,.3));
-}
-
 body > header h1 > span,
 body > header time > span {
   display: none;
@@ -163,7 +140,7 @@ section > h2 > small {
   background-color: #84060D;
 }
 
-#the-day-staff > div > div > p {
+#the-day-staff > div > p {
   text-align: center;
   font-size: 1.5em;
 }
@@ -173,19 +150,7 @@ section > h2 > small {
   width: 100%;
   height: 3em;
   color: #84060D;
-}
-
-#the-day-staff > div > div {
-  position: absolute;
-  top: 0;
-}
-
-#the-day-staff > div > div > a.fa-twitter {
-  color: #1da1f2;
-}
-
-#the-day-staff > div > div > a.fa-facebook-f {
-  color: #3b5998;
+  min-width: 550px;
 }
 
 #overview h3 {
@@ -490,6 +455,12 @@ section > h2 > small {
 }
 
 /* SP */
+@media screen and (max-width: 550px) {
+    #the-day-staff {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 959px) {
   .container {
     padding: 0 1em;
@@ -497,21 +468,36 @@ section > h2 > small {
 
   body > header {
     height: 600px;
-    background-image: url(images/bg_sp.png);
+    background-color: #84060D;
   }
-
-  body > header .island,
-  body > header h1,
-  body > header time {
-    right: 0;
-    left: 0;
+  body > header > div {
     margin: 0 auto;
+    min-width: 550px;
   }
 
-  body > header .island {
-    top: 220px;
-    width: 360px;
-    height: 209px;
+  body > header .people {
+    background-image: url(images/people.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  body > header .people {
+    position: absolute;
+    right: 0px;
+    width: 563px;
+    height: 596px;
+  }
+
+  body > header .header_title {
+    background-image: url(images/header_title.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  body > header .header_title {
+    position: absolute;
+    width: 332px;
+    height: 321px;
   }
 
   body > header h1 {
@@ -520,26 +506,9 @@ section > h2 > small {
     height: 176px;
   }
 
-  body > header time {
-    bottom: 150px;
-    width: 240px;
-    height: 68px;
-  }
-
   body > nav > #nav-bar {
     display: none;
   }
-
-  #the-day-staff > div > div.left {
-      position: absolute;
-      left: 2em;
-  }
-
-  #the-day-staff > div > div.right {
-      position: absolute;
-      right: 2em;
-  }
-
 
   #keynote h3 > small {
     display: block;
@@ -557,30 +526,9 @@ section > h2 > small {
 
   body > header {
     height: 600px;
-    background-image: url(images/bg_pc.png);
+    background-image: url(images/main_image.png);
     background-repeat: no-repeat;
     background-color: #84060D;
-  }
-
-  body > header .island {
-    top: 170px;
-    left: 250px;
-    height: 320px;
-    width: 552px;
-  }
-
-  body > header h1 {
-    width: 240px;
-    height: 211px;
-    top: 180px;
-    left: 100px;
-  }
-
-  body > header time {
-    bottom: 80px;
-    left: 360px;
-    width: 300px;
-    height: 84px;
   }
 
   body > nav {
@@ -612,16 +560,6 @@ section > h2 > small {
 
   body > nav > #nav-bar > ul > li > a {
     padding: 0 1em;
-  }
-
-  #the-day-staff > div > div.left {
-      position: absolute;
-      left: 4em;
-  }
-
-  #the-day-staff > div > div.right {
-      position: absolute;
-      right: 4em;
   }
 
   #keynote > div::after {
