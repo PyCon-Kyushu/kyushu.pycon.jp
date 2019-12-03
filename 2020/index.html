@@ -43,19 +43,40 @@
           <li><a href="#staff">運営スタッフ</a></li>
         </ul>
       </div>
+      <a id="nav-button-open" class="nav-button fas fa-bars"></a>
+      <div id="nav-modal" class="puremodal">
+        <div class="window">
+          <a class="nav-button fas fa-times close"></a>
+          <ul class="close">
+            <li><a href="#">トップ</a></li>
+            <li><a href="#overview">概要</a></li>
+            <li><a href="#venue-info">会場案内</a></li>
+            <li><a href="#keynote">キーノート</a></li>
+            <li><a href="#timetable">タイムテーブル</a></li>
+            <li><a href="#sponsors">スポンサー</a></li>
+            <li><a href="#staff">運営スタッフ</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <main>
       <section id="the-day-staff" class="container">
           <div class="social">
               <p>
-              SNSで最新情報をフォロー
-              <a href="https://twitter.com/PyConK" target="_blank" rel="noopener noreferrer" class="fab fa-twitter" title="Twitter"></a>
-              <a href="https://www.facebook.com/kyushu.pycon.jp" target="_blank" rel="noopener noreferrer" class="fab fa-facebook-f" title="Facebook"></a>
+              SNSで最新情報をフォロー&nbsp;
+              <a href="https://twitter.com/PyConK" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>&nbsp;
+              <a href="https://www.facebook.com/kyushu.pycon.jp" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>&nbsp;
               　
-              <a href="https://forms.gle/DtpEUyeqjdAosRPA9" target="_blank" rel="noopener noreferrer">スタッフ募集</a>
+              <a href="https://forms.gle/DtpEUyeqjdAosRPA9" target="_blank" rel="noopener noreferrer" class="">スタッフ募集</a>
               </p>
           </div>
       </section>
+      <!--
+      <section id="ticket" class="container">
+        <a href="https://pycon-kyushu.connpass.com/event/120758/" target="_blank" rel="noopener noreferrer">チケット購入はこちら</a>
+        <a href="https://pycon-kyushu.connpass.com/event/121909/" target="_blank" rel="noopener noreferrer">懇親会チケット購入はこちら</a>
+      </section>
+      -->
       <section id="overview" class="container">
         <h2>
           概要<small>Overview</small>
@@ -69,10 +90,38 @@
           PyCon Kyushu 2020 Kumamoto のテーマは <strong>Grow</strong> です！
 成長が期待される学生世代に学びの機会を作りたい。エンジニア・非エンジニア問わず、成長に繋がるイベントにしたい。熊本地震後、復興のためがんばっている熊本の方々のこれから（成長）を応援したい。という思いで決めました。このイベントで様々な方の成長に繋がることを目指します。 特に、若い世代に多く関わりをもってもらうことで、 九州の地で、力を合わせて協力し互いに成長できたらと考えています。
         </p>
-        <p>
-          日程： 2020年5月23日(土)<br/>
-          会場： 熊本城ホール (A1,D1-2,G1-G2)
-        </p>
+        <div>
+            <table>
+                <tr>
+                    <th>日　程</th>
+                    <td>2020年5月23日(土)</td>
+                </tr>
+                <tr>
+                    <th>時　間</th>
+                    <td>9:30〜17:15 (受付 9:00〜9:30)</td>
+                </tr>
+                <tr>
+                    <th>会　場</th>
+                    <td>熊本城ホール (A1,D1-2,G1-G2)</td>
+                </tr>
+                <tr>
+                    <th>参加費</th>
+                    <td>一般1000円、学生無料</td>
+                </tr>
+                <tr>
+                    <th>対　象</th>
+                    <td>県外、県内のPythonに関わりたい人、エンジニア、非エンジニア</td>
+                </tr>
+                <tr>
+                    <th>参加者</th>
+                    <td>150名程度</td>
+                </tr>
+                <tr>
+                    <th>主　催</th>
+                    <td><a href="https://www.pykyushu.jp/" target="_blank">PyCon Kyushu 実行委員会</a></td>
+                </tr>
+            </table>
+        </div>
       </section>
       <section id="venue-info" class="container">
         <h2>
@@ -80,8 +129,7 @@
         </h2>
         <p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.7051113476255!2d130.70041421518272!3d32.80007748096503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f526b4d6fc17%3A0xa19e07e3309ed39!2z54aK5pys5Z-O44Ob44O844Or!5e0!3m2!1sja!2sjp!4v1573786163378!5m2!1sja!2sjp" style="border: none; width: 100%; height: 12em"></iframe>
-          <a href="https://www.kumamoto-jo-hall.jp/access/" target="_blank" rel="noopener noreferrer">PyCon Kyushu 熊本会場へのアクセスについて </a>
-          <a href="images/venue.png"><img src="images/venue.png" style="width: 100%" alt="熊本城ホールアクセス" /></a>
+          <a href="https://www.kumamoto-jo-hall.jp/access/"><img src="images/venue.png" style="width: 100%" alt="熊本城ホールアクセス" /></a>
           <small>
             参考：
             <a href="https://www.kumamoto-jo-hall.jp/" target="_blank" rel="noopener noreferrer">
@@ -92,9 +140,28 @@
       </section>
       <section id="keynote" class="container">
         <h2>
-          キーノート<small>Keynote</small>
+            キーノート<small>Keynote</small>
         </h2>
-        <div>TBD</div>
+        <div>
+            <div>
+                <img src="images/keynote.jpg" alt="keynote" />
+            </div>
+            <div>
+                <h3>清水川 貴之</h3>
+                <p>
+                2003年からPythonを使い始め、国内外の多数のPythonイベントに登壇、Pythonとその関連技術の普及に努めている。
+                公私ともにPythonを教える立場でも活動している。<br/><br/>
+                <strong>所属</strong>: <a href="https://www.beproud.jp/">BeProud</a><br/><br/>
+                <strong>著書／訳書</strong><br/>
+                <a href="https://www.amazon.co.jp/dp/4798032948">Pythonプロフェッショナルプログラミング</a> <small>(2018 秀和システム刊)</small><br/>
+                <a href="https://www.amazon.co.jp/dp/4048686291">エキスパートPythonプログラミング</a> <small>(2018 アスキードワンゴ刊)</small><br/>
+                <a href="https://www.amazon.co.jp/dp/4822292274">独学プログラマー</a> <small>(2017 日経BP社)</small><br>
+                <a href="https://www.oreilly.co.jp/books/9784873116488/">Sphinxをはじめよう</a> <small>(2017 オライリー・ジャパン刊)</small><br/>
+                Twitter: <a href="https://twitter.com/shimizukawa">@shimizukawa</a><br/>
+                URL: <a href="http://www.freia.jp/taka/">http://清水川.jp/</a></br>
+                </p>
+            </div>
+        </div>
       </section>
       <section id="timetable" class="container">
         <h2>
@@ -106,18 +173,29 @@
         <h2>
           スポンサー<small>Sponsors</small>
         </h2>
-        <div style="text-align: center">TBD</div>
+        <div> 
+            <a href="https://docs.google.com/presentation/d/1BU--x3kyWNc7KIp6qWnxshhbVkYY6nY9YZzDKqunMVM/edit?usp=sharing" class="button" target="_blank" rel="noopener noreferrer">スポンサー募集についてはこちら</a>
+        </div>
       </section>
       <section id="staff" class="container">
         <h2>
           運営スタッフ<small>Staff</small>
         </h2>
-        <div style="text-align: center">TBD</div>
+        <div>
+          <div class="chairman staff-icon">
+            <a href="https://twitter.com/kiyotaman" target="_blank" rel="noopener noreferrer"></a>
+            <span class="tooltip">実行委員長<br />きよた</span>
+          </div>
+        </div>
+        <ul></ul>
       </section>
     </main>
     <footer>
-        <div class="container">
-            <a href="https://www.pykyushu.jp/">© PyCon Kyushu 実行委員会</a>
+        <div class="container" id="copy">
+            <a href="https://www.pykyushu.jp/" target="_blank">© PyCon Kyushu 実行委員会</a>
+            <br>PyCon™ is a trademark for worldwide conference activities claimed by the Python Software foundation.
+            <br>PyCon Kyushu is organized by volunteers from PyCon Kyushu in Japan.
+            <br>Copyright (c) PyCon Kyushu Exective Committee 2017-2019
         </div>
       </footer>
   </body>

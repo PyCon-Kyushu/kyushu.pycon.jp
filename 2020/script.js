@@ -116,30 +116,6 @@ axios.get('sponsors.json').then(function(res) {
       ul2.appendChild(li2);
     }
   }
-  // パトロン
-  var li = document.createElement('li');
-  li.classList.add('patron');
-  ul.appendChild(li);
-  var h3 = document.createElement('h3');
-  h3.textContent = 'パトロン (個人スポンサー)';
-  li.appendChild(h3);
-  var ul2 = document.createElement('ul');
-  li.appendChild(ul2);
-  for (var i in res.data.patron) {
-    var patron = res.data.patron[i];
-    var li2 = document.createElement('li');
-    li2.style.backgroundImage = 'url(images/patron/' + patron.icon + ')';
-    ul2.appendChild(li2);
-    var a = document.createElement('a');
-    a.href = patron.url;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    li2.appendChild(a);
-    var span = document.createElement('span');
-    span.classList.add('tooltip');
-    span.textContent = patron.name;
-    li2.appendChild(span);
-  }
 });
 
 // スタッフ
