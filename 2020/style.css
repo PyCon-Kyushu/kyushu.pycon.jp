@@ -136,17 +136,16 @@ section > h2 > small {
   background-color: #84060D;
 }
 
-#the-day-staff > div > p {
+#social > div > p {
   text-align: center;
   font-size: 1.5em;
 }
 
-#the-day-staff > div {
+#social > div {
   position: relative;
   width: 100%;
   height: 3em;
   color: #84060D;
-  min-width: 550px;
 }
 
 #overview h3 {
@@ -493,12 +492,6 @@ section > h2 > small {
 
 
 /* SP */
-@media screen and (max-width: 560px) {
-    #the-day-staff {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 889px) {
   .container {
     padding: 0 1em;
