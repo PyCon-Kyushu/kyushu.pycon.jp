@@ -93,7 +93,7 @@ axios.get('sponsors.json').then(function(res) {
     'platinum': 'プラチナ',
     'gold': 'ゴールド',
     'silver': 'シルバー',
-    'silver': 'コミュニティー',
+    'community': 'コミュニティー',
   };
   var ul = document.querySelector('#sponsors > ul');
   // 企業スポンサー
@@ -112,7 +112,7 @@ axios.get('sponsors.json').then(function(res) {
       var sponsor = res.data[rank][j];
       var li2 = document.createElement('li');
       if (sponsor.logo) {
-          li2.style.backgroundImage = 'url(images/sponsors/' + sponsor.logo + ')';
+        li2.style.backgroundImage = 'url(images/sponsors/' + sponsor.logo + ')';
       }
       li2.addEventListener('click', openSponsorModal.bind(sponsor));
       ul2.appendChild(li2);

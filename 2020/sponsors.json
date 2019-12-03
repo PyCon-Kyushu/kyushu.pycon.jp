@@ -1,34 +1,34 @@
 {
   "platinum": [
     {
-      "name": "募集中...",
+      "name": "募集中",
       "logo": "",
       "url": "/",
-      "description": ""
+      "description": "募集中"
     }
   ],
   "gold": [
     {
-      "name": "募集中...",
+      "name": "募集中",
       "logo": "",
       "url": "/",
-      "description": ""
+      "description": "募集中"
     }
   ],
   "silver": [
     {
-      "name": "募集中...",
+      "name": "募集中",
       "logo": "",
       "url": "/",
-      "description": ""
+      "description": "募集中"
     }
   ],
   "community": [
     {
-      "name": "募集中...",
+      "name": "募集中",
       "logo": "",
       "url": "/",
-      "description": ""
+      "description": "募集中"
     }
   ]
 }
