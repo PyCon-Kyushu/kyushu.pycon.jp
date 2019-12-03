@@ -195,9 +195,19 @@ section > h2 > small {
   text-align: left;
 }
 
+#timetable div {
+    width: 100%;
+}
+
 #timetable table {
   font-size: smaller;
   border-spacing: .5em;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#timetable table th {
+  width: 40px;
 }
 
 #timetable table th,

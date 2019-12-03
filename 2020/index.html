@@ -13,16 +13,16 @@
 
     <link rel="icon" type="image/png" href="images/icon.png">
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.hotolab.net/puremodal/v1.0.0/puremodal.css" integrity="sha384-eL6wVAI7OXTJ130QmQYqhCeSRm3VSIGqFROBbJgcvNBBjTOjXtDlVuDtrhxruGVv" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.hotolab.net/puremodal/v1.0.0/puremodal.css" integrity="sha384-eL6wVAI7OXTJ130QmQYqhCeSRm3VSIGqFROBbJgcvNBBjTOjXtDlVuDtrhxruGVv" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134272616-1"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-134272616-1')</script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/smooth-scroll/15.2.1/smooth-scroll.min.js" integrity="sha256-/8HtdmYywOpcDN0Hx4aM7nUPRlzV7Hq6Eez7xwqP+e0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/15.2.1/smooth-scroll.min.js" integrity="sha256-/8HtdmYywOpcDN0Hx4aM7nUPRlzV7Hq6Eez7xwqP+e0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js" integrity="sha256-OI3N9zCKabDov2rZFzl8lJUXCcP7EmsGcGoP6DMXQCo=" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
-    <script src="//cdn.hotolab.net/puremodal/v1.0.0/puremodal.js" integrity="sha384-xrSecVekR/WMcwyFbfVbSzSq7J1cR+shalZSekEVzEUbTug1dml+YZx0ov3IM9iK" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.hotolab.net/puremodal/v1.0.0/puremodal.js" integrity="sha384-xrSecVekR/WMcwyFbfVbSzSq7J1cR+shalZSekEVzEUbTug1dml+YZx0ov3IM9iK" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -167,7 +167,101 @@
         <h2>
           タイムテーブル<small>Time Table</small>
         </h2>
-        <div style="text-align: center">TBD</div>
+        <div>
+            <table>
+                <tr>
+                    <th>9:00-9:30</th>
+                    <td colspan="2">開場/受付</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2">メイン開場(A会場)</th>
+                </tr>
+                <tr>
+                    <th>9:30-9:40</th>
+                    <td colspan="2">オープニング</td>
+                </tr>
+                <tr>
+                    <th>9:40-10:30</th>
+                    <td class="talk talk-keynote" colspan="2"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>A会場</th>
+                    <th>D会場</th>
+                </tr>
+                <tr>
+                    <th>10:50-11:20</th>
+                    <td class="talk talk-A1"></td>
+                    <td class="talk talk-D1"></td>
+                </tr>
+                <tr>
+                    <th>12:20-12:50</th>
+                    <td class="talk talk-A2"></td>
+                    <td class="talk talk-D2"></td>
+                </tr>
+                <tr>
+                    <th>13:00-13:30</th>
+                    <td class="talk talk-A3"></td>
+                    <td class="talk talk-D4"></td>
+                </tr>
+                <tr>
+                    <th>13:40-14:10</th>
+                    <td class="talk talk-A4"></td>
+                    <td class="talk talk-D4"></td>
+                </tr>
+                <tr>
+                    <th>14:20-14:50</th>
+                    <td class="talk talk-A5"></td>
+                    <td class="talk talk-D5"></td>
+                </tr>
+                <tr>
+                    <th>15:10-15:40</th>
+                    <td class="talk talk-A6"></td>
+                    <td class="talk talk-D6"></td>
+                </tr>
+                <tr>
+                    <th>15:50-16:20</th>
+                    <td class="talk talk-A7"></td>
+                    <td class="talk talk-D7"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2">メイン開場(A会場)</th>
+                </tr>
+                <tr>
+                    <th>16:25-16:55</th>
+                    <td colspan="2">スポンサーLT</td>
+                </tr>
+                <tr>
+                    <th>16:55-17:15</th>
+                    <td colspan="2">クロージング・記念撮影</td>
+                </tr>
+            </table>
+        </div>
+        <div id="timetable-modal" class="puremodal">
+          <div class="overlay close"></div>
+          <div class="window">
+            <a class="close">&times;</a>
+            <div>
+              <dl>
+                <dt>トークタイトル</dt>
+                <dd class="talk-title"></dd>
+                <dt>スピーカー</dt>
+                <dd>
+                  <a class="talk-speaker" target="_blank" rel="noopener noreferrer"></a>
+                </dd>
+                <dt>トーク内容</dt>
+                <dd class="talk-description"></dd>
+                <dt>トーク資料</dt>
+                <dd>
+                  <a class="talk-slide" target="_blank" rel="noopener noreferrer"></a>
+                </dd>
+                <dt>言語</dt>
+                <dd class="talk-language"></dd>
+              </dl>
+            </div>
+          </div>
       </section>
       <section id="sponsors" class="container">
         <h2>
@@ -175,6 +269,21 @@
         </h2>
         <div> 
             <a href="https://docs.google.com/presentation/d/1BU--x3kyWNc7KIp6qWnxshhbVkYY6nY9YZzDKqunMVM/edit?usp=sharing" class="button" target="_blank" rel="noopener noreferrer">スポンサー募集についてはこちら</a>
+            <!--<p>(ロゴをクリックすると各スポンサー企業様の詳しい情報が表示されます。)</p> -->
+        </div>
+        <ul></ul>
+        <div id="sponsor-modal" class="puremodal">
+          <div class="overlay close"></div>
+          <div class="window">
+            <header>
+              <span class="sponsor-name"></span>
+              <a class="close">&times;</a>
+            </header>
+            <div>
+              <p class="sponsor-description"></p>
+              <p class="sponsor-link"><a target="_blank" rel="noopener noreferrer"></a></p>
+            </div>
+          </div>
         </div>
       </section>
       <section id="staff" class="container">

@@ -93,7 +93,6 @@ axios.get('sponsors.json').then(function(res) {
     'platinum': 'プラチナ',
     'gold': 'ゴールド',
     'silver': 'シルバー',
-    'community': 'コミュニティ',
   };
   var ul = document.querySelector('#sponsors > ul');
   // 企業スポンサー
