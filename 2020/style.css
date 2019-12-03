@@ -31,6 +31,8 @@ body > footer {
   text-align: center;
   margin-top: 4em;
   padding: 2em 0;
+  font-size: .9em;
+  line-height: 1.1em;
 }
 
 body > nav a {
@@ -521,6 +523,7 @@ section > h2 > small {
 
   body > header .header_title {
     background-image: url(images/header_title.png);
+    background-size: 265px 256px;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 99;
@@ -528,8 +531,8 @@ section > h2 > small {
 
   body > header .header_title {
     position: absolute;
-    width: 332px;
-    height: 321px;
+    width: 265px;
+    height: 256px;
   }
 
   body > header h1 {
