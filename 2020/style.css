@@ -203,11 +203,12 @@ section > h2 > small {
   font-size: smaller;
   border-spacing: .5em;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 #timetable table th {
-  width: 40px;
+  width: 35px;
+  min-width: 35px;
 }
 
 #timetable table th,
@@ -495,7 +496,7 @@ section > h2 > small {
 /* SP */
 @media screen and (max-width: 889px) {
   .container {
-    padding: 0 1em;
+    padding: 0;
   }
 
   body > header {
@@ -540,7 +541,10 @@ section > h2 > small {
   body > nav > #nav-bar {
     display: none;
   }
-
+  body table,
+  body p {
+    padding: 0 1.5em;
+  }
   #keynote h3 > small {
     display: block;
   }
