@@ -504,12 +504,10 @@ section > h2 > small {
   }
   body > header > div {
     margin: 0 auto;
-    min-width: 550px;
   }
 
   body > header .people {
     background-image: url(images/people.png);
-    background-size: contain;
     background-repeat: no-repeat;
   }
 
@@ -524,6 +522,7 @@ section > h2 > small {
     background-image: url(images/header_title.png);
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 99;
   }
 
   body > header .header_title {
