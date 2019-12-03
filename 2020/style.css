@@ -177,6 +177,10 @@ section > h2 > small {
   text-align: left;
 }
 
+#venue-info p {
+  text-align: center;
+}
+
 #keynote > div {
   text-align: center;
 }
