@@ -165,9 +165,10 @@ section > h2 > small {
 #overview table th {
   background-color: #84060D;
   color: #fff;
+  min-width: 80px;
+  text-align: center;
 }
 
-#overview table th,
 #overview table td {
   border: 1px #eee solid;
   padding: .3em .7em;
