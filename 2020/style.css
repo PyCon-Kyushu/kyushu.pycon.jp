@@ -1,7 +1,7 @@
 body {
   font-family: sans-serif;
   color: #595757;
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 
 a[href]:link, a[href]:visited, a[href]:hover, a[href]:active {
@@ -159,7 +159,7 @@ section > h2 > small {
 }
 
 #overview table {
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 #overview table th {
