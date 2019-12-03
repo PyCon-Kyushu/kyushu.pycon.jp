@@ -291,10 +291,9 @@ section > h2 > small {
 }
 
 #sponsors h3 {
-  color: #2c9abc;
+  color: #999;
   margin: 2em 0 1em;
 }
-
 
 #sponsors ul {
   padding: 0;
