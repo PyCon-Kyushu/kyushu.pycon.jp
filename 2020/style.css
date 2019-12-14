@@ -476,6 +476,8 @@ section > h2 > small {
   padding: .1em .5em;
   border-radius: .3em;
   text-align: center;
+  opacity: 80%;
+  white-space: nowrap;
 }
 
 #staff > ul > li:hover > .tooltip {
