@@ -9,18 +9,18 @@
   ],
   "gold": [
     {
-      "name": "募集中",
-      "logo": "",
-      "url": "/",
-      "description": "募集中"
+      "name": "株式会社ライトコード",
+      "logo": "rightcode.png",
+      "url": "https://rightcode.co.jp",
+      "description": "<img src=\"images/sponsors/rightcode.png\" alt=\"\"/>\n好きを仕事にする\nエンジニア集団\n自由度が高い仕事場であなたのチャレンジを応援します。\n あなたの「こうしたい」という想いをぜひ実現してください。"
     }
   ],
   "silver": [
     {
-      "name": "募集中",
-      "logo": "",
-      "url": "/",
-      "description": "募集中"
+      "name": "株式会社ビープラウド",
+      "logo": "beproud.svg",
+      "url": "https://www.beproud.jp/",
+      "description": "<img src=\"images/sponsors/beproud.svg\" alt=\"\"/>\nビープラウドはPythonをメイン言語とし、優秀なPythonistaがより力を発揮できる環境作りに努めています。\nPythonに特化したオンライン学習サービス「PyQ（パイキュー）」・研修事業・技術書「Pythonプロフェッショナルプログラミング第3版」「いちばんやさしいPythonの教本」執筆などを通してそのノウハウを発信しています。\nまた、IT勉強会支援プラットフォーム「connpass（コンパス）」の運営や勉強会「BPStudy」の主催など、コミュニティ活動にも積極的に取り組んでいます。"
     }
   ],
   "community": [
