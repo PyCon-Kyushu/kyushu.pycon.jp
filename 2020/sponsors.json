@@ -12,7 +12,7 @@
       "name": "株式会社ライトコード",
       "logo": "rightcode.png",
       "url": "https://rightcode.co.jp",
-      "description": "<img src=\"images/sponsors/rightcode.png\" width=\"80%\"  alt=\"\"/>\nライトコードは、福岡、東京の2拠点で活動しているWEB、モバイル、ゲームの開発に特化したシステム開発会社です。\n 「好きを仕事に」をテーマに技術好きなエンジニアたちが集い、Pythonを始め、多様な技術で開発をしています。\n<a href=\"https://rightcode.co.jp\">自社メディア</a> ）で技術発信をしていますので是非御覧ください。"
+      "description": "<img src=\"images/sponsors/rightcode.png\" height=\"350\" alt=\"\"/>\nライトコードは、福岡、東京の2拠点で活動しているWEB、モバイル、ゲームの開発に特化したシステム開発会社です。\n 「好きを仕事に」をテーマに技術好きなエンジニアたちが集い、Pythonを始め、多様な技術で開発をしています。\n<a href=\"https://rightcode.co.jp\">自社メディア</a> ）で技術発信をしていますので是非御覧ください。"
     }
   ],
   "silver": [
@@ -20,13 +20,13 @@
       "name": "株式会社ビープラウド",
       "logo": "beproud.svg",
       "url": "https://www.beproud.jp/",
-      "description": "<img src=\"images/sponsors/beproud.svg\" width=\"80%\"  alt=\"\"/>\nビープラウドはPythonをメイン言語とし、優秀なPythonistaがより力を発揮できる環境作りに努めています。\nPythonに特化したオンライン学習サービス「PyQ（パイキュー）」・研修事業・技術書「Pythonプロフェッショナルプログラミング第3版」「いちばんやさしいPythonの教本」執筆などを通してそのノウハウを発信しています。\nまた、IT勉強会支援プラットフォーム「connpass（コンパス）」の運営や勉強会「BPStudy」の主催など、コミュニティ活動にも積極的に取り組んでいます。"
+      "description": "<img src=\"images/sponsors/beproud.svg\" height=\"350\" alt=\"\"/>\nビープラウドはPythonをメイン言語とし、優秀なPythonistaがより力を発揮できる環境作りに努めています。\nPythonに特化したオンライン学習サービス「PyQ（パイキュー）」・研修事業・技術書「Pythonプロフェッショナルプログラミング第3版」「いちばんやさしいPythonの教本」執筆などを通してそのノウハウを発信しています。\nまた、IT勉強会支援プラットフォーム「connpass（コンパス）」の運営や勉強会「BPStudy」の主催など、コミュニティ活動にも積極的に取り組んでいます。"
     },
     {
       "name": "株式会社KIS",
       "logo": "kis.jpg",
       "url": "https://www.kis.co.jp/",
-      "description": "<img src=\"images/sponsors/kis.jpg\" width=\"80%\" alt=\"\"/>\n今年創立50周年を迎える熊本のシステムインテグレーターです。\n激しい環境変化に適応するトータルなITソリューションを提供します。"
+      "description": "<img src=\"images/sponsors/kis.jpg\" height=\"350\" alt=\"\"/>\n今年創立50周年を迎える熊本のシステムインテグレーターです。\n激しい環境変化に適応するトータルなITソリューションを提供します。"
     }
   ],
   "community": [
