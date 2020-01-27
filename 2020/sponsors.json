@@ -39,6 +39,12 @@
       "logo": "kis.jpg",
       "url": "https://www.kis.co.jp/",
       "description": "<img src=\"images/sponsors/kis.jpg\" height=\"350\" alt=\"\"/>\n今年創立50周年を迎える熊本のシステムインテグレーターです。\n激しい環境変化に適応するトータルなITソリューションを提供します。"
+    },
+    {
+      "name": "株式会社RevComm",
+      "logo": "revcomm.png",
+      "url": "https://www.revcomm.co.jp/",
+      "description": "<img src=\"images/sponsors/revcomm.png\" height=\"350\" alt=\"\"/>\n新たなコミュニケーションの在り方を創造し、世界に変革をもたらす」というミッションを掲げ、AI × Voice × Cloudのソフトウェア/データベースを提供するスタートアップです。法人向けサービス第一弾として、電話営業を可視化するAI搭載型クラウドIP電話 「MiiTel」をご提供しております。"
     }
   ],
   "community": [
