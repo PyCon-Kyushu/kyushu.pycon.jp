@@ -553,6 +553,10 @@ section > h2 > small {
   #keynote h3 > small {
     display: block;
   }
+  #sponsor-modal .sponsor-description img {
+      width: 80%;
+      height: 80%;
+  }
 }
 
 /* PC */
