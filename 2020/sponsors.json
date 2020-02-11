@@ -1,10 +1,10 @@
 {
   "platinum": [
     {
-      "name": "募集中",
-      "logo": "",
-      "url": "/",
-      "description": "募集中"
+      "name": "アイシン精機株式会社",
+      "logo": "aisin.jpg",
+      "url": "https://www.aisin.co.jp/",
+      "description": "アイシン精機はCASEをキーワードに、人工知能など新技術開発を\n福岡、台場、愛知で積極的に進める自動車システムサプライヤーです。\n自動車業界は100年に1度の大変革期\n「変化の時代　自ら変革を起こし　未来を切り開こう」\n貴方もPythonを使って、世界を走る車のシステム開発、最新のスマート工場にチャレンジしませんか！" 
     }
   ],
   "gold": [
@@ -25,6 +25,18 @@
       "logo": "filot.png",
       "url": "https://filot.co.jp/",
       "description": "<img src=\"images/sponsors/filot.png\" alt=\"\"/>\nFilotは、福岡でワクワクするような先進技術を追求している会社です。\nWebシステムを中心としたアプリケーション開発を事業基盤として成長を続けています。\nその他にも、XRをはじめとした次世代向けプロダクトの研究開発や動画ポータルサイト「Vith」の運営を行なっています。"
+    },
+    {
+      "name": "株式会社ワイズ・リーディング",
+      "logo": "ysreading.png",
+      "url": "https://www.ysreading.co.jp/",
+      "description": "熊本で、AIシステム開発を行っている企業です。様々な業種へ、AIソリューションを提供しております。"
+    },
+    {
+      "name": "NOB DATA株式会社",
+      "logo": "nob-data-logo-bon-saki.jpg",
+      "url": "https://nobdata.co.jp/",
+      "description": "<img src=\"images/sponsors/nob-data-logo-bon-saki.jpg\" height=\"350\" alt=\"\"/>\nNOB DATAは福岡に拠点を置くデータ分析会社です。\n\n現在、東京、福岡、沖縄など様々な地域・企業・コミュニティから\n「副業」のメンバーを募り、リモートによる全国各地のデータ分析支援を行なっております。\n(データ分析系の各書籍の執筆者約10名と連携中)\n\n強会で身につけた技術を実戦で使ってみたい！\nまた地方のデータサイエンスシーンを盛り上げたい！\nという思いを持つ皆様、是非お気軽にお声がけください。"
     }
   ],
   "silver": [
@@ -44,7 +56,13 @@
       "name": "株式会社RevComm",
       "logo": "revcomm.png",
       "url": "https://www.revcomm.co.jp/",
-      "description": "<img src=\"images/sponsors/revcomm.png?v=2\" height=\"350\" alt=\"\"/>\n新たなコミュニケーションの在り方を創造し、世界に変革をもたらす」というミッションを掲げ、AI × Voice × Cloudのソフトウェア/データベースを提供するスタートアップです。法人向けサービス第一弾として、電話営業を可視化するAI搭載型クラウドIP電話 「MiiTel」をご提供しております。"
+      "description": "<img src=\"images/sponsors/revcomm.png\" height=\"350\" alt=\"\"/>\n新たなコミュニケーションの在り方を創造し、世界に変革をもたらす」というミッションを掲げ、AI × Voice × Cloudのソフトウェア/データベースを提供するスタートアップです。法人向けサービス第一弾として、電話営業を可視化するAI搭載型クラウドIP電話 「MiiTel」をご提供しております。"
+    },
+    {
+      "name": "一般社団法人Pythonエンジニア育成推進協会",
+      "logo": "pythonic-exam.png",
+      "url": "https://www.pythonic-exam.com/",
+      "description": "<img src=\"images/sponsors/pythonic-exam.png\" height=\"350\" alt=\"\"/>\nPython 3 エンジニア認定試験を主催しています。試験は全国200か所で1年中受験できます。初夏にはデータ分析試験が始まります。"
     }
   ],
   "community": [
