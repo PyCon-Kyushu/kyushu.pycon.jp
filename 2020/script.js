@@ -104,7 +104,11 @@ axios.get('sponsors.json').then(function(res) {
     li.classList.add(rank);
     ul.appendChild(li);
     var h3 = document.createElement('h3');
-    h3.textContent = ranks[rank] + 'スポンサー';
+    if (rank == 'community') {
+        h3.textContent = ranks[rank];
+    } else {
+        h3.textContent = ranks[rank] + 'スポンサー';
+    }
     li.appendChild(h3);
     var ul2 = document.createElement('ul');
     li.appendChild(ul2);
