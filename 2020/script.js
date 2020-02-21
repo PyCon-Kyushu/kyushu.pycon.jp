@@ -105,7 +105,7 @@ axios.get('sponsors.json').then(function(res) {
     ul.appendChild(li);
     var h3 = document.createElement('h3');
     if (rank == 'community') {
-        h3.textContent = ranks[rank];
+        h3.textContent = ranks[rank] + '紹介';
     } else {
         h3.textContent = ranks[rank] + 'スポンサー';
     }
