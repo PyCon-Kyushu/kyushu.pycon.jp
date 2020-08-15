@@ -15,24 +15,6 @@
       "description": "<img src=\"images/sponsors/rightcode.png\" width=\"80%\" alt=\"\"/>\nライトコードは、福岡、東京の2拠点で活動しているWEB、モバイル、ゲームの開発に特化したシステム開発会社です。\n 「好きを仕事に」をテーマに技術好きなエンジニアたちが集い、Pythonを始め、多様な技術で開発をしています。\n<a href=\"https://rightcode.co.jp\">自社メディア</a> ）で技術発信をしていますので是非御覧ください。"
     },
     {
-      "name": "株式会社Xoxzo",
-      "logo": "xoxzo.png",
-      "url": "https://www.xoxzo.com/",
-      "description": "<img src=\"images/sponsors/xoxzo.png\" height=\"350\" alt=\"\"/>\nXoxzoは、Web開発者のための、テレフォニーWebAPIプラットフォームです。\n\nXoxzoでは、美しいウェブAPIを使って、SMS送信やキャリア検索、通話の受信や送信ができます。たった数行のコードを書くだけで、今すぐにご利用を開始いただけます。\n\n Xoxzoは、ワンタイムパスワードをSMSや音声通話にて送信することで、多要素認証の実装に、また、SMSや音声通話を通じたマーケティングキャンペーンにも、更には、イベントのお知らせや、コールセンターの管理、アフィリエイト・トラッキング等、お客様のアイディア次第で多様にご利用いただけます。"
-    },
-    {
-      "name": "株式会社ファイロット",
-      "logo": "filot.png",
-      "url": "https://filot.co.jp/",
-      "description": "<img src=\"images/sponsors/filot.png\" alt=\"\"/>\nFilotは、福岡でワクワクするような先進技術を追求している会社です。\nWebシステムを中心としたアプリケーション開発を事業基盤として成長を続けています。\nその他にも、XRをはじめとした次世代向けプロダクトの研究開発や動画ポータルサイト「Vith」の運営を行なっています。"
-    },
-    {
-      "name": "株式会社ワイズ・リーディング",
-      "logo": "ysreading1.png",
-      "url": "https://www.ysreading.co.jp/",
-      "description": "<img src=\"images/sponsors/ysreading1.png\" alt=\"\"/>\n熊本で、AIシステム開発を行っている企業です。様々な業種へ、AIソリューションを提供しております。"
-    },
-    {
       "name": "NOB DATA株式会社",
       "logo": "nob-data-logo-bon-saki.jpg",
       "url": "https://nobdata.co.jp/",
@@ -51,12 +33,6 @@
       "logo": "kis.jpg",
       "url": "https://www.kis.co.jp/",
       "description": "<img src=\"images/sponsors/kis.jpg\" height=\"350\" alt=\"\"/>\n今年創立50周年を迎える熊本のシステムインテグレーターです。\n激しい環境変化に適応するトータルなITソリューションを提供します。"
-    },
-    {
-      "name": "株式会社RevComm",
-      "logo": "revcomm.png",
-      "url": "https://www.revcomm.co.jp/",
-      "description": "<img src=\"images/sponsors/revcomm.png\" height=\"350\" alt=\"\"/>\n新たなコミュニケーションの在り方を創造し、世界に変革をもたらす」というミッションを掲げ、AI × Voice × Cloudのソフトウェア/データベースを提供するスタートアップです。法人向けサービス第一弾として、電話営業を可視化するAI搭載型クラウドIP電話 「MiiTel」をご提供しております。"
     },
     {
       "name": "一般社団法人Pythonエンジニア育成推進協会",
