@@ -1,0 +1,58 @@
+{
+  "platinum": [
+    {
+      "name": "株式会社アイシン",
+      "logo": "aisin.png",
+      "url": "https://www.aisin.com/jp/",
+      "description": "<a href=\"https://www.aisin.com/jp//\" target=\"_blank\" ><img src=\"images/sponsors/aisin.png\" width=\"250px\" alt=\"\"/></a>\n<div><p>株式会社アイシンはＣＡＳＥをキーワードに、人工知能など新技術開発を\n福岡・東京・愛知で積極的に進める自動車システムサプライヤーです。\n自動車業界は100年に1度の大変革期\n“移動”に感動を、　未来に笑顔を。\n\n貴方もPythonを使って、世界を走る車のシステム開発、最新のスマート工場に\nチャレンジしませんか！\n\n株式会社アイシン　公式企業ＨＰ：　<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.aisin.com/jp/\">https://www.aisin.com/jp/</a>\nＡＩ研究・開発：　<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.aisin.com/jp/recruit/aisin-ai-engineer/\">https://www.aisin.com/jp/recruit/aisin-ai-engineer/</a></p></div>",
+      "url_enable": false
+    }
+  ],
+  "gold": [
+    {
+      "name": "株式会社ライトコード",
+      "logo": "rightcode.png",
+      "url": "https://rightcode.co.jp",
+      "description": "<br><a href=\"https://rightcode.co.jp\" target=\"_blank\" ><img src=\"images/sponsors/rightcode.png\" width=\"80%\" alt=\"\"/></a><br>\n<div><p>ライトコードは、福岡、東京の2拠点で活動しているWEB、モバイル、ゲームの開発に特化したシステム開発会社です。\n 「好きを仕事に」をテーマに技術好きなエンジニアたちが集い、Pythonを始め、多様な技術で開発をしています。\n<a href=\"https://rightcode.co.jp\">自社メディア</a> で技術発信をしていますので是非御覧ください。</p></div>",
+      "url_enable": true
+    },
+    {
+      "name": "NOB DATA株式会社",
+      "logo": "nob-data-logo-bon-saki.jpg",
+      "url": "https://nobdata.co.jp/",
+      "description": "<a href=\"https://nobdata.co.jp/\" target=\"_blank\" ><img src=\"images/sponsors/nob-data-logo-bon-saki.jpg\" height=\"350px\" alt=\"\"/></a>\n<div><p>NOB DATAは福岡に拠点を置くデータ分析会社です。\n\n現在、東京、福岡、沖縄など様々な地域・企業・コミュニティから\n「副業」のメンバーを募り、リモートによる全国各地のデータ分析支援を行なっております。\n(データ分析系の各書籍の執筆者約10名と連携中)\n\n強会で身につけた技術を実戦で使ってみたい！\nまた地方のデータサイエンスシーンを盛り上げたい！\nという思いを持つ皆様、是非お気軽にお声がけください。</p></div>",
+      "url_enable": true
+    }
+  ],
+  "silver": [
+    {
+      "name": "株式会社ビープラウド",
+      "logo": "beproud.svg",
+      "url": "https://www.beproud.jp/",
+      "description": "<a href=\"https://www.beproud.jp/\" target=\"_blank\" ><img src=\"images/sponsors/beproud.svg\" height=\"350px\" alt=\"\"/></a>\n<div><p>ビープラウドはPythonをメイン言語とし、優秀なPythonistaがより力を発揮できる環境作りに努めています。\nオンラインPython学習サービス「PyQ（パイキュー）」・システム開発者向けクラウドドキュメントサービス「TRACERY（トレーサリー）」や研修事業、技術書「Pythonプロフェッショナルプログラミング第3版」「いちばんやさしいPythonの教本」執筆などを通してそのノウハウを発信しています。\n\nまた、IT勉強会支援プラットフォーム「connpass（コンパス）」の運営や勉強会「BPStudy」の主催など、コミュニティ活動にも積極的に取り組んでいます。</p></div>",
+      "url_enable": true
+    },
+    {
+      "name": "株式会社KIS",
+      "logo": "kis.jpg",
+      "url": "https://www.kis.co.jp/",
+      "description": "<a href=\"https://www.kis.co.jp/\" target=\"_blank\" ><img src=\"images/sponsors/kis.jpg\" height=\"350px\" alt=\"\"/></a>\n<div><p>昨年創立50周年を迎えた熊本のシステムインテグレーターです。\n激しい環境変化に適応するトータルなITソリューションを提供します。</p></div>",
+      "url_enable": true
+    },
+    {
+      "name": "一般社団法人Pythonエンジニア育成推進協会",
+      "logo": "pythonic-exam.png",
+      "url": "https://www.pythonic-exam.com/",
+      "description": "<a href=\"https://www.pythonic-exam.com/\" target=\"_blank\" ><img src=\"images/sponsors/pythonic-exam.png\" height=\"350px\" alt=\"\"/></a>\n<div><p>年間1万人が受験するPython 3 エンジニア認定試験を主催しています。\n試験は全国300か所で1年中受験できます。</p></div>",
+      "url_enable": true
+    }
+  ],
+  "community": [
+    {
+      "name": "募集中",
+      "logo": "",
+      "url": "/",
+      "description": "募集中"
+    }
+  ]
+}
