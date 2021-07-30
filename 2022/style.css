@@ -358,7 +358,8 @@ section > h2 > small {
 }
 
 #sponsors > ul > li.platinum > ul > li {
-  width: 40em;
+  /*width: 40em;*/
+  width: 90%;
   height: 20em;
   background-size: 50%;
 }
@@ -611,7 +612,8 @@ section > h2 > small {
   }
 
   #sponsors > ul > li.platinum > ul > li {
-    width: 26em;
+    /*width: 26em;*/
+    width: 90%;
     height: 13em;
     background-size: 100%;
   }
