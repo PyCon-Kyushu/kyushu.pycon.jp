@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="PyCon はプログラミング言語 Python のユーザが集う技術カンファレンスです。2022年は、熊本で開催することになりました！">
+    <meta name="keywords" content="PyCon,Python,PyCon Kyushu,熊本,カンファレンス">
+    <meta property="og:title" content="PyCon Kyushu 2022 Kumamoto">
+    <meta property="og:image" content="https://kyushu.pycon.jp/2022/images/main_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>PyCon Kyushu 2022 Kumamoto</title>
+
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.hotolab.net/puremodal/v1.0.0/puremodal.css"
+          integrity="sha384-eL6wVAI7OXTJ130QmQYqhCeSRm3VSIGqFROBbJgcvNBBjTOjXtDlVuDtrhxruGVv" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134272616-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments)
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-134272616-1')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/15.2.1/smooth-scroll.min.js"
+            integrity="sha256-/8HtdmYywOpcDN0Hx4aM7nUPRlzV7Hq6Eez7xwqP+e0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"
+            integrity="sha256-OI3N9zCKabDov2rZFzl8lJUXCcP7EmsGcGoP6DMXQCo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
+            integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.hotolab.net/puremodal/v1.0.0/puremodal.js"
+            integrity="sha384-xrSecVekR/WMcwyFbfVbSzSq7J1cR+shalZSekEVzEUbTug1dml+YZx0ov3IM9iK"
+            crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156018733-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-156018733-1');
+    </script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header_title"></div>
+        <div class="people"></div>
+    </div>
+</header>
+<nav>
+    <div id="nav-bar">
+        <ul class="container">
+            <li><a href="#">トップ</a></li>
+            <li><a href="#overview">概要</a></li>
+            <li><a href="#venue-info">会場案内</a></li>
+            <li><a href="#keynote">キーノート</a></li>
+            <li><a href="#timetable">タイムテーブル</a></li>
+            <li><a href="#sponsors">スポンサー</a></li>
+            <li><a href="#staff">実行委員</a></li>
+            <li><a href="#infection_prevention">感染予防対策</a></li>
+            <li><a href="#policy">行動規範</a></li>
+        </ul>
+    </div>
+    <a id="nav-button-open" class="nav-button fas fa-bars"></a>
+    <div id="nav-modal" class="puremodal">
+        <div class="window">
+            <a class="nav-button fas fa-times close"></a>
+            <ul class="close">
+                <li><a href="#">トップ</a></li>
+                <li><a href="#overview">概要</a></li>
+                <li><a href="#venue-info">会場案内</a></li>
+                <li><a href="#keynote">キーノート</a></li>
+                <li><a href="#timetable">タイムテーブル</a></li>
+                <li><a href="#sponsors">スポンサー</a></li>
+                <li><a href="#staff">実行委員</a></li>
+                <li><a href="#infection_prevention">感染予防対策</a></li>
+                <li><a href="#policy">行動規範</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+    <section id="social" class="container">
+        <h2>
+            最新情報をフォロー
+        </h2>
+        <div>
+            <p>
+                <a href="https://twitter.com/PyConK" target="_blank" rel="noopener noreferrer" title="Twitter"><i
+                        class="fab fa-twitter"></i></a>&nbsp;
+                <a href="https://www.facebook.com/kyushu.pycon.jp" target="_blank" rel="noopener noreferrer"
+                   title="Facebook"><i class="fab fa-facebook-f"></i></a>&nbsp;
+            </p>
+        </div>
+    </section>
+    <section id="ticket" class="container">
+        <a target="_blank"
+           rel="noopener noreferrer">チケット購入(準備中)<br/>Ticket</a>
+        <a target="_blank" rel="noopener noreferrer">トーク募集(準備中)<br/>CfP</a>
+        <a target="_blank"  href="https://pyconjp.blogspot.com/search/label/kyushu">ブログ(外部サイト)<br/>Blog</a>
+    </section>
+    <section id="overview" class="container">
+        <h2>
+            概要<small>Overview</small>
+        </h2>
+        <h3>Pythonの祭典、改めて熊本で開催します！<br><small>The Python Conference will be held again in Kumamoto!</small></h3>
+
+        <div class="text-box1">
+            <p>
+                PyCon Kyushuは、プログラミング言語 Python のユーザが集う九州地区で開催される技術カンファレンスです。<br>
+                新型コロナウイルスの影響で、2020年、2021年に実施することはできませんでしたが、<br>
+                改めて、2022年にPyCon Kyushu を、熊本で開催することになりました！<br>
+                <br>
+                PyCon Kyushu 2022 Kumamoto のテーマは <strong>Grow with Covid-19</strong> です！<br>
+                昨年のテーマは<br>
+                ・成長が期待される学生世代に学びの機会を作りたい。<br>
+                ・エンジニア・非エンジニア問わず、成長に繋がるイベントにしたい。<br>
+                ・熊本地震後、復興のためがんばっている熊本の方々のこれから（成長）を応援したい。<br>
+                という思いで「Grow」に決めました。<br>
+                このイベントで様々な方の成長に繋がる思いで開催を目指していましたが、
+                新型コロナウイルスの影響で開催を中止にせざるを得ませんでした。<br>
+                <br>
+                そして今年改めてテーマを検討した結果、<br>
+                昨年のテーマに、私たちがいま直面している「with Covid-19」を加えようという意見で一致し<br>
+                今年は「<strong>Grow with Covid-19</strong>」をテーマとすることにしました。
+                <br>
+                このような状況ではありますが、若い世代に多く関わりをもってもらうことで、
+                九州の地で、力を合わせて協力し互いに成長できたらと考えています。
+            </p>
+            <p>
+                PyCon Kyushu is a technical conference held in the Kyushu area where users of the Python programming language gather.<br>
+                Due to the effects of Covid-19, we were not able to hold PyCon in 2020 and 2021.<br>
+                Due to Covid-19, we were unable to hold PyCon Kyushu in 2020 and 2021, but we have decided to hold PyCon Kyushu in Kumamoto in 2022!<br>
+                <br>
+                The theme for PyCon Kyushu 2022 Kumamoto is Grow with Covid-19!<br>
+                Last year's theme was:<br>
+                ・We want to create learning opportunities for students who are expected to grow.<br>
+                ・We want to create a learning opportunity for students who are expected to grow up, and we want to make it an event that leads to growth for both engineers and non-engineers.<br>
+                ・After the Kumamoto earthquake, I wanted to support the people of Kumamoto who are working hard to recover from the disaster.<br>
+                <br>
+                That is why I decided on "Grow".<br>
+                We had been aiming to hold this event with the hope that it would lead to the growth of various people,<br>
+                but However, due to Covid-19, we had to cancel the event.<br>
+                <br>
+                After reviewing the theme once again.<br>
+                However, due to Covid-19, the event had to be cancelled. After reviewing the theme again, we agreed to add "Covid-19", which we are facing now, to the theme for 2020.<br>
+                We have decided that the theme for 2022 will be "Grow with Covid-19".<br>
+
+                In spite of this situation, we hope that the younger generation will become more involved in the project.<br>
+                I hope that we will be able to cooperate and grow together in Kyushu.<br>
+            </p>
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <th>日　程<br/>Date</th>
+                    <td>2022年01月22日(土) January 22, 2022</td>
+                </tr>
+                <tr>
+                    <th>時　間<br/>Time</th>
+                    <td>9:30〜17:00 (受付/Reception 9:00〜9:30)</td>
+                </tr>
+                <tr>
+                    <th>会　場<br/>Venue</th>
+                    <td>熊本城ホール 会議室B・D</td>
+                </tr>
+                <tr>
+                    <th>会場費<br/>Fee</th>
+                    <td>TBD</td>
+                </tr>
+                <tr>
+                    <th>対　象<br/>Target</th>
+                    <td>Pythonに関わりたい人、エンジニア、非エンジニア<br/>People who want to get involved in Python, engineers and non-engineers
+                    </td>
+                </tr>
+                <tr>
+                    <th>参加者<br/>Participants</th>
+                    <td>100名程度（新型コロナウイルスの状況により変動あり）<br/>Around 100（Subject to change depending on the status of Covid-19）</td>
+                </tr>
+                <tr>
+                    <th>主　催<br/>Organizer</th>
+                    <td><a href="https://www.pykyushu.jp/" target="_blank">PyCon Kyushu 実行委員会</a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id="venue-info" class="container">
+        <h2>
+            会場案内<small>Venue information</small>
+        </h2>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.715417013402!2d130.70054245085535!3d32.7998042808717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f526b4d6fc17%3A0xa19e07e3309ed39!2z54aK5pys5Z-O44Ob44O844Or!5e0!3m2!1sja!2sjp!4v1625402805565!5m2!1sja!2sjp"
+                    style="border: none; width: 100%; height: 24em"></iframe>
+        </div>
+
+        <p>
+            <a href="https://www.kumamoto-jo-hall.jp/access/" target="_blank" rel="noopener noreferrer">熊本城ホール のアクセスはこちら</a>
+        </p>
+    </section>
+    <section id="keynote" class="container">
+        <h2>
+            キーノート<small>Keynote</small>
+        </h2>
+        <div>
+            <div>
+                <img src="images/keynote.jpg" alt="keynote" />
+            </div>
+            <div>
+                <h3>清水川 貴之</h3>
+                <p>
+                    2003年からPythonを使い始め、Webアプリの開発を中心に活用してきた。現職のビープラウドでは開発の他、Python関連書籍の執筆や研修講師も行っている。<br/><br/>
+
+                    個人では、一般社団法人PyCon JPの会計理事を担当するとともにPython Boot Campで九州を含む日本各地でPython講師をした。Python mini Hack-a-thonやSphinx-users.jpなどのユーザー会運営のかたわら、国内外の数多くのPythonイベントへ登壇するなど、公私ともにPythonとその関連技術の普及活動を行っている。<br/><br/>
+
+                    近年はPythonを学ぶ観点から自分が共感できる本の翻訳を手掛ける。2018年出版の『<a href="https://www.amazon.co.jp/dp/4822292274">独学プログラマー</a>』は、プログラミングに必要な知識の他、独学に特徴的な挫折を含む経験談など"独学のエッセンス"が多く含まれている。入門書としてはハードな部類なものの、学び成長するための要素がちりばめられており、多くの人にそのエッセンスを届けるための活動を継続している。<br/><br/>
+                    <strong>所属</strong>: <a href="https://www.beproud.jp/">BeProud</a> / <a href="http://www.pycon.jp/">PyCon JP Association</a><br/><br/>
+                    <strong>著書／訳書</strong><br/>
+                    <a href="https://www.amazon.co.jp/dp/4798053821">Pythonプロフェッショナルプログラミング</a> <small>(2018 秀和システム刊)</small><br/>
+                    <a href="https://www.amazon.co.jp/dp/4048930613">エキスパートPythonプログラミング</a> <small>(2018 アスキードワンゴ刊)</small><br/>
+                    <a href="https://www.amazon.co.jp/dp/4822292274">独学プログラマー</a> <small>(2018 日経BP社)</small><br>
+                    <a href="https://www.oreilly.co.jp/books/9784873118192/">Sphinxをはじめよう</a> <small>(2017 オライリー・ジャパン刊)</small><br/>
+                    他書籍: <a href="https://www.amazon.co.jp/%E6%B8%85%E6%B0%B4%E5%B7%9D%E8%B2%B4%E4%B9%8B/e/B0749GZGZW/">Amazon 著者セントラル</a><br />
+                    Twitter: <a href="https://twitter.com/shimizukawa">@shimizukawa</a><br/>
+                    URL: <a href="http://www.freia.jp/taka/">http://清水川.jp/</a><br/>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="timetable" class="container">
+        <h2>
+            タイムテーブル(予定)<small>Time Table</small>
+        </h2>
+        <div>
+            <table>
+                <tr>
+                    <th>09:00～09:30</th>
+                    <td colspan="2">開場&amp;受付 / Opening&amp;Reception</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="2">メイン会場 / Room B</th>
+                </tr>
+                <tr>
+                    <th>09:30～09:40</th>
+                    <td colspan="2">オープニング / Opening</td>
+                </tr>
+                <tr>
+                    <th>09:45～10:35</th>
+                    <td class="talk talk-keynote" colspan="2"></td>
+                </tr>
+                <tr>
+                    <th>10:40～10:50</th>
+                    <td class="platinum" colspan="2">プラチナスポンサーショートトーク / Platinum Sponsor Short Talk</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>メイン会場 / Room B</th>
+                    <th>サブ会場 / Room D</th>
+                </tr>
+                <tr>
+                    <th>10:55～11:25</th>
+                    <td class="talk talk-B1"></td>
+                    <td class="talk talk-D1"></td>
+                </tr>
+                <tr>
+                    <th>11:30～12:00</th>
+                    <td class="talk talk-B2"></td>
+                    <td class="talk talk-D2"></td>
+                </tr>
+                <tr>
+                    <th>12:00～13:00</th>
+                    <td colspan="2">ランチブレイク</td>
+                </tr>
+                <tr>
+                    <th>13:00～13:30</th>
+                    <td class="talk talk-B3"></td>
+                    <td class="talk talk-D3"></td>
+                </tr>
+                <tr>
+                    <th>13:35～14:05</th>
+                    <td class="talk talk-B4"></td>
+                    <td class="talk talk-D4"></td>
+                </tr>
+                <tr>
+                    <th>14:10～14:40</th>
+                    <td class="talk talk-B5"></td>
+                    <td class="talk talk-D5"></td>
+                </tr>
+                <tr>
+                    <th>14:40～15:05</th>
+                    <td colspan="2">ショートブレイク</td>
+                </tr>
+                <tr>
+                    <th>15:05～15:35</th>
+                    <td class="talk talk-B6"></td>
+                    <td class="talk talk-D6"></td>
+                </tr>
+                <tr>
+                    <th>15:40～16:10</th>
+                    <td class="talk talk-B7"></td>
+                    <td class="talk talk-D7"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="3">メイン会場 / Parea Hole</th>
+                </tr>
+                <tr>
+                    <th>16:15～16:45</th>
+                    <td colspan="2">クロージングLT / Closing LT</td>
+                </tr>
+                <tr>
+                    <th>16:45～17:00</th>
+                    <td colspan="2">クロージング&amp;記念撮影 / Closing&amp;Commemorative photo</td>
+                </tr>
+            </table>
+        </div>
+        <div id="timetable-modal" class="puremodal">
+            <div class="overlay close"></div>
+            <div class="window">
+                <header>
+                    <span>　</span>
+                    <a class="close">&times;</a>
+                </header>
+                <div>
+                    <br>
+                    <dl>
+                        <dt>トークタイトル</dt>
+                        <dd class="talk-title"></dd>
+                        <dt>スピーカー</dt>
+                        <dd>
+                            <a class="talk-speaker" target="_blank" rel="noopener noreferrer"></a>
+                        </dd>
+                        <dt>トーク内容</dt>
+                        <dd class="talk-description"></dd>
+                        <dt>トーク資料</dt>
+                        <dd>
+                            <a class="talk-slide" target="_blank" rel="noopener noreferrer"></a>
+                        </dd>
+                        <dt>言語</dt>
+                        <dd class="talk-language"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sponsors" class="container">
+        <h2>
+            スポンサー<small>Sponsors</small>
+        </h2>
+        <ul></ul>
+        <div id="sponsor-modal" class="puremodal">
+            <div class="overlay close"></div>
+            <div class="window">
+                <header>
+                    <span class="sponsor-name"></span>
+                    <a class="close">&times;</a>
+                </header>
+                <div>
+                    <p class="sponsor-description"></p>
+                    <div>
+                        <p class="sponsor-link"><a target="_blank" rel="noopener noreferrer"></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="staff" class="container">
+        <h2>
+            実行委員<small>Staff</small>
+        </h2>
+        <div>
+            <a href="https://forms.gle/4otHnekkUCpCi8QL8" target="_blank" rel="noopener noreferrer" class="button">実行委員メンバー募集についてはこちら</a><br/>
+            <p>遠方からの協力、エンジニア、非エンジニア問わず幅広く募集しています！</p>
+        </div>
+        <div>
+            <div class="chairman staff-icon">
+                <a href="https://twitter.com/kiyotaman" target="_blank" rel="noopener noreferrer"></a>
+                <span class="tooltip">実行委員長<br/>きよた</span>
+            </div>
+        </div>
+        <ul></ul>
+    </section>
+    <section id="infection_prevention" class="container">
+        <h2>
+            感染予防対策<small>prevention of infection</small>
+        </h2>
+        <div class="text-box1">
+            カンファレンスに参加する際は、必ず以下の感染予防対策にご協力ください。
+            <br>・当日発熱がある方は、参加できません。（検温を実施する予定です。）
+            <br>・会場内では、必ずマスクを着用ください。
+            <br>・会場内で、大声での会話はお控えください。
+            <br>・会場への入室の際は、十分な手洗い・消毒をお願いします。（消毒設備を用意する予定です）
+            <br>・会場内での食事は禁止とさせて頂きます。
+            <br>
+            <br>When attending the conference, please be sure to cooperate with the following infection prevention measures.
+            <br>・If you have a fever on the day of the conference, you will not be able to participate in the conference.
+            <br> （we will do a temperature check on you.）
+            <br>・You must wear a mask in the venue.
+            <br>・Do not talk loudly in the venue.
+            <br>・Before entering the venue, you must be sure to wash and disinfect your hands thoroughly.
+            <br> （we will prepare the disinfection）
+            <br>・Eating in the venue is prohibited.
+
+
+        </div>
+    </section>
+    <section id="policy" class="container">
+        <h2>
+            行動規範<small>policy</small>
+        </h2>
+        <div class="text-box1">
+            <p>
+                PyCon Kyushu は、九州にゆかりのある Python ユーザを主体に集まったPyCon Kyushu 実行委員会を主催として Python や Python を使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。
+                <br> PyCon Kyushu の開催を通じて九州の Python ユーザーの新たな開拓、 および日本各地、海外との Python ユーザーと様々な分野の知識や情報を交換し、 新たなパートナーやコミュニティの繁栄、仕事やビジネスチャンスを増やせる場所とすることを目的としています。
+                <br>
+                <br> ハラスメント行為には、言葉による性別、性的指向、障碍の有無、外見、身体の大きさ、人種、宗教に関する攻撃的なコメント、公的空間での性的な映像表現、意図的な威力行為、ストーキング、つきまとい、写真撮影や録音によるいやがらせ、トークやその他の会議イベントに対して繰り返して中断しようとする行為、不適切な身体接触、そして望まれない性的な注意を引きつける行為を含みます。
+                <br>
+                <br> 参加者は、これらのハラスメント行為を止めるように求められた場合、すぐに従わなければなりません。
+                <br>
+                <br> スポンサーもまた反ハラスメント行為ポリシーに従わなければなりません。
+                <br> 特に、スポンサーは性的な関心を引き起こす映像表現、活動、あるいはその他の物品を使うべきではありません。
+                <br> ボランティアを含め、ブースのスタッフは、性的な関心を引き起こすような服装/制服/コスチュームを使うべきではありませんし、その他の手段で性的な関心を引き起こすような環境を作ることもすべきではありません。
+                <br>
+                <br> 参加者がハラスメント行為に属するふるまいをした場合は、会議主催者は適切と判断した範囲で、当該行為を行った者に対する警告や、参加費を返還せずに会議から追放処分とするなどを含むいかなる行動も取ります。
+                <br>
+                <br> もしあなたがハラスメントに遭った場合、他の人がハラスメントに遭っている場合、あるいは他に気になることがあった時は、すぐに会議スタッフの誰かに連絡していただくようお願いします。
+                <br> 会議スタッフは会議のブランドを付けたTシャツを着ています。
+                <br>
+                <br> 会議スタッフは、ハラスメントを経験した人が、会議期間中安全かつ安心と感じられるように、参加者がホテル/会場の警備や近隣の警察に連絡すること、付き添い者の提供、およびその他の支援を行います。
+                <br> 私達にとってあなたが参加しているのは大事なことなのです。
+                <br>
+                <br> 私達は参加者が会議場とワークショップ会場、また会議に関連したソーシャルイベントにて、このルールに従うことを望みます。
+                <br>
+            </p>
+            <p>
+                PyCon Kyushu is a conference for exchanging information about Python and
+                Python-based software, organized by the PyCon Kyushu Committee,
+                which is composed mainly of Python users with connections to Kyushu.<br>
+                The purpose of PyCon Kyushu is to develop new Python users in Kyushu,
+                to exchange knowledge and information in various fields with Python users
+                from all over Japan and overseas, and to provide a place where new partners
+                and communities can flourish and job and business opportunities can increase.<br>
+                <br>
+                Harassment includes offensive verbal comments related to gender, age,
+                sexual orientation, disability, physical appearance, body size, race,
+                religion, sexual images in public spaces, deliberate intimidation, stalking,
+                following, harassing photography or recording, sustained disruption of talks
+                or other events, inappropriate physical contact, and unwelcome sexual attention.<br>
+                <br>
+                Participants asked to stop any harassing behavior are expected to comply immediately.<br>
+                <br>
+                Sponsors are also subject to the anti-harassment policy. In particular,
+                sponsors should not use sexualised images, activities, or other material. <br>
+                Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes,
+                or otherwise create a sexualised environment.<br>
+                <br>
+                If a participant engages in harassing behavior,
+                the conference organisers may take any action they deem appropriate,
+                including warning the offender or expulsion from the conference with no refund.<br>
+                <br>
+                If you are being harassed, notice that someone else is being harassed,
+                or have any other concerns, please contact a member of conference staff immediately. <br>
+                Conference staff can be identified as they'll be wearing branded t-shirts.<br>
+                <br>
+                Conference staff will be happy to help participants contact
+                hotel/venue security or local law enforcement, provide escorts,
+                or otherwise assist those experiencing harassment to feel safe
+                for the duration of the conference. We value your attendance.<br>
+                <br>
+                We expect participants to follow these rules at conference and workshop venues
+                and conference-related social events.<br>
+            </p>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container" id="copy">
+        <a href="https://www.pykyushu.jp/" target="_blank">© PyCon Kyushu 実行委員会</a><br/>
+        <br/>PyCon™ is a trademark for worldwide conference activities claimed by the Python Software foundation.
+        <br/>PyCon Kyushu is organized by volunteers from PyCon Kyushu in Japan.
+        <br/>Copyright (c) PyCon Kyushu Executive Committee 2017-2022
+    </div>
+</footer>
+</body>
+</html>
