@@ -342,8 +342,9 @@ section > h2 > small {
 
 #sponsors > ul > li > ul > li {
   display: inline-block;
-  border: .2em #d73f44 solid;
-  margin: .5em;
+  /*border: .2em #d73f44 solid;
+  margin: .5em;*/
+  margin-right: .5em;
   border-radius: 1em;
   cursor: pointer;
   background-color: #fff;
@@ -737,8 +738,8 @@ section > h2 > small {
   padding: 1em;
   width: 90%;
   background-color: #fff;
-  border: 2px solid #d73f44;
-  box-shadow: -2px 5px 5px #e8d3c7;
+  /*border: 2px solid #d73f44;
+  box-shadow: -2px 5px 5px #e8d3c7;*/
   border-radius: 20px;
   max-width: 1000px;
 }
