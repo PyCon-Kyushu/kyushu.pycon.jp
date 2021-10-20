@@ -117,6 +117,18 @@ section > h2 > small {
   display: block;
 }
 
+#information > div {
+  display: flex;
+  justify-content: space-around
+}
+
+#information > div > div:nth-child(2) > p {
+  font-size: large;
+  font-weight: bold;
+  color: #d43f3a;
+  text-align: left;
+}
+
 #ticket {
   text-align: center;
   padding-top: 2em;
