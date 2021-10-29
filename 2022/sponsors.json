@@ -22,6 +22,13 @@
       "url": "https://nobdata.co.jp/",
       "description": "<a href=\"https://nobdata.co.jp/\" target=\"_blank\" ><img src=\"images/sponsors/nob-data-logo-bon-saki.jpg\" height=\"350px\" alt=\"\"/></a>\n<div><p>NOB DATAは福岡に拠点を置くデータ分析会社です。\n\n現在、東京、福岡、沖縄など様々な地域・企業・コミュニティから\n「副業」のメンバーを募り、リモートによる全国各地のデータ分析支援を行なっております。\n(データ分析系の各書籍の執筆者約10名と連携中)\n\n強会で身につけた技術を実戦で使ってみたい！\nまた地方のデータサイエンスシーンを盛り上げたい！\nという思いを持つ皆様、是非お気軽にお声がけください。</p></div>",
       "url_enable": true
+    },
+    {
+      "name": "株式会社ファイロット",
+      "logo": "filot_logo.png",
+      "url": "https://filot.co.jp",
+      "description": "<a href=\"https://filot.co.jp\" target=\"_blank\" ><img src=\"images/sponsors/filot_logo.png\" height=\"350px\" alt=\"\"/></a>\n<div><p>株式会社ファイロットは福岡にてWebシステムや次世代向けプロダクト開発などを\n行なっている会社です。\nそのため九州出身のメンバーも多く、ぜひとも一緒に熊本を盛り上げたいと思い\nスポンサーへ参加させていただきました。\n 機械学習の案件にてPythonを採用しており、弊社グループ会社全体で活用して\n広めて行きたいと思っております。</p></div>",
+      "url_enable": true
     }
   ],
   "silver": [
