@@ -29,6 +29,13 @@
       "url": "https://filot.co.jp",
       "description": "<a href=\"https://filot.co.jp\" target=\"_blank\" ><img src=\"images/sponsors/filot_logo.png\" height=\"350px\" alt=\"\"/></a>\n<div><p>株式会社ファイロットは福岡にてWebシステムや次世代向けプロダクト開発などを\n行なっている会社です。\nそのため九州出身のメンバーも多く、ぜひとも一緒に熊本を盛り上げたいと思い\nスポンサーへ参加させていただきました。\n 機械学習の案件にてPythonを採用しており、弊社グループ会社全体で活用して\n広めて行きたいと思っております。</p></div>",
       "url_enable": true
+    },
+    {
+      "name": "トリプルイー株式会社",
+      "logo": "eeej_logo.jpg",
+      "url": "https://eeej.jp/",
+      "description": "<a href=\"https://eeej.jp/\" target=\"_blank\" ><img src=\"images/sponsors/eeej_logo.jpg\" style=\"width: 25%;\"  height=\"350px\" alt=\"\"/></a>\n<div><p>挑戦する起業家に寄り添う\n\nトリプルイー株式会社は、常に家族としての愛情を持って自社に関わる全ての方々を愛し、\n全てのアントレプレナーシップを尊重・体現出来る世界を作るために必要な\nインフラ整備を行うリーディングカンパニーを目指します。</p></div>",
+      "url_enable": true
     }
   ],
   "silver": [
