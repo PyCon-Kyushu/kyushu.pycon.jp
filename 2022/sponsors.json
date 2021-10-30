@@ -64,7 +64,7 @@
       "name": "Becom株式会社",
       "logo": "becom.jpg",
       "url": "https://www.becom.co.jp/",
-      "description": "<a href=\"https://www.becom.co.jp/\" target=\"_blank\" ><img src=\"images/sponsors/becom.jpg\" height=\"150px\" alt=\"\"/></a>\n<div><p>プログラミングのスキルを身近なものに...\n福岡を中心に主にwebシステム、通販システムの受託開発をメインに活動して\nいます。</p></div>",
+      "description": "<a href=\"https://www.becom.co.jp/\" target=\"_blank\" ><img src=\"images/sponsors/becom.jpg\" style=\"width: 27%;\"  height=\"150px\" alt=\"\"/></a>\n<div><p>プログラミングのスキルを身近なものに...\n福岡を中心に主にwebシステム、通販システムの受託開発をメインに活動して\nいます。</p></div>",
       "url_enable": true
     }
   ],
