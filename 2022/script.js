@@ -38,7 +38,15 @@ window.document.getElementById('nav-button-open').addEventListener('click', func
 const timetableModal = new PureModal(window.document.getElementById('timetable-modal'));
 
 function openTimetableModal(event) {
+    timetableModal.elem.querySelector('.talk-level').textContent = this.level;
+    timetableModal.elem.querySelector('.talk-level').className = ('talk-level talk-' + this.level);
     timetableModal.elem.querySelector('.talk-title').textContent = this.title;
+    if (this.subTitle !== null) {
+        let br = document.createElement('br');
+        timetableModal.elem.querySelector('.talk-title').append(br);
+        timetableModal.elem.querySelector('.talk-title').append(this.subTitle);
+    }
+
     timetableModal.elem.querySelector('.talk-speaker').textContent = this.name;
     if (this.url)
         timetableModal.elem.querySelector('.talk-speaker').href = this.url;
@@ -46,14 +54,15 @@ function openTimetableModal(event) {
         timetableModal.elem.querySelector('.talk-speaker').removeAttribute('href');
     timetableModal.elem.querySelector('.talk-description').innerHTML = this.description.replace(/\n/g, '<br />');
     timetableModal.elem.querySelector('.talk-language').textContent = '日本語';
-    let talkSlide = timetableModal.elem.querySelector('.talk-slide');
-    if (this.slide) {
-        talkSlide.href = this.slide;
-        talkSlide.textContent = talkSlide.hostname;
-    } else {
-        talkSlide.removeAttribute('href');
-        talkSlide.textContent = 'None';
-    }
+    // let talkSlide = timetableModal.elem.querySelector('.talk-slide');
+    // if (this.slide) {
+    //     talkSlide.href = this.slide;
+    //     talkSlide.textContent = talkSlide.hostname;
+    // } else {
+    //     talkSlide.removeAttribute('href');
+    //     talkSlide.textContent = 'None';
+    // }
+
     timetableModal.open();
     // モーダル内のスクロール位置をリセットする
     timetableModal.elem.querySelector('.window > div').scrollTop = 0;
@@ -69,9 +78,21 @@ axios.get('talks.json').then(function (res) {
             continue;
         }
         td.textContent = talk.title;
+
+        if (talk.subTitle !== null) {
+            let br = document.createElement('br');
+            td.appendChild(br);
+            let subTitle = document.createTextNode(talk.subTitle);
+            td.appendChild(subTitle);
+        }
+
         let small = document.createElement('small');
         small.textContent = talk.name;
         td.appendChild(small);
+        let tag = document.createElement('a');
+        tag.textContent = talk.level;
+        tag.className = "talk-" + talk.level
+        td.appendChild(tag);
         td.addEventListener('click', openTimetableModal.bind(talk));
     }
     // URL にトークの個別ページの hash がついていたら、そのトークのモーダルを開く

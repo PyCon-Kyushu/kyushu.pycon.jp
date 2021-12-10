@@ -3,120 +3,150 @@
     "id": "keynote",
     "name": "清水川 貴之",
     "url": null,
-    "title": "",
-    "description": "",
-    "slide": null
+    "title": "キーノート",
+    "subTitle": null,
+    "description": "TBD",
+    "slide": null,
+    "level": "KeyNote"
   },
   {
     "id": "B1",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "MoonWalker",
+    "url": "https://qiita.com/moonwalkerpoday",
+    "title": "静的コード解析から見出す一人前Pythonistaへの道",
+    "subTitle": null,
+    "description": "これからPythonistaを目指そうとしている方、\n全てのバグをプログラム実行時に見つけようとしている方、\nそしてよくわからんが動いているからヨシ！なコードを書いている方へ朗報です。\n\nこのトークではそんな皆さんの悩みを解決する静的コード解析についてお話しします。\n翌日から一皮むけること必至でしょう。目指せ一人前Pythonista！",
+    "slide": "",
+    "level": "Beginner"
   },
   {
     "id": "B2",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "Atsushi Odagiri",
+    "url": "https://github.com/aodag",
+    "title": "async await の向こう側",
+    "subTitle": null,
+    "description": "python3.5で導入されすっかり非同期処理の基本として広まったasync/await構文。 \n実際この構文は何をしているのでしょうか？ \n\nまたマルチスレッドやマルチプロセスのような既存の非同期処理とは\nどういった違いがあるのでしょうか？ \n\nジェネレーターから始まる協調スレッドや\n既存のプリエンプティブな非同期処理などを\n比較解説します。",
+    "slide": "",
+    "level": "Intermediate"
   },
   {
     "id": "B3",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "Nakamura Masato",
+    "url": "https://github.com/masahitojp",
+    "title": "Cloud DataFlow / Pythonで 大規模データ処理",
+    "subTitle": null,
+    "description": "Pythonを使ってデータ基盤を構築していくための話をします。 \n構築するときに必要なこと、よくある問題点とその解決法などについても紹介します。\n\nデータ基盤とは\nCloud Dataflowの利点\nApache Beam SDK with Python",
+    "slide": "",
+    "level": "Beginner"
   },
   {
     "id": "B4",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "Takanori Suzuki",
+    "url": "https://slides.takanory.net/",
+    "title": "Introduction to Structural Pattern Matching",
+    "subTitle": null,
+    "description": "Structural Pattern MatchingはPython 3.10の新機能です。\n久しぶりにPythonに追加された大きな機能だと思います。\n\nこの講演では、この機能の基本的な使い方を、サンプルコードを使って紹介します。\nパターンマッチングの使い方を理解して、Python 3.10で使い始めてみましょう。",
+    "slide": "",
+    "level": "Intermediate"
   },
   {
     "id": "B5",
-    "name": "Talk(TBD)",
+    "name": "nishida",
     "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "title": "PythonでgRPC入門",
+    "subTitle": "~web chatを実装してみるハンズオン~",
+    "description": "gRPCはGoogleの作ったRPCの新しいフレームワークで、\nハイパフォーマンス、様々なストリーミング方式の通信が\n可能など様々な利点があります。\n\nこのセッションでは、gRPCの概要から\n従来のREST APIと比較して開発者体験がどう変わっているのか、\nそして最後に実際にweb chatを実装してみるハンズオンを行います。",
+    "slide": "",
+    "level": "Beginner"
+  },
+  {
+    "id": "B6",
+    "name": "Manabu TERADA",
+    "url": "https://www.cmscom.jp",
+    "title": "Python環境の今 2022",
+    "subTitle": null,
+    "description": "Python環境の作り方やインストール方法の選択方法やお勧めを紹介します。\n\nPythonの環境構築には複数の方法が存在します。\nこのトークでは、Python環境構築に必要な選択すべき項目をあげ、\nそれぞれについて選択方法を解説します。",
+    "slide": "",
+    "level": "Beginner"
   },
   {
     "id": "B7",
     "name": "Talk(TBD)",
     "url": "/",
     "title": "",
+    "subTitle": null,
     "description": "",
-    "slide": ""
-  },
-  {
-    "id": "B6",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "slide": "",
+    "level": ""
   },
   {
     "id": "D1",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "malo 21st",
+    "url": "https://github.com/malo21st",
+    "title": "クールなデータアプリが作れるWebフレームワーク",
+    "subTitle": "Dash と Streamlit をもっと理解しよう",
+    "description": "Pythonだけでクールなデータアプリが作れるWebフレームワークに、Dash と Streamlit があります。 \nこのトークでは、WebアプリケーションのアーキテクチャーであるＭＶＣアーキテクチャーの観点から\n両フレームワークの特徴を説明します。 \n\n両フレームワークの特徴を踏まえた上で、\nコーディングのポイントや初心者が躓き易い点などを実例を交えながら説明します。 \n\nユーザーがインタラクティブにデータ可視化を楽しめるクールなデータアプリを作りたい方、\n魅力的なデータ可視化ツールである Dash と Streamlit について知りたい方、\n是非このトークを聴きに来てください。",
+    "slide": "",
+    "level": "ALL"
   },
   {
     "id": "D2",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "Akira Nonaka",
+    "url": "https://github.com/anonaka",
+    "title": "CPythonのソースを読んでみよう",
+    "subTitle": null,
+    "description": "日頃使っているPythonインタプリタの中身を少しでも知ると、\nPythonに対する理解が深まります。\n\nこのトークを聞いて、\n一人でも多くの人がCPythonの実装に興味を持つようになること、\nそして日本からのCPythonに対する貢献が増えると良いなと思っています。",
+    "slide": "",
+    "level": "ALL"
   },
   {
     "id": "D3",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "ローランド　リチャード",
+    "url": " https://github.com/coolandsmartrr",
+    "title": "print(\"Hello World\")を実行する",
+    "subTitle": "- Pythonコードからスタック型仮想マシンまで -",
+    "description": "Pythonがスクリプト型言語だということはよく知られているが、\n書いたコードがどのように解釈されて実行されるかは広く語られていない。\n\nこのトークではPythonの実装の中でも最も使われているCPythonを用いて、\nPythonコードのコンパイルの過程を通り、\n最終的に変換されたバイトコードがどのように仮想マシンのスタックの中で実行されるかを解説する。\n\nプログラミングの初歩である”Hello world”の裏に、\nどのように実行マシンの計算資源を確保して複雑な処理を行なっているかを知ることで、\nPythonの実行に対する理解を深め、その性質を上手に利用したプログラミングができるように啓蒙する。",
+    "slide": "",
+    "level": "ALL"
   },
   {
     "id": "D4",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "山ノ内 祥訓",
+    "url": "https://www.facebook.com/yoshinori.yamanouchi.12",
+    "title": "FHIR on Python",
+    "subTitle": null,
+    "description": "FHIR(Fast Healthcare Interoperability Resources)とは、\n医療情報のデータ交換を行う標準規格です。\n\nこれまでの標準規格と異なりRESTやJSONといったWeb技術をベースに構成されており\n実装が容易であることが特徴です。\n\nここ数年日本でも日本向け実装ガイドの作成が進められており、\n今後のヘルスケア分野のサービス開発には重要な構成要素になると考えられています。\n\n今回はこのFHIRをPython上で使用する方法について紹介します。",
+    "slide": "",
+    "level": "ALL"
   },
   {
     "id": "D5",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "廣津留 慶人",
+    "url": "https://github.com/Taka710",
+    "title": "「視線」を科学する。",
+    "subTitle": "- MediaPipeを用いた視線計測の手法について -",
+    "description": "この発表を聞くことで聴衆は「視線」を実体のある像として獲得できます。 \nこれはつまり「注目を引く広告はABのどちらか？」や\n「導線のどこに盲点があるのか？」を明らかにすることが出来るということです。 \n\n今回お話する手法はGoogle社が機械学習向けのソリューションとして\n開発している「MediaPipe」をベースにしたものです。 \n\nそこに旧来研究されてきた顔特徴量の理論を組み合わせることで、\nこれまでのボンヤリとした視線計測とは一線を画す新しい視線計測手法を確立いたしました。 \n\nこの発表を通して皆様が「視線」の持つ無限の可能性に気がついていただければと思います。",
+    "slide": "",
+    "level": "Intermediate"
   },
   {
     "id": "D6",
-    "name": "Talk(TBD)",
-    "url": "/",
-    "title": "",
-    "description": "",
-    "slide": ""
+    "name": "nikkie",
+    "url": "http://nikkie-ftnext.hatenablog.com/",
+    "title": "文に立ち返ってPython再入門",
+    "subTitle": null,
+    "description": "Pythonを学ぶ上で、if文、for文、関数定義を皆さん学びますよね。\nそのときにifやforの行にはコロンが必要なことや、続く行をインデントする必要があることも学ぶでしょう\n（SyntaxErrorが出てしまいますからね）。\n\nでは、このコロンやインデントはなぜ必要なのでしょうか？\nそう決まっているからではあるのですが、\nPython言語リファレンスで「文」を深堀ることで私は納得の行く説明にたどり着きました。\nさらに文の深堀りは、構文の定義にも繋がります。\n\nBNF記法で簡潔に抜け漏れなく表された構文定義を\nこのトークのひと時で一緒に味わってみませんか？",
+    "slide": "",
+    "level": "Intermediate"
   },
   {
     "id": "D7",
     "name": "Talk(TBD)",
     "url": "/",
     "title": "",
+    "subTitle": null,
     "description": "",
-    "slide": ""
+    "slide": "",
+    "level": ""
   }
 ]

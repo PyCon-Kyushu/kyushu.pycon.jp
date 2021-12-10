@@ -264,6 +264,7 @@ section > h2 > small {
 #timetable table td {
   border: 2px #eee solid;
   border-radius: .5em;
+  color: #0f0f0f;
 }
 
 #timetable table td.talk {
@@ -280,12 +281,52 @@ section > h2 > small {
   color: #999;
 }
 
-#timetable-modal > .window {
-  width: 50%;
-  height: 60%;
-  border-radius: .5em;
-  box-shadow: 0 0 3em rgba(0,0,0,.5);
+#timetable a.talk-KeyNote {
+  display: inline-block;
+  margin: 0 .1em .6em 0;
+  padding: .6em;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  background-color: #db9e4d;
 }
+
+#timetable a.talk-Intermediate {
+  display: inline-block;
+  margin: 0 .1em .6em 0;
+  padding: .6em;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  background-color: #7a7ab8;
+}
+
+#timetable a.talk-ALL {
+  display: inline-block;
+  margin: 0 .1em .6em 0;
+  padding: .6em;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  background-color: #e186e8;
+}
+
+#timetable a.talk-Beginner {
+  display: inline-block;
+  margin: 0 .1em .6em 0;
+  padding: .6em;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  background-color: #78cba3;
+}
+
+/*#timetable-modal > .window {*/
+/*  width: 50%;*/
+/*  height: 60%;*/
+/*  border-radius: .5em;*/
+/*  box-shadow: 0 0 3em rgba(0,0,0,.5);*/
+/*}*/
 
 #timetable-modal > div.window > header {
   position: absolute;
@@ -304,7 +345,8 @@ section > h2 > small {
 #timetable-modal > .window > div {
   height: 100%;
   overflow-y: scroll;
-  padding: 1em;
+  /*padding: 1em;*/
+  padding: 4em 1em 1em;
   box-sizing: border-box;
 }
 
@@ -329,6 +371,16 @@ section > h2 > small {
 #timetable-modal dl > dd {
   margin-left: 1em;
   font-size: smaller;
+}
+
+#timetable-modal > div.window > div > dl > dd.talk-title {
+  font-size: large;
+  font-weight: bold;
+}
+
+#timetable-modal > div.window > div > dl > dd:nth-child(4) > a {
+  font-size: large;
+  font-weight: bold;
 }
 
 #sponsors div {
@@ -648,6 +700,13 @@ section > h2 > small {
     box-shadow: 0 0 3em rgba(0,0,0,.5);
   }
 
+  #timetable-modal > .window {
+    width: auto;
+    height: auto;
+    border-radius: .5em;
+    box-shadow: 0 0 3em rgba(0,0,0,.5);
+  }
+
 }
 
 /* PC */
@@ -723,6 +782,13 @@ section > h2 > small {
   }
 
   #sponsor-modal > .window {
+    width: 800px;
+    height: 80%;
+    border-radius: .5em;
+    box-shadow: 0 0 3em rgba(0,0,0,.5);
+  }
+
+  #timetable-modal > .window {
     width: 800px;
     height: 80%;
     border-radius: .5em;
