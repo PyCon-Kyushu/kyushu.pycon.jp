@@ -54,18 +54,19 @@ function openTimetableModal(event) {
         timetableModal.elem.querySelector('.talk-speaker').removeAttribute('href');
     timetableModal.elem.querySelector('.talk-description').innerHTML = this.description.replace(/\n/g, '<br />');
     timetableModal.elem.querySelector('.talk-language').textContent = '日本語';
-    // let talkSlide = timetableModal.elem.querySelector('.talk-slide');
-    // if (this.slide) {
-    //     talkSlide.href = this.slide;
-    //     talkSlide.textContent = talkSlide.hostname;
-    // } else {
-    //     talkSlide.removeAttribute('href');
-    //     talkSlide.textContent = 'None';
-    // }
+
+    let talkSlide = timetableModal.elem.querySelector('.talk-slide');
+    if (this.slide) {
+        talkSlide.innerHTML ='<iframe class="talk-slide" width="560" height="315" src="' + this.slide +  '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
 
     timetableModal.open();
     // モーダル内のスクロール位置をリセットする
     timetableModal.elem.querySelector('.window > div').scrollTop = 0;
+}
+
+function closeTimetableModal(event) {
+    timetableModal.elem.querySelector('.talk-slide').innerHTML = "";
 }
 
 axios.get('talks.json').then(function (res) {
