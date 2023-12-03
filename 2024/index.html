@@ -1,108 +1,703 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-
-    <title>PyCon Kyushu 2024 Kagoshima</title>
-
-    <!-- <link rel="icon" type="image/png" href="icon.png"> -->
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">]
-    <link rel="stylesheet" href="https://cdn.hotolab.net/puremodal/v1.0.0/puremodal.css"
-          integrity="sha384-eL6wVAI7OXTJ130QmQYqhCeSRm3VSIGqFROBbJgcvNBBjTOjXtDlVuDtrhxruGVv" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134272616-1"></script>
-    <script>window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments)
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'UA-134272616-1')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/15.2.1/smooth-scroll.min.js"
-            integrity="sha256-/8HtdmYywOpcDN0Hx4aM7nUPRlzV7Hq6Eez7xwqP+e0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"
-            integrity="sha256-OI3N9zCKabDov2rZFzl8lJUXCcP7EmsGcGoP6DMXQCo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
-            integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
-    <script src="https://cdn.hotolab.net/puremodal/v1.0.0/puremodal.js"
-            integrity="sha384-xrSecVekR/WMcwyFbfVbSzSq7J1cR+shalZSekEVzEUbTug1dml+YZx0ov3IM9iK"
-            crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156018733-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'UA-156018733-1');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156018733-1"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@next"></script>
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
+
 <body>
-<header>
-</header>
-<main>
-    <section id="social" class="container">
-        <div>
-            <p>
-                <a href="https://twitter.com/PyConK" target="_blank" rel="noopener noreferrer" title="Twitter"><i
-                        class="ffa-brands fa-twitter"></i></a>&nbsp;
-                <a href="https://www.facebook.com/kyushu.pycon.jp" target="_blank" rel="noopener noreferrer"
-                   title="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>&nbsp;
-                <a href="https://www.youtube.com/@pyconkyushu4071/videos" target="_blank" rel="noopener noreferrer"
-                   title="Youtube"><i class="fab fa-youtube fa-2x"></i></a>&nbsp;
-                <a href="https://pyconjp.blogspot.com/search/label/kyushu" target="_blank" rel="noopener noreferrer"
-                   title="Blogspot"><i class="fab fa-blogger fa-2x"></i></a>&nbsp;
-            </p>
+
+  <div id="app">
+    <div class="menu flex justify-between items-center p-2 bg-cyan-600 shadow-md fixed top-0 w-full">
+      <div class="flex flex-wrap items-center justify-between w-full p-1">
+
+        <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl mr-4 font-custom"
+          aria-label="logo">
+          <img src="./images/logo2.png" alt="Logo" class="w-12" style="height: auto;">
+          <div className="font-roboto">
+            PyCon Kyushu
+          </div>
+
+        </a>
+
+        <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+          <button @click="toggleMenu"
+            class="fixed top-4 right-4 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button">
+            <!-- <span class="block relative w-6 h-px rounded-sm bg-black"></span>
+            <span class="block relative w-6 h-px rounded-sm bg-black mt-1"></span>
+            <span class="block relative w-6 h-px rounded-sm bg-black mt-1"></span> -->
+            <i class="material-icons">menu</i>
+          </button>
         </div>
-    </section>
-    <section id="overview" class="container">
-        <p style="font-size: 32px; text-align: center; color: #28889b;">2024年春に鹿児島での開催を計画中です</p>
-    </section>     
-    <section id="overview" class="container">
-        <h2>実行委員を募集します</h2>
-        <div class="text-box1">
-            <div class="item"></div>
-            <div class="item">
-                <p>
-                    2023年5月に「Python BootCamp in 鹿児島2nd」開催されたことがきっかけで<br>
-                    現在、鹿児島でのPyCon Kyushu開催を検討しています。<br>
-                    <br>
-                    開催にはPythonに関心を持つ皆様のご協力が不可欠であり<br>
-                    実行委員として現地またはリモートで協力していただける方を募集します。 <br>
-                    <br>
-                    九州地区のPythonコミュニティを盛り上げる一員に<br>
-                    ぜひあなたもチャレンジしてみてはいかがでしょうか？<br>
-                    実行委員に興味のある方は、下記のGoogleFormより、ぜひお申し込みください。<br>
-                    <br>
-                    Pythonコミュニティの発展に、あなたのご協力をお待ちしております！
-                </p>
-            </div>
-            <div>
-                <a href="https://forms.gle/fcBvadKQr8uX4anD8" target="_blank" rel="noopener noreferrer" class="button">Google Form
-                </a><br/>
-            </div>
-            <div class="item"></div>
+        <div v-show="isOpen" class="lg:flex flex-grow items-center" id="example-navbar-warning">
+          <ul class="flex flex-col lg:flex-row list-none ml-auto">
+            <li class="nav-item">
+              <a class="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug text-black hover:opacity-75"
+                href="#pablo" @click.prevent="showContent1(); closeMenu()">
+                Home
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug text-black hover:opacity-75"
+                href="#pablo" @click.prevent="showContent2(); closeMenu()">
+                Session
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug text-black hover:opacity-75"
+                href="#pablo" @click.prevent="showContent3(); closeMenu()">
+                TimeTable
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug text-black hover:opacity-75"
+                href="#pablo" @click.prevent="showContent5(); closeMenu()">
+                Code of Conduct
+              </a>
+            </li>
+          </ul>
         </div>
-    </section>    
-</main>
-<footer>
-    <div class="container" id="copy">
-        <a href="https://www.pykyushu.jp/" target="_blank">© PyCon Kyushu 実行委員会</a><br/>
-        <br/>PyCon™ is a trademark for worldwide conference activities claimed by the Python Software foundation.
-        <br/>PyCon Kyushu is organized by volunteers from PyCon Kyushu in Japan.
-        <br/>Copyright (c) PyCon Kyushu Executive Committee 2017-2023
+      </div>
     </div>
-</footer>
+
+    <div v-show="content1Visible">
+
+      <div class="flex justify-center items-center pt-16 bg-cyan-50 bg-image"
+        style="background-image: url('./images/sakurajima.jpg'); background-size: cover; background-position: center;">
+        <img src="./images/main_title.png" loading="lazy" class="w-full max-w-5xl object-scale-down object-center" />
+      </div>
+
+      <!-- features - start -->
+      <div class="bg-gray-100 py-6 sm:py-2 lg:py-12">
+
+        <div class="mx-auto max-w-screen-lg px-4 md:px-8">
+
+          <div class="mb-10 md:mb-16 mt-12">
+            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+
+            <h3 class="mb-4 text-center text-2xl font-bold text-cyan-950 md:mb-6">Pythonの祭典、2024年春に鹿児島で開催します！</h3>
+            <div class="bg-white p-4 rounded-sm">
+              <p class="mx-auto max-w-screen-lg text-start text-gray-500 md:text-lg">
+                PyCon Kyushuは、プログラミング言語 Pythonのユーザが集う九州地区で開催される技術カンファレンスです。<br>
+                今回、鹿児島コミュニティの協力をいただき、2年ぶりに鹿児島で開催することになりました！<br>
+                <br>
+                Python初心者の方から上級者まで、参加していただく方全員にとって有意義なカンファレンス、
+                そして、地方での開催ならではのアットホームな雰囲気で、有益なセッションやネットワーキングの場になるように、<br>
+                したいと思っています。<br>
+                <br>
+                ぜひ、皆さんの参加をお待ちしています！
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="flex justify-center">
+            <div>
+              <div class="flex justify-start items-center space-x-2 ml-10">
+                <span class="material-symbols-outlined">
+                  location_on
+                </span>
+                <span class="text-xl font-bold text-slate-700">開催場所：鹿児島県鹿児島市内</span>
+              </div>
+
+              <div class="flex justify-start items-center space-x-2 ml-10">
+                <span class="material-symbols-outlined">
+                  schedule
+                </span>
+                <span class="text-xl font-bold text-slate-700">日時　　：2024年5月下旬を予定</span>
+              </div>
+
+              <div class="flex justify-start items-center space-x-2 ml-10 mb-4">
+                <span class="material-symbols-outlined">
+                  paid
+                </span>
+                <span class="text-xl font-bold text-slate-700">参加費　：無料</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-10 md:mb-16 mt-24">
+            <h2 class="mb-4 text-center text-4xl font-bold text-cyan-800 md:mb-6 lg:text-5xl">
+              Sponsors
+              <br>
+            </h2>
+
+            <div class="bg-white p-4 rounded-sm mb-4">
+              <p class="mx-auto max-w-screen-lg text-start text-gray-500 md:text-lg">
+                PyConKyushuを開催するにあたり、<br>
+                イベントを一一緒に盛り上げていただける企業様のご支援をお待ちしております。<br>
+                スポンサー特典の内容、お申し込みついては、下記のリンクよりpykyushu.jpのサイトをご覧ください。
+              </p>
+            </div>
+
+            <div class="flex justify-center mb-4">
+              <a href="https://www.pykyushu.jp/sponsor2024/" target="_blank">
+                <button type="button"
+                  class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">スポンサー申し込みはこちら</button>
+              </a>
+            </div>
+
+            <!-- <div class="mb-10 md:mb-16 mt-12">
+              <div class="bg-white p-4 rounded-sm">
+                <h3 class="mb-4 text-center text-3xl font-bold text-gold md:mb-6">Gold</h3>
+                <div class="flex flex-wrap justify-center">
+                  <img class="mb-4 mx-2" src="images/sponsors/sponsor.png" alt="Logo 1">
+                  <img class="mb-4 mx-2" src="images/sponsors/sponsor.png" alt="Logo 2">
+                  <img class="mb-4 mx-2" src="images/sponsors/sponsor.png" alt="Logo 3">
+                  <img class="mb-4 mx-2" src="images/sponsors/sponsor.png" alt="Logo 4">
+                </div>
+              </div>
+            </div> -->
+
+            <!-- <div class="mb-10 md:mb-16 mt-12">
+              <div class="bg-white p-4 rounded-sm">
+                <h3 class="mb-4 text-center text-3xl font-bold text-silver md:mb-6">Silver</h3>
+                <div class="flex flex-wrap justify-center">
+                  <img class="mb-4 mx-2 w-48" src="images/sponsors/sponsor.png" alt="Logo 1">
+                  <img class="mb-4 mx-2 w-48" src="images/sponsors/sponsor.png" alt="Logo 2">
+                  <img class="mb-4 mx-2 w-48" src="images/sponsors/sponsor.png" alt="Logo 3">
+                  <img class="mb-4 mx-2 w-48" src="images/sponsors/sponsor.png" alt="Logo 3">
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div v-show="content2Visible" style="margin-top: 100px;">
+
+      <div id="session" class="bg-gray-100 py-6 sm:py-2 lg:py-12">
+
+        <div class="flex flex-wrap">
+          <div v-for="talk in timetable" @click="openTimetableModal(talk)" class="w-full lg:w-1/2 p-4">
+            <div class="bg-white rounded shadow p-6">
+              <a v-bind:class="['talk-level', `talk-${talk.level}`]">{{ talk.level }}</a>
+              <h2 class="text-xl font-bold mb-2">{{ talk.title }}</h2>
+              <p class="text-gray-700 mb-2">{{ talk.name }}</p>
+              <p class="text-gray-500 text-lg">{{ truncate(talk.description, 100) }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="timetable-modal" class="puremodal" v-if="showModal">
+        <div class="overlay close"></div>
+        <div class="window">
+          <header>
+            <span>　</span>
+            <a class="close" @click="showModal = false">&times;</a>
+          </header>
+          <div>
+            <a v-bind:class="['talk-level', `talk-${selectedTalk.level}`]">{{ selectedTalk.level }}</a>
+            <br>
+            <dl>
+              <dt>トークタイトル</dt>
+              <dd class="talk-title">{{ selectedTalk.title }}</dd>
+              <dt>スピーカー</dt>
+              <dd>
+                <a class="talk-speaker" target="_blank" rel="noopener noreferrer">{{ selectedTalk.name }}</a>
+              </dd>
+              <dt>トーク内容</dt>
+              <dd class="talk-description">{{ selectedTalk.description }}</dd>
+              <dt>YouTube</dt>
+              <dd>
+                <div class="talk-slide">
+                  <iframe width="560" height="315" v-bind:src="selectedTalk.slide" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+              </dd>
+              <dt>言語</dt>
+              <dd class="talk-language">{{ selectedTalk.language }}</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div v-show="content3Visible">
+
+      <section class="bg-white  antialiased">
+        <div class="max-w-screen-4xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+          <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold leading-tight tracking-tight text-black">
+              TimeTable
+            </h2>
+
+          </div>
+
+          <div class="flow-root max-w-6xl mx-auto mt-8 sm:mt-12 lg:mt-16">
+            <div class="w-full -my-4 divide-y divide-gray-200 dark:divide-gray-700">
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right shrink-0">
+                  09:30 - 09:40
+                </p>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  <a>オープニング/Opening</a>
+                </h3>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  09:40 - 10:30
+                </p>
+
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="keynote" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  10:40 - 11:10
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="B1" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+
+                    <div id="D1" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  11:15 - 11:45
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="B2" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+
+                    <div id="D2" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  13:00 - 13:30
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="B3" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+
+                    <div id="D3" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  13:40 - 14:10
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="B4" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+
+                    <div id="D4" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  14:15 - 14:45
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="B5" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+
+                    <div id="D5" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  15:10 - 15:40
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="B6" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+
+                    <div id="D6" class="timetable bg-white rounded shadow p-1 h-36">
+                      <a href="#" class="talk-level">ああああああ</a>
+                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
+                      <p class="text-gray-700 mb-2">ああああああ</p>
+                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  15:50 - 16:30
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="" class="timetable bg-white rounded shadow p-1 h-36">
+                      <!-- <a href="#" class="talk-level">ああああああ</a> -->
+                      <h2 class="text-xl font-bold mb-2">LT大会</h2>
+                      <!-- <p class="text-gray-700 mb-2">ああああああ</p> -->
+                      <!-- <a href="#" class="btn btn-primary">ああああああ</a> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right shrink-0">
+                  16:30 - 17:00
+                </p>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  <a>クロージング/Closing</a>
+                </h3>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div v-show="content5Visible">
+      <section id="policy-box" class="container centered">
+        <div class="mx-auto w-3/4">
+          <h2 class="mt-24 text-center text-4xl font-bold text-cyan-800 md:mb-6 lg:text-5xl">
+            行動規範
+            <br>
+          </h2>
+          <div class="relative mt-12 text-box1">
+            <div class="flex justify-end mx-auto max-w-4xl mb-5">
+              <!-- <button @click="switchLanguage" class="bg-cyan-500 hover:bg-cyan-800 text-white font-bold py-2 px-4 rounded">
+                {{ buttonLabel }}
+              </button> -->
+
+              <div class="h-full overflow-hidden bg-white text-gray-900 font-sans">
+                <div class="flex items-center justify-center h-full text-center">
+                  <div class="lang mx-auto">
+                    <table>
+                      <tr>
+                        <td class="tdlang">
+                          <button id="jp"
+                            class="button_lang transition-colors duration-200 ease-in-out rounded-full w-20 py-1"
+                            :class="{ 'bg-cyan-300': language === 'jp', 'bg-gray-200 hover:bg-gray-300': language !== 'jp' }"
+                            @click="switchLanguage('jp')">JP</button>
+                        </td>
+                        <td class="tdlang">
+                          <button id="en"
+                            class="button_lang transition-colors duration-200 ease-in-out rounded-full w-20 py-1"
+                            :class="{ 'bg-cyan-300': language === 'en', 'bg-gray-200 hover:bg-gray-300': language !== 'en' }"
+                            @click="switchLanguage('en')">EN</button>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="translation text-center my-2" :class="language">
+                      {{ message }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="flex justify-center">
+              <p v-if="language === 'jp'" class="border-2 border-cyan-600 mx-auto max-w-4xl p-6 mr-4 mb-4 centered">
+                PyCon Kyushu は、九州にゆかりのある Python ユーザを主体に集まったPyCon Kyushu 実行委員会を主催として Python や Python
+                を使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。
+                <br> PyCon Kyushu の開催を通じて九州の Python ユーザーの新たな開拓、 および日本各地、海外との Python ユーザーと様々な分野の知識や情報を交換し、
+                新たなパートナーやコミュニティの繁栄、仕事やビジネスチャンスを増やせる場所とすることを目的としています。
+                <br>
+                <br>
+                ハラスメント行為には、言葉による性別、性的指向、障碍の有無、外見、身体の大きさ、人種、宗教に関する攻撃的なコメント、公的空間での性的な映像表現、意図的な威力行為、ストーキング、つきまとい、写真撮影や録音によるいやがらせ、トークやその他の会議イベントに対して繰り返して中断しようとする行為、不適切な身体接触、そして望まれない性的な注意を引きつける行為を含みます。
+                <br>
+                <br> 参加者は、これらのハラスメント行為を止めるように求められた場合、すぐに従わなければなりません。
+                <br>
+                <br> スポンサーもまた反ハラスメント行為ポリシーに従わなければなりません。
+                <br> 特に、スポンサーは性的な関心を引き起こす映像表現、活動、あるいはその他の物品を使うべきではありません。
+                <br>
+                ボランティアを含め、ブースのスタッフは、性的な関心を引き起こすような服装/制服/コスチュームを使うべきではありませんし、その他の手段で性的な関心を引き起こすような環境を作ることもすべきではありません。
+                <br>
+                <br> 参加者がハラスメント行為に属するふるまいをした場合は、会議主催者は適切と判断した範囲で、当該行為を行った者に対する警告や、参加費を返還せずに会議から追放処分とするなどを含むいかなる行動も取ります。
+                <br>
+                <br> もしあなたがハラスメントに遭った場合、他の人がハラスメントに遭っている場合、あるいは他に気になることがあった時は、すぐに会議スタッフの誰かに連絡していただくようお願いします。
+                <br> 会議スタッフは会議のブランドを付けたTシャツを着ています。
+                <br>
+                <br> 会議スタッフは、ハラスメントを経験した人が、会議期間中安全かつ安心と感じられるように、参加者がホテル/会場の警備や近隣の警察に連絡すること、付き添い者の提供、およびその他の支援を行います。
+                <br> 私達にとってあなたが参加しているのは大事なことなのです。
+                <br>
+                <br> 私達は参加者が会議場とワークショップ会場、また会議に関連したソーシャルイベントにて、このルールに従うことを望みます。
+                <br>
+              </p>
+              <p v-else class="border-2 border-cyan-600 mx-auto max-w-4xl p-6 mr-4 mb-4 centered">
+                PyCon Kyushu is a conference for exchanging information about Python and
+                Python-based software, organized by the PyCon Kyushu Committee,
+                which is composed mainly of Python users with connections to Kyushu.<br>
+                <br>
+                The purpose of PyCon Kyushu is to develop new Python users in Kyushu,
+                to exchange knowledge and information in various fields with Python users
+                from all over Japan and overseas, and to provide a place where new partners
+                and communities can flourish and job and business opportunities can increase.<br>
+                <br>
+                Harassment includes offensive verbal comments related to gender, age,
+                sexual orientation, disability, physical appearance, body size, race,
+                religion, sexual images in public spaces, deliberate intimidation, stalking,
+                following, harassing photography or recording, sustained disruption of talks
+                or other events, inappropriate physical contact, and unwelcome sexual attention.<br>
+                <br>
+                Participants asked to stop any harassing behavior are expected to comply promptly.<br>
+                <br>
+                Sponsors are also subject to the anti-harassment policy. In particular,
+                sponsors should not use sexualized images, activities, or other material.<br>
+                Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes,
+                or otherwise create a sexualized environment.<br>
+                <br>
+                If a participant engages in harassing behavior,
+                the conference organizers may take any action they deem appropriate,
+                including warning the offender or expulsion from the conference with no refund.<br>
+                <br>
+                If you are being harassed, notice that someone else is being harassed,
+                or have any other concerns, please contact a member of the conference staff immediately.<br>
+                Conference staff can be identified as they'll be wearing branded t-shirts.<br>
+                <br>
+                Conference staff will be happy to help participants contact
+                hotel/venue security or local law enforcement, provide escorts,
+                or otherwise assist those experiencing harassment to feel safe
+                for the duration of the conference. We value your attendance.<br>
+                <br>
+                We expect participants to follow these rules at conference and workshop venues
+                and conference-related social events.<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="inset-x-0 bottom-0 bg-gray-800 text-white text-sm p-4">
+      <a href="https://www.pykyushu.jp/" target="_blank">© PyCon Kyushu 実行委員会</a><br />
+      <br />PyCon™ is a trademark for worldwide conference activities claimed by the Python Software foundation.
+      <br />PyCon Kyushu is organized by volunteers from PyCon Kyushu in Japan.
+      <br />Copyright (c) PyCon Kyushu Executive Committee 2017-2024
+    </div>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          isOpen: false,
+          content1Visible: true,
+          content2Visible: false,
+          content3Visible: false,
+          content4Visible: false,
+          timetable: [],
+          showModal: false,
+          language: 'jp',
+          jp: {
+            buttonLabel: 'Switch to English'
+          },
+          en: {
+            buttonLabel: '日本語に切り替え'
+          }
+        };
+      },
+      created() {
+        window.addEventListener('resize', this.checkWidth);
+        this.checkWidth();
+        fetch('./talks.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            this.timetable = data;
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation: ', error);
+          });
+      },
+      beforeUnmount() {
+        window.removeEventListener('resize', this.checkWidth);
+      },
+      computed: {
+        buttonLabel() {
+          return this[this.language].buttonLabel;
+        }
+      },
+      methods: {
+        checkWidth() {
+          if (window.innerWidth < 1024) {
+            this.isOpen = false;
+          } else {
+            this.isOpen = true;
+          }
+        },
+        showContent1() {
+          this.content1Visible = true;
+          this.content2Visible = false;
+          this.content3Visible = false;
+          this.content4Visible = false;
+          this.content5Visible = false;
+        },
+        showContent2() {
+          this.content1Visible = false;
+          this.content2Visible = true;
+          this.content3Visible = false;
+          this.content4Visible = false;
+          this.content5Visible = false;
+        },
+        showContent3() {
+          this.content1Visible = false;
+          this.content2Visible = false;
+          this.content3Visible = true;
+          this.content4Visible = false;
+          this.content5Visible = false;
+        },
+        showContent4() {
+          this.content1Visible = false;
+          this.content2Visible = false;
+          this.content3Visible = false;
+          this.content4Visible = true;
+          this.content5Visible = false;
+        },
+        showContent5() {
+          this.content1Visible = false;
+          this.content2Visible = false;
+          this.content3Visible = false;
+          this.content4Visible = false;
+          this.content5Visible = true;
+        },
+        toggleMenu() {
+          this.isOpen = !this.isOpen;
+        },
+        closeMenu() {
+          if (window.innerWidth <= 768) {
+            this.isOpen = false;
+          }
+        },
+        truncate(string, value) {
+          return string.substring(0, value) + '...';
+        },
+        openTimetableModal(talk) {
+          console.log('openTimetableModal is called');
+          this.selectedTalk = talk;
+          this.showModal = true;
+        },
+        switchLanguage() {
+          this.language = this.language === 'jp' ? 'en' : 'jp';
+        }
+        ,
+      },
+    });
+    app.mount('#app');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    axios.get('./talks.json').then(function (res) {
+      for (let i in res.data) {
+        const talk = res.data[i];
+        let div = document.getElementById(talk.id);
+        if (!div) {
+          console.warn('Talk element "' + talk.id + '" is not found');
+          continue;
+        }
+        let talkLevelElement = div.querySelector('.talk-level');
+        talkLevelElement.textContent = talk.level;
+        talkLevelElement.classList.add('talk-' + talk.level);
+        div.querySelector('h2').textContent = talk.title;
+        div.querySelector('p').textContent = talk.name;
+        div.querySelector('.btn.btn-primary').textContent = talk.buttonText;
+      }
+    });
+  </script>
 </body>
+
 </html>
