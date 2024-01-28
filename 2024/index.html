@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <link href="./output.css" rel="stylesheet">
+  <link href="./assets/css/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -13,6 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
 
         <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl mr-4 font-custom"
           aria-label="logo">
-          <img src="./images/logo2.png" alt="Logo" class="w-12" style="height: auto;">
+          <img src="./assets/images/logo2.png" alt="Logo" class="w-12" style="height: auto;">
           <div className="font-roboto">
             PyCon Kyushu
           </div>
@@ -43,25 +44,25 @@
         <div v-show="isOpen" class="lg:flex flex-grow items-center" id="example-navbar-warning">
           <ul class="flex flex-col lg:flex-row list-none ml-auto">
             <li class="nav-item">
-              <a class="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug text-black hover:opacity-75"
+              <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
                 href="#pablo" @click.prevent="showContent1(); closeMenu()">
                 Home
               </a>
             </li>
             <!-- <li class="nav-item">
-              <a class="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug text-black hover:opacity-75"
+              <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
                 href="#pablo" @click.prevent="showContent2(); closeMenu()">
                 Session
               </a>
             </li>
             <li class="nav-item">
-              <a class="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug text-black hover:opacity-75"
+              <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
                 href="#pablo" @click.prevent="showContent3(); closeMenu()">
                 TimeTable
               </a>
             </li> -->
             <li class="nav-item">
-              <a class="px-3 py-2 flex items-center text-2xl uppercase font-bold leading-snug text-black hover:opacity-75"
+              <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
                 href="#pablo" @click.prevent="showContent5(); closeMenu()">
                 Code of Conduct
               </a>
@@ -74,8 +75,8 @@
     <div v-show="content1Visible">
 
       <div class="flex justify-center items-center pt-16 bg-cyan-50 bg-image"
-        style="background-image: url('./images/sakurajima.jpg'); background-size: cover; background-position: center;">
-        <img src="./images/main_title.png" loading="lazy" class="w-full max-w-5xl object-scale-down object-center" />
+        style="background-image: url('./assets/images/sakurajima.jpg'); background-size: cover; background-position: center;">
+        <img src="./assets/images/main_title.png" loading="lazy" class="w-full max-w-5xl object-scale-down object-center" />
       </div>
 
       <!-- features - start -->
@@ -84,10 +85,24 @@
         <div class="mx-auto max-w-screen-lg px-4 md:px-8">
 
           <div class="mb-10 md:mb-16 mt-12">
+
+            <div id="social" class="flex items-center justify-center mb-4">
+              <p>
+                  <a href="https://twitter.com/PyConK" target="_blank" rel="noopener noreferrer" title="Twitter"><i
+                          class="fa-brands fa-x-twitter fa-3x"></i></a>&nbsp;
+                  <a href="https://www.facebook.com/kyushu.pycon.jp" target="_blank" rel="noopener noreferrer"
+                     title="Facebook"><i class="fa-brands fa-facebook fa-3x"></i></a>&nbsp;
+                  <a href="https://www.youtube.com/@pyconkyushu4071" target="_blank" rel="noopener noreferrer"
+                     title="Youtube"><i class="fa-brands fa-youtube fa-3x"></i></a>&nbsp;
+                  <a href="https://pyconjp.blogspot.com/search/label/kyushu" target="_blank" rel="noopener noreferrer"
+                     title="Blogger"><i class="fa-brands fa-blogger fa-3x"></i></a>&nbsp;
+              </p>
+          </div>
+
             <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
 
             <h3 class="mb-4 text-center text-2xl font-bold text-cyan-950 md:mb-6">Pythonの祭典、2024年春に鹿児島で開催します！</h3>
-            <div class="bg-white p-4 rounded-sm">
+            <div class="bg-white p-4 rounded-sm mb-4">
               <p class="mx-auto max-w-screen-lg text-start text-gray-500 md:text-lg">
                 PyCon Kyushuは、プログラミング言語 Pythonのユーザが集う九州地区で開催される技術カンファレンスです。<br>
                 今回、鹿児島コミュニティの協力をいただき、2年ぶりに鹿児島で開催することになりました！<br>
@@ -100,10 +115,12 @@
               </p>
             </div>
 
+
+            
           </div>
 
 
-          <div class="flex justify-center">
+          <div class="flex justify-center mb-10">
             <div>
               <div class="flex justify-start items-center space-x-2 ml-10">
                 <span class="material-symbols-outlined">
@@ -116,7 +133,7 @@
                 <span class="material-symbols-outlined">
                   schedule
                 </span>
-                <span class="text-xl font-bold text-slate-700">日時　　：2024年5月下旬を予定</span>
+                <span class="text-xl font-bold text-slate-700">日時　　：2024年5月下旬</span>
               </div>
 
               <div class="flex justify-start items-center space-x-2 ml-10 mb-4">
@@ -128,6 +145,70 @@
             </div>
           </div>
 
+          <!-- keynote -->
+          <!-- <div class="mb-10 md:mb-16 mt-24">
+            <h2 class="mb-4 text-center text-4xl font-bold text-cyan-800 md:mb-6 lg:text-5xl">
+              KeyNote
+              <br>
+            </h2>
+
+            <div id="keynote" class="container">
+              <div class="flex space-x-4 text-left">
+                <div>
+                  <img class="rounded-full border-2 border-cyan-500 box-border object-cover" src="./assets/images/icon.png" alt="keynote" />
+                </div>
+                <div class ="bg-white border-2 p-4 rounded-sm mb-4 flex-grow">
+                  <h3 class="text-3xl mb-4">山田　太郎</h3>
+                  <p class="mb-4">
+                    あああああああああああああああああああああああああああああ<br/>
+                    あああああああああああああああああああああああああああああ<br/>
+                    あああああああああああああああああああああああああああああ<br/>
+                    あああああああああああああああああああああああああああああ<br/>
+                    あああああああああああああああああああああああああああああ<br/>
+                    あああああああああああああああああああああああああああああ<br/>
+                  </p>
+                  <p class="mb-4">
+                    <strong>所属</strong>: <a href="/">xxxxxxx</a> <br/>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          
+          <!-- Call for Proposals -->
+          <div class="mx-auto max-w-screen-lg px-4 md:px-8">
+
+            <h2 class="mb-4 text-center text-4xl font-bold text-cyan-800 md:mb-6 lg:text-5xl">
+              Call for Proposals
+              <br>
+            </h2>
+
+            <div class="mb-10 md:mb-16 mt-12">
+              <div class="bg-white p-4 rounded-sm mb-4">
+                <p class="mx-auto max-w-screen-lg text-start text-gray-500 md:text-lg">
+                  PyConKyushu 2024では、Pythonに関する幅広いトピックを扱うセッションを募集しています。<br>
+                  <br>
+                  詳細は、Googleフォームからご確認ください。<br>
+                  Pythonに関する技術や実践、教育に関することやコミュニティ活動など<br>
+                  ぜひあなたの知識や経験を共有してください！<br>
+                  <br>
+                  たくさんのご応募お待ちしております！<br>
+                  <br>
+                  提出期限：2024/3/17 23:59:59(JST)<br>
+                </p>
+              </div>
+  
+              <div class="flex justify-center mb-4">
+                <a href="https://forms.gle/Tf3xzJfVJsLDStLX7" target="_blank">
+                  <button type="button"
+                    class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">CfP申し込みはこちら</button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- sponsor -->
           <div class="mb-10 md:mb-16 mt-24">
             <h2 class="mb-4 text-center text-4xl font-bold text-cyan-800 md:mb-6 lg:text-5xl">
               Sponsors
@@ -149,32 +230,35 @@
               </a>
             </div>
 
-            <!-- <div class="mb-10 md:mb-16 mt-12">
-              <div class="bg-white p-4 rounded-sm">
-                <h3 class="mb-4 text-center text-3xl font-bold text-gold md:mb-6">Gold</h3>
-                <div class="flex flex-wrap justify-center">
-                  <img class="mb-4 mx-2" src="images/sponsors/sponsor.png" alt="Logo 1">
-                  <img class="mb-4 mx-2" src="images/sponsors/sponsor.png" alt="Logo 2">
-                  <img class="mb-4 mx-2" src="images/sponsors/sponsor.png" alt="Logo 3">
-                  <img class="mb-4 mx-2" src="images/sponsors/sponsor.png" alt="Logo 4">
-                </div>
+            <div class="mb-10 md:mb-16 mt-12">
+              <div id="sponsors" class="bg-white p-4 rounded-sm">
+                <div id="sponsorlist"></div>
               </div>
-            </div> -->
-
-            <!-- <div class="mb-10 md:mb-16 mt-12">
-              <div class="bg-white p-4 rounded-sm">
-                <h3 class="mb-4 text-center text-3xl font-bold text-silver md:mb-6">Silver</h3>
-                <div class="flex flex-wrap justify-center">
-                  <img class="mb-4 mx-2 w-48" src="images/sponsors/sponsor.png" alt="Logo 1">
-                  <img class="mb-4 mx-2 w-48" src="images/sponsors/sponsor.png" alt="Logo 2">
-                  <img class="mb-4 mx-2 w-48" src="images/sponsors/sponsor.png" alt="Logo 3">
-                  <img class="mb-4 mx-2 w-48" src="images/sponsors/sponsor.png" alt="Logo 3">
-                </div>
-              </div>
-            </div> -->
+            </div>
 
           </div>
 
+        </div>
+      </div>
+
+      <div id="sponsor-modal" class="puremodal" v-if="showSponsorModal">
+        <div class="overlay close"></div>
+        <div class="window h-auto">
+          <header>
+            <span class="sponsor-name text-xl">{{ selectedSponsor.name }}</span>
+            <a class="close" @click="showSponsorModal = false">
+              <span class="material-symbols-outlined">
+                close
+                </span>
+            </a>
+          </header>
+          <div>
+            <a v-if="selectedSponsor" :href="selectedSponsor.url" target="_blank" rel="noopener noreferrer">
+              <img :src="'assets/images/sponsors/' + selectedSponsor.logo" style="width: 320px;">
+            </a>
+            <br>
+            <p class="text-gray-500 text-lg">{{ selectedSponsor.description }}</p>
+          </div>
         </div>
       </div>
 
@@ -201,7 +285,10 @@
         <div class="window">
           <header>
             <span>　</span>
-            <a class="close" @click="showModal = false">&times;</a>
+            <a class="close" @click="showModal = false">              
+              <span class="material-symbols-outlined">
+              close
+              </span></a>
           </header>
           <div>
             <a v-bind:class="['talk-level', `talk-${selectedTalk.level}`]">{{ selectedTalk.level }}</a>
@@ -567,137 +654,7 @@
     </div>
   </div>
 
-  <script>
-    const app = Vue.createApp({
-      data() {
-        return {
-          isOpen: false,
-          content1Visible: true,
-          content2Visible: false,
-          content3Visible: false,
-          content4Visible: false,
-          timetable: [],
-          showModal: false,
-          language: 'jp',
-          jp: {
-            buttonLabel: 'Switch to English'
-          },
-          en: {
-            buttonLabel: '日本語に切り替え'
-          }
-        };
-      },
-      created() {
-        window.addEventListener('resize', this.checkWidth);
-        this.checkWidth();
-        fetch('./talks.json')
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then(data => {
-            this.timetable = data;
-          })
-          .catch(error => {
-            console.error('There was a problem with the fetch operation: ', error);
-          });
-      },
-      beforeUnmount() {
-        window.removeEventListener('resize', this.checkWidth);
-      },
-      computed: {
-        buttonLabel() {
-          return this[this.language].buttonLabel;
-        }
-      },
-      methods: {
-        checkWidth() {
-          if (window.innerWidth < 1024) {
-            this.isOpen = false;
-          } else {
-            this.isOpen = true;
-          }
-        },
-        showContent1() {
-          this.content1Visible = true;
-          this.content2Visible = false;
-          this.content3Visible = false;
-          this.content4Visible = false;
-          this.content5Visible = false;
-        },
-        showContent2() {
-          this.content1Visible = false;
-          this.content2Visible = true;
-          this.content3Visible = false;
-          this.content4Visible = false;
-          this.content5Visible = false;
-        },
-        showContent3() {
-          this.content1Visible = false;
-          this.content2Visible = false;
-          this.content3Visible = true;
-          this.content4Visible = false;
-          this.content5Visible = false;
-        },
-        showContent4() {
-          this.content1Visible = false;
-          this.content2Visible = false;
-          this.content3Visible = false;
-          this.content4Visible = true;
-          this.content5Visible = false;
-        },
-        showContent5() {
-          this.content1Visible = false;
-          this.content2Visible = false;
-          this.content3Visible = false;
-          this.content4Visible = false;
-          this.content5Visible = true;
-        },
-        toggleMenu() {
-          this.isOpen = !this.isOpen;
-        },
-        closeMenu() {
-          if (window.innerWidth <= 768) {
-            this.isOpen = false;
-          }
-        },
-        truncate(string, value) {
-          return string.substring(0, value) + '...';
-        },
-        openTimetableModal(talk) {
-          console.log('openTimetableModal is called');
-          this.selectedTalk = talk;
-          this.showModal = true;
-        },
-        switchLanguage() {
-          this.language = this.language === 'jp' ? 'en' : 'jp';
-        }
-        ,
-      },
-    });
-    app.mount('#app');
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>
-    axios.get('./talks.json').then(function (res) {
-      for (let i in res.data) {
-        const talk = res.data[i];
-        let div = document.getElementById(talk.id);
-        if (!div) {
-          console.warn('Talk element "' + talk.id + '" is not found');
-          continue;
-        }
-        let talkLevelElement = div.querySelector('.talk-level');
-        talkLevelElement.textContent = talk.level;
-        talkLevelElement.classList.add('talk-' + talk.level);
-        div.querySelector('h2').textContent = talk.title;
-        div.querySelector('p').textContent = talk.name;
-        div.querySelector('.btn.btn-primary').textContent = talk.buttonText;
-      }
-    });
-  </script>
+  <script src="assets/js/app.js"></script>
 </body>
-
 </html>
