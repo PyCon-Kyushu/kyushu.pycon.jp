@@ -64,7 +64,7 @@
             <li class="nav-item">
               <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
                 href="#pablo" @click.prevent="showContent5(); closeMenu()">
-                Code of Conduct
+                行動規範
               </a>
             </li>
           </ul>
@@ -78,11 +78,20 @@
         style="background-image: url('./assets/images/sakurajima.jpg'); background-size: cover; background-position: center;">
         <img src="./assets/images/main_title.png" loading="lazy" class="w-full max-w-5xl object-scale-down object-center" />
       </div>
-
+      
       <!-- features - start -->
       <div class="bg-gray-100 py-6 sm:py-2 lg:py-12">
-
         <div class="mx-auto max-w-screen-lg px-4 md:px-8">
+
+          <div class="co-sponsor mb-10 md:mb-16">
+            <div class="flex flex-col md:flex-row justify-center items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+                <span class="mb-4 text-center text-3xl font-bold text-slate-700 md:mb-6 lg:text-3xl">共同開催</span>
+                <a href="https://mark-meizan.io/" target="_blank">
+                    <img
+                        src="https://mark-meizan.io/wp-content/themes/mark-meizan.io/img/header/mm-logo-black.svg" alt="Logo">
+                </a>
+            </div>
+          </div>
 
           <div class="mb-10 md:mb-16 mt-12">
 
@@ -114,11 +123,7 @@
                 ぜひ、皆さんの参加をお待ちしています！
               </p>
             </div>
-
-
-            
           </div>
-
 
           <div class="flex justify-center mb-10">
             <div>
@@ -126,14 +131,14 @@
                 <span class="material-symbols-outlined">
                   location_on
                 </span>
-                <span class="text-xl font-bold text-slate-700">開催場所：鹿児島県鹿児島市内</span>
+                <span class="text-xl font-bold text-slate-700">開催場所：MarkMeizan</span>
               </div>
 
               <div class="flex justify-start items-center space-x-2 ml-10">
                 <span class="material-symbols-outlined">
                   schedule
                 </span>
-                <span class="text-xl font-bold text-slate-700">日時　　：2024年5月下旬</span>
+                <span class="text-xl font-bold text-slate-700">日時　　：2024年5月25日(土)</span>
               </div>
 
               <div class="flex justify-start items-center space-x-2 ml-10 mb-4">
@@ -145,35 +150,45 @@
             </div>
           </div>
 
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.4275017811415!2d130.5564986130613!3d31.594743743352787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e5e040512a975%3A0xd4550a1353228ab7!2z44CSODkyLTA4MjEg6bm_5YWQ5bO255yM6bm_5YWQ5bO25biC5ZCN5bGx55S677yZ4oiS77yR77yV!5e0!3m2!1sja!2sjp!4v1700661923748!5m2!1sja!2sjp"
+              style="border: none; width: 100%; height: 24em"></iframe>
+          </div>
+
           <!-- keynote -->
-          <!-- <div class="mb-10 md:mb-16 mt-24">
+          <div class="mb-10 md:mb-16 mt-24">
             <h2 class="mb-4 text-center text-4xl font-bold text-cyan-800 md:mb-6 lg:text-5xl">
               KeyNote
               <br>
             </h2>
 
             <div id="keynote" class="container">
-              <div class="flex space-x-4 text-left">
-                <div>
-                  <img class="rounded-full border-2 border-cyan-500 box-border object-cover" src="./assets/images/icon.png" alt="keynote" />
+              <div class="flex flex-col sm:flex-row space-x-4">
+                <div class="flex justify-center mb-2">
+                  <img class="rounded-full border-2 border-cyan-500 box-border object-cover" src="./assets/images/keynote.png" alt="keynote" />
                 </div>
                 <div class ="bg-white border-2 p-4 rounded-sm mb-4 flex-grow">
-                  <h3 class="text-3xl mb-4">山田　太郎</h3>
+                  <h3 class="text-3xl mb-4">渕田 孝康</h3>
                   <p class="mb-4">
-                    あああああああああああああああああああああああああああああ<br/>
-                    あああああああああああああああああああああああああああああ<br/>
-                    あああああああああああああああああああああああああああああ<br/>
-                    あああああああああああああああああああああああああああああ<br/>
-                    あああああああああああああああああああああああああああああ<br/>
-                    あああああああああああああああああああああああああああああ<br/>
+                    鹿児島大学でニューラルネットワークや数理情報工学に関する研究に携わり、<br/>
+                    機械学習や仮想現実などを中心に研究を行ってきた。<br/>
+                    最近では、大学と地域のDX推進にも力を入れている。<br/>
+                    <br/>
+                    また、地域のデジタル教育事業にも積極的に取り組み、<br/>
+                    学生向けのさまざまなコンテストやイベントを主催し、<br/>
+                    若者たちがデジタル表現を社会に発信する機会を提供している。<br/>
                   </p>
                   <p class="mb-4">
-                    <strong>所属</strong>: <a href="/">xxxxxxx</a> <br/>
+                    <strong>所属</strong>: <br/>
+                    <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">鹿児島大学 総合科学域共同学系 情報基盤統括センター 教授</a> <br/>
+                    <a href="https://infarmation.org/" target="_blank">特定非営利活動法人 鹿児島インファーメーション 副理事長</a> <br/>
+                    <a href="https://kpc.kagoshima-kids.com/" target="_blank">鹿児島キッズプログラミングコンテスト実行委員会 会長</a> <br/>
                   </p>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
           
           <!-- Call for Proposals -->
           <div class="mx-auto max-w-screen-lg px-4 md:px-8">
