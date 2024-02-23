@@ -298,3 +298,15 @@ a.talk-level {
 #social a[title="Blogger"] {
   color: #FF5722;
 }
+
+.co-sponsor img {
+  width: 400px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .co-sponsor img {
+    width: 200px;
+    height: auto;
+  }
+}
