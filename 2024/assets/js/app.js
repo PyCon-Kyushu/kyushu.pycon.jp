@@ -6,10 +6,13 @@ const app = Vue.createApp({
       content2Visible: false,
       content3Visible: false,
       content4Visible: false,
+      content5Visible: false,
       timetable: [],
       showModal: false,
       showSponsorModal: false,
       selectedSponsor: null,
+      selectedTalk: null,
+      message: null,
       language: 'jp',
       jp: {
         buttonLabel: 'Switch to English'

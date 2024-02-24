@@ -256,11 +256,11 @@
         </div>
       </div>
 
-      <div id="sponsor-modal" class="puremodal" v-if="showSponsorModal">
+      <div id="sponsor-modal" class="puremodal" v-bind:class="{ 'visible': showSponsorModal  && selectedSponsor}">
         <div class="overlay close"></div>
         <div class="window h-auto">
           <header>
-            <span class="sponsor-name text-xl">{{ selectedSponsor.name }}</span>
+            <span class="sponsor-name text-xl">{{ selectedSponsor ? selectedSponsor.name : '' }}</span>
             <a class="close" @click="showSponsorModal = false">
               <span class="material-symbols-outlined">
                 close
@@ -272,7 +272,7 @@
               <img :src="'assets/images/sponsors/' + selectedSponsor.logo" style="width: 320px;">
             </a>
             <br>
-            <p class="text-gray-500 text-lg">{{ selectedSponsor.description }}</p>
+            <p class="text-gray-500 text-lg">{{ selectedSponsor ? selectedSponsor.description : '' }}</p>
           </div>
         </div>
       </div>
@@ -295,7 +295,7 @@
         </div>
       </div>
 
-      <div id="timetable-modal" class="puremodal" v-if="showModal">
+      <div id="timetable-modal" class="puremodal" v-if="showModal && selectedTalk" v-bind:class="{ 'visible': showModal && selectedTalk }">
         <div class="overlay close"></div>
         <div class="window">
           <header>
@@ -306,28 +306,28 @@
               </span></a>
           </header>
           <div>
-            <a v-bind:class="['talk-level', `talk-${selectedTalk.level}`]">{{ selectedTalk.level }}</a>
+            <a v-bind:class="['talk-level', `talk-${ selectedTalk ? selectedTalk.level : ''}`]">{{ selectedTalk ? selectedTalk.level : '' }}</a>
             <br>
             <dl>
               <dt>トークタイトル</dt>
-              <dd class="talk-title">{{ selectedTalk.title }}</dd>
+              <dd class="talk-title">{{ selectedTalk ? selectedTalk.title : '' }}</dd>
               <dt>スピーカー</dt>
               <dd>
-                <a class="talk-speaker" target="_blank" rel="noopener noreferrer">{{ selectedTalk.name }}</a>
+                <a class="talk-speaker" target="_blank" rel="noopener noreferrer">{{ selectedTalk ? selectedTalk.name : '' }}</a>
               </dd>
               <dt>トーク内容</dt>
-              <dd class="talk-description">{{ selectedTalk.description }}</dd>
+              <dd class="talk-description">{{ selectedTalk ? selectedTalk.description : '' }}</dd>
               <dt>YouTube</dt>
               <dd>
                 <div class="talk-slide">
-                  <iframe width="560" height="315" v-bind:src="selectedTalk.slide" frameborder="0"
+                  <iframe v-if="selectedTalk" width="560" height="315" v-bind:src="selectedTalk.slide" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                   </iframe>
                 </div>
               </dd>
               <dt>言語</dt>
-              <dd class="talk-language">{{ selectedTalk.language }}</dd>
+              <dd class="talk-language">{{ selectedTalk ? selectedTalk.language : '' }}</dd>
             </dl>
           </div>
         </div>

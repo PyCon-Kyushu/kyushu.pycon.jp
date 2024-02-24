@@ -570,6 +570,10 @@ video {
   }
 }
 
+.visible{
+  visibility: visible;
+}
+
 .fixed{
   position: fixed;
 }
@@ -1288,9 +1292,7 @@ a.talk-level {
 }
 
 #timetable-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1298,6 +1300,13 @@ a.talk-level {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
+}
+
+#timetable-modal.visible {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
 }
 
 #timetable-modal > .window {
@@ -1366,9 +1375,7 @@ a.talk-level {
 }
 
 #sponsor-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:  none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1376,6 +1383,12 @@ a.talk-level {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
+}
+
+#sponsor-modal.visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #sponsor-modal > .window {
