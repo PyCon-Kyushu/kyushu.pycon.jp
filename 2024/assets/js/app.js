@@ -151,9 +151,9 @@ for (var i in arr) {
   var rank = arr[i];
   var li = document.createElement('div');
   li.classList.add(rank);
-  li.classList.add('mb-20');
+  li.classList.add('mb-5');
   ul.appendChild(li);
-  ul.classList.add('py-20');
+  ul.classList.add('py-10');
   var h3 = document.createElement('h3');
   h3.classList.add('text-2xl', 'font-bold', 'mb-4', 'text-center');
   if (rank == 'community') {
@@ -176,7 +176,7 @@ for (var i in arr) {
             img.style.objectFit = 'cover';
         }
         if (rank == 'silver') {
-            img.classList.add('mb-4', 'mx-2');
+            img.classList.add('mb-4', 'mx-4');
             img.style.width = '120px';
             img.style.objectFit = 'cover';
         }

@@ -270,7 +270,7 @@
               <img :src="'assets/images/sponsors/' + selectedSponsor.logo" style="width: 320px;">
             </a>
             <br>
-            <p class="text-gray-500 text-lg">{{ selectedSponsor ? selectedSponsor.description : '' }}</p>
+            <p class="text-gray-500 text-lg" v-html="selectedSponsor ? selectedSponsor.description : ''"></p>
           </div>
         </div>
       </div>

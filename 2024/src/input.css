@@ -318,4 +318,14 @@ a.talk-level {
     width: 200px;
     height: auto;
   }
+
+  #sponsor-modal > .window {
+    position: fixed;
+    max-height: 100%;
+  }
+
+  #sponsor-modal > .window p {
+    max-height: 50vh; /* 適切な高さに設定します */
+    overflow-y: auto; /* 垂直方向のスクロールを設定します */
+  }
 }
