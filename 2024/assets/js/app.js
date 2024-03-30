@@ -13,6 +13,7 @@ const app = Vue.createApp({
       selectedSponsor: null,
       selectedTalk: null,
       message: null,
+      param: null,
       language: 'jp',
       jp: {
         buttonLabel: 'Switch to English'
@@ -24,6 +25,10 @@ const app = Vue.createApp({
   },
   created() {
     window.addEventListener('resize', this.checkWidth);
+    const urlParams = new URLSearchParams(window.location.search);
+    const param = urlParams.get('param');
+    this.param = param;
+    this.showContent(param);
     this.checkWidth();
     fetch('./assets/json/talks.json')
       .then(response => {
@@ -54,6 +59,35 @@ const app = Vue.createApp({
       } else {
         this.isOpen = true;
       }
+    },
+    showContent(mode) {
+      this.content1Visible = false;
+      this.content2Visible = false;
+      this.content3Visible = false;
+      this.content4Visible = false;
+      this.content5Visible = false;
+      switch (mode) {
+        case 'Sessions':
+          this.content2Visible = true;
+          break;
+        case 'TimeTable':
+          this.content3Visible = true;
+          break;
+        case 'CoC':
+          this.content5Visible = true;
+          break;
+        default:
+          this.content1Visible = true;
+          mode = '';
+          break;
+      }
+      const newUrl = new URL(window.location.href);
+      if (mode !== '') {
+        newUrl.searchParams.set('param', mode);
+      } else {
+        newUrl.searchParams.delete('param');
+      }
+      window.history.pushState({}, '', newUrl);
     },
     showContent1() {
       this.content1Visible = true;
@@ -90,6 +124,7 @@ const app = Vue.createApp({
       this.content4Visible = false;
       this.content5Visible = true;
     },
+    translateLevel: translateLevel,
     toggleMenu() {
       this.isOpen = !this.isOpen;
     },
@@ -100,6 +135,23 @@ const app = Vue.createApp({
     },
     truncate(string, value) {
       return string.substring(0, value) + '...';
+    },
+    linkify(inputText) {
+      let replacedText, replacePattern1, replacePattern2, replacePattern3;
+  
+      //URLs starting with http://, https://, or ftp://
+      replacePattern1 = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+      replacedText = inputText.replace(replacePattern1, '<a href="$1" target="_blank">$1</a>');
+  
+      //URLs starting with "www." (without // before it, or it'd re-link the ones done above).
+      replacePattern2 = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
+      replacedText = replacedText.replace(replacePattern2, '$1<a href="http://$2" target="_blank">$2</a>');
+  
+      //Change email addresses to mailto:: links.
+      replacePattern3 = /(([a-zA-Z0-9\-_.])+@[a-zA-Z_]+?(\.[a-zA-Z]{2,6})+)/gim;
+      replacedText = replacedText.replace(replacePattern3, '<a href="mailto:$1">$1</a>');
+  
+      return replacedText;
     },
     openTimetableModal(talk) {
       console.log('openTimetableModal is called');
@@ -129,10 +181,12 @@ axios.get('./assets/json/talks.json').then(function (res) {
       continue;
     }
     let talkLevelElement = div.querySelector('.talk-level');
-    talkLevelElement.textContent = talk.level;
+    let levelText = translateLevel(talk.level);
+    talkLevelElement.textContent = levelText;
     talkLevelElement.classList.add('talk-' + talk.level);
     div.querySelector('h2').textContent = talk.title;
-    div.querySelector('p').textContent = talk.name;
+    div.querySelector('h3').textContent = talk.subTitle;
+    div.querySelector('p').innerHTML = talk.name;
     div.querySelector('.btn.btn-primary').textContent = talk.buttonText;
   }
 });
@@ -168,6 +222,7 @@ for (var i in arr) {
   for (var j in res.data[rank]) {
     var sponsor = res.data[rank][j];
     var li2 = document.createElement('div');
+    li2.classList.add('flex', 'justify-center', 'items-center');
     if (sponsor.logo) {
         var img = document.createElement('img');
         if (rank == 'gold') {
@@ -193,3 +248,16 @@ for (var i in arr) {
   }
 }
 });
+
+function translateLevel(level) {
+  switch (level) {
+    case 'Beginner':
+      return '初級';
+    case 'Intermediate':
+      return '中級';
+    case 'Advanced':
+      return '上級';
+    default:
+      return level;
+  }
+}

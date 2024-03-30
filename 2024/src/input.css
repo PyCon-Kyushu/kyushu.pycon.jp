@@ -28,9 +28,9 @@
   background-color: #7a7ab8;
 }
 
-#session a.talk-ALL,
-.timetable a.talk-ALL,
-#timetable-modal a.talk-ALL  {
+#session a.talk-Advanced,
+.timetable a.talk-Advanced,
+#timetable-modal a.talk-Advanced  {
   display: inline-block;
   margin: 0 .1em .6em 0;
   padding: .6em;
@@ -52,9 +52,21 @@
   background-color: #78cba3;
 }
 
+#session a.talk-Sponsor,
+.timetable a.talk-Sponsor,
+#timetable-modal a.talk-Sponsor  {
+  display: inline-block;
+  margin: 0 .1em .6em 0;
+  padding: .6em;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  background-color: #FFB38E;
+}
+
 #session {
   justify-content: space-between;
-  padding: 0 4em;  /* 両端に1emの余白を作る */
+  padding: 0 1em;  /* 両端に1emの余白を作る */
 }
 
 a.talk-level {
@@ -66,7 +78,11 @@ a.talk-level {
   flex-direction: column;
   justify-content: space-between;
   min-width: 315px;
-  height: 300px;  
+  min-height: 320px;  
+}
+
+ p.talk-description {
+  height: 100px;
 }
 
 #timetable-modal {
@@ -113,7 +129,7 @@ a.talk-level {
 
 #timetable-modal > .window > div {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   /*padding: 1em;*/
   padding: 4em 1em 1em;
   box-sizing: border-box;
@@ -144,6 +160,11 @@ a.talk-level {
 
 #timetable-modal > div.window > div > dl > dd.talk-title {
   font-size: large;
+  font-weight: bold;
+}
+
+#timetable-modal > div.window > div > dl > dd.talk-subtitle {
+  font-size: medium;
   font-weight: bold;
 }
 
@@ -195,7 +216,7 @@ a.talk-level {
 
 #sponsor-modal > .window > div {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   /*padding: 1em;*/
   padding: 4em 1em 1em;
   box-sizing: border-box;
@@ -327,5 +348,9 @@ a.talk-level {
   #sponsor-modal > .window p {
     max-height: 50vh; /* 適切な高さに設定します */
     overflow-y: auto; /* 垂直方向のスクロールを設定します */
+  }
+
+  .bg-white.rounded.shadow.p-6 {
+    min-height: 200px;  
   }
 }

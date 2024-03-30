@@ -13,6 +13,7 @@
   <meta property="og:site_name" content="PyCon Kyushu 2024 kagoshima">
   <meta property="og:image" content="https://kyushu.pycon.jp/2024/assets/images/meta_main_title.png">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue-router@4"></script>
   <link href="./assets/css/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet"
@@ -53,25 +54,25 @@
           <ul class="flex flex-col lg:flex-row list-none ml-auto">
             <li class="nav-item">
               <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
-                href="#pablo" @click.prevent="showContent1(); closeMenu()">
+                href="#pablo" @click.prevent="showContent('Home'); closeMenu()">
                 Home
               </a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
-                href="#pablo" @click.prevent="showContent2(); closeMenu()">
+                href="#pablo" @click.prevent="showContent('Sessions'); closeMenu()">
                 Session
               </a>
             </li>
             <li class="nav-item">
               <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
-                href="#pablo" @click.prevent="showContent3(); closeMenu()">
+                href="#pablo" @click.prevent="showContent('TimeTable'); closeMenu()">
                 TimeTable
               </a>
-            </li> -->
+            </li>
             <li class="nav-item">
               <a class="px-3 py-2 flex items-center text-xl uppercase font-bold leading-snug text-black hover:opacity-75"
-                href="#pablo" @click.prevent="showContent5(); closeMenu()">
+                href="#pablo" @click.prevent="showContent('CoC'); closeMenu()">
                 行動規範
               </a>
             </li>
@@ -104,7 +105,13 @@
                   <a href="https://pyconjp.blogspot.com/search/label/kyushu" target="_blank" rel="noopener noreferrer"
                      title="Blogger"><i class="fa-brands fa-blogger fa-3x"></i></a>&nbsp;
               </p>
-          </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-sm mb-4 border-2 border-orange-600">
+              <p class="mx-auto max-w-screen-lg text-start text-gray-500 md:text-lg">
+                一般参加申し込みは現在準備中です。準備が整い次第、お知らせいたします。
+              </p>
+            </div>
 
             <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
 
@@ -168,7 +175,7 @@
                 </div>
                 <div class ="bg-white border-2 p-4 rounded-sm mb-4 flex-grow">
                   <h3 class="text-3xl mb-4">渕田 孝康</h3>
-                  <p class="mb-4">
+                  <p class="mb-4 text-gray-500 md:text-lg">
                     鹿児島大学でニューラルネットワークや数理情報工学に関する研究に携わり、<br/>
                     機械学習や仮想現実などを中心に研究を行ってきた。<br/>
                     最近では、大学と地域のDX推進にも力を入れている。<br/>
@@ -177,7 +184,7 @@
                     学生向けのさまざまなコンテストやイベントを主催し、<br/>
                     若者たちがデジタル表現を社会に発信する機会を提供している。<br/>
                   </p>
-                  <p class="mb-4">
+                  <p class="mb-4  text-gray-500 md:text-lg">
                     <strong>所属</strong>: <br/>
                     <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">鹿児島大学 総合科学域共同学系 情報基盤統括センター 教授</a> <br/>
                     <a href="https://infarmation.org/" target="_blank">特定非営利活動法人 鹿児島インファーメーション 副理事長</a> <br/>
@@ -189,7 +196,7 @@
           </div>
           
           <!-- Call for Proposals -->
-          <div class="mx-auto max-w-screen-lg px-4 md:px-8">
+          <!-- <div class="mx-auto max-w-screen-lg px-4 md:px-8">
 
             <h2 class="mb-4 text-center text-4xl font-bold text-cyan-800 md:mb-6 lg:text-5xl">
               Call for Proposals
@@ -219,7 +226,7 @@
               </div>
 
             </div>
-          </div>
+          </div> -->
 
           <!-- sponsor -->
           <div class="mb-10 md:mb-16 mt-24">
@@ -277,25 +284,27 @@
 
     </div>
 
-    <div v-show="content2Visible" style="margin-top: 100px;">
+    <div v-show="content2Visible" style="margin-top: 75px;">
 
       <div id="session" class="bg-gray-100 py-6 sm:py-2 lg:py-12">
 
         <div class="flex flex-wrap">
-          <div v-for="talk in timetable" @click="openTimetableModal(talk)" class="w-full lg:w-1/2 p-4">
-            <div class="bg-white rounded shadow p-6">
-              <a v-bind:class="['talk-level', `talk-${talk.level}`]">{{ talk.level }}</a>
-              <h2 class="text-xl font-bold mb-2">{{ talk.title }}</h2>
-              <p class="text-gray-700 mb-2">{{ talk.name }}</p>
-              <p class="text-gray-500 text-lg">{{ truncate(talk.description, 100) }}</p>
+          <div v-for="(talk, index) in timetable" @click="openTimetableModal(talk)" class="w-full md:w-1/2 p-1 h-auto">
+            <div class="bg-white rounded shadow p-6 overflow-wrap overflow-y-auto">
+              <a v-bind:class="['talk-level', `talk-${talk.level}`]">{{ translateLevel(talk.level) }}</a>
+              <h2 class="text-xl font-bold">{{ talk.title }}</h2>
+              <h3 class="text-xm font-bold mb-2">{{ talk.subTitle }}</h3>
+              <p class="text-gray-700 mb-2" v-html="talk.name"></p>
+              <p class="talk-description text-gray-500 text-lm overflow-hidden overflow-ellipsis" v-html="talk.description"></p>
+              </div>
             </div>
           </div>
-        </div>
       </div>
+
 
       <div id="timetable-modal" class="puremodal" v-if="showModal && selectedTalk" v-bind:class="{ 'visible': showModal && selectedTalk }">
         <div class="overlay close"></div>
-        <div class="window">
+        <div class="window min-w-10">
           <header>
             <span>　</span>
             <a class="close" @click="showModal = false">              
@@ -304,18 +313,20 @@
               </span></a>
           </header>
           <div>
-            <a v-bind:class="['talk-level', `talk-${ selectedTalk ? selectedTalk.level : ''}`]">{{ selectedTalk ? selectedTalk.level : '' }}</a>
+            <a v-bind:class="['talk-level', `talk-${ selectedTalk ? selectedTalk.level : ''}`]">{{ selectedTalk ? translateLevel(selectedTalk.level) : '' }}</a>
             <br>
             <dl>
               <dt>トークタイトル</dt>
-              <dd class="talk-title">{{ selectedTalk ? selectedTalk.title : '' }}</dd>
+              <dd class="talk-title text-gray-700 md:text-lg">{{ selectedTalk ? selectedTalk.title : '' }}</dd>
+              <dd class="talk-subtitle text-gray-700 md:text-lg">{{ selectedTalk ? selectedTalk.subTitle : '' }}</dd>
               <dt>スピーカー</dt>
               <dd>
-                <a class="talk-speaker" target="_blank" rel="noopener noreferrer">{{ selectedTalk ? selectedTalk.name : '' }}</a>
+                <!-- <a class="talk-speaker" target="_blank" rel="noopener noreferrer">{{ selectedTalk ? selectedTalk.name : '' }}</a> -->
+                <a class="talk-speaker" target="_blank" rel="noopener noreferrer" v-html="selectedTalk ? selectedTalk.name : ''"></a>
               </dd>
               <dt>トーク内容</dt>
-              <dd class="talk-description">{{ selectedTalk ? selectedTalk.description : '' }}</dd>
-              <dt>YouTube</dt>
+              <dd class="talk-description  text-gray-700 md:text-lg" v-html="selectedTalk ? linkify(selectedTalk.description.replace(/\n/g, '<br>')) : ''"></dd>
+              <!-- <dt>YouTube</dt>
               <dd>
                 <div class="talk-slide">
                   <iframe v-if="selectedTalk" width="560" height="315" v-bind:src="selectedTalk.slide" frameborder="0"
@@ -323,7 +334,7 @@
                     allowfullscreen>
                   </iframe>
                 </div>
-              </dd>
+              </dd> -->
               <dt>言語</dt>
               <dd class="talk-language">{{ selectedTalk ? selectedTalk.language : '' }}</dd>
             </dl>
@@ -338,17 +349,34 @@
       <section class="bg-white  antialiased">
         <div class="max-w-screen-4xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-4xl font-extrabold leading-tight tracking-tight text-black">
+            <h2 class="text-4xl font-extrabold leading-tight tracking-tight text-cyan-800">
               TimeTable
             </h2>
-
+            <p>※タイムテーブルは仮となっていますので、変更となる可能性があります。</p>
           </div>
 
           <div class="flow-root max-w-6xl mx-auto mt-8 sm:mt-12 lg:mt-16">
             <div class="w-full -my-4 divide-y divide-gray-200 dark:divide-gray-700">
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="" class="timetable">
+                      <h2 class="text-xl font-bold mb-2 text-center">HALL A</h2>
+                    </div>
+
+                    <div id="" class="timetable">
+                      <h2 class="text-xl font-bold mb-2 text-center">HALL B</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right shrink-0">
-                  09:30 - 09:40
+                  09:50 - 10:00
                 </p>
                 <h3 class="text-lg font-semibold text-gray-900">
                   <a>オープニング/Opening</a>
@@ -357,16 +385,17 @@
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
-                  09:40 - 10:30
+                  10:00 - 10:45
                 </p>
 
                 <div class="flex justify-between space-x-4 w-full">
                   <div class="grid grid-cols-2 gap-4 w-full">
-                    <div id="keynote" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="keynote2" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
 
                   </div>
@@ -375,47 +404,38 @@
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
-                  10:40 - 11:10
+                  10:55 - 11:15
                 </p>
+
                 <div class="flex justify-between space-x-4 w-full">
                   <div class="grid grid-cols-2 gap-4 w-full">
-                    <div id="B1" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="sponsor1" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
 
-                    <div id="D1" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
-                    </div>
                   </div>
                 </div>
               </div>
 
-
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
-                  11:15 - 11:45
+                  11:15 - 11:35
                 </p>
+
                 <div class="flex justify-between space-x-4 w-full">
                   <div class="grid grid-cols-2 gap-4 w-full">
-                    <div id="B2" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="sponsor2" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900 mb-2"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
 
-                    <div id="D2" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -426,22 +446,25 @@
                 </p>
                 <div class="flex justify-between space-x-4 w-full">
                   <div class="grid grid-cols-2 gap-4 w-full">
-                    <div id="B3" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="A1" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
 
-                    <div id="D3" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="B1" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900 mb-2"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
                   </div>
                 </div>
               </div>
+
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
@@ -449,41 +472,20 @@
                 </p>
                 <div class="flex justify-between space-x-4 w-full">
                   <div class="grid grid-cols-2 gap-4 w-full">
-                    <div id="B4" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="A2" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
 
-                    <div id="D4" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
-                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
-                  14:15 - 14:45
-                </p>
-                <div class="flex justify-between space-x-4 w-full">
-                  <div class="grid grid-cols-2 gap-4 w-full">
-                    <div id="B5" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
-                    </div>
-
-                    <div id="D5" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="B2" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
                   </div>
                 </div>
@@ -491,22 +493,24 @@
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
-                  15:10 - 15:40
+                  14:20 - 14:50
                 </p>
                 <div class="flex justify-between space-x-4 w-full">
                   <div class="grid grid-cols-2 gap-4 w-full">
-                    <div id="B6" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="A3" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
 
-                    <div id="D6" class="timetable bg-white rounded shadow p-1 h-36">
-                      <a href="#" class="talk-level">ああああああ</a>
-                      <h2 class="text-xl font-bold mb-2">ああああああ</h2>
-                      <p class="text-gray-700 mb-2">ああああああ</p>
-                      <a href="#" class="btn btn-primary">ああああああ</a>
+                    <div id="B3" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
                     </div>
                   </div>
                 </div>
@@ -514,15 +518,87 @@
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
-                  15:50 - 16:30
+                  15:00 - 15:30
                 </p>
                 <div class="flex justify-between space-x-4 w-full">
                   <div class="grid grid-cols-2 gap-4 w-full">
-                    <div id="" class="timetable bg-white rounded shadow p-1 h-36">
-                      <!-- <a href="#" class="talk-level">ああああああ</a> -->
-                      <h2 class="text-xl font-bold mb-2">LT大会</h2>
-                      <!-- <p class="text-gray-700 mb-2">ああああああ</p> -->
-                      <!-- <a href="#" class="btn btn-primary">ああああああ</a> -->
+                    <div id="A4" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
+                    </div>
+
+                    <div id="B4" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  15:40 - 16:10
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="A5" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
+                    </div>
+
+                    <div id="B5" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  16:20 - 16:50
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="A6" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold mb-2"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
+                    </div>
+
+                    <div id="B6" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <a href="#" class="talk-level"></a>
+                      <h2 class="text-xl font-bold"></h2>
+                      <h3 class="text-ml font-semibold text-gray-900 mb-2"></h3>
+                      <p class="text-gray-700 mb-2"></p>
+                      <a href="#" class="btn btn-primary"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  17:00 - 17:20
+                </p>
+                <div class="flex justify-between space-x-4 w-full">
+                  <div class="grid grid-cols-2 gap-4 w-full">
+                    <div id="" class="timetable bg-white rounded shadow p-1 min-h-36">
+                      <h2 class="text-xl font-bold mb-2">ライトニングトーク</h2>
                     </div>
 
                   </div>
@@ -531,7 +607,7 @@
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right shrink-0">
-                  16:30 - 17:00
+                  17:20 - 17:30
                 </p>
                 <h3 class="text-lg font-semibold text-gray-900">
                   <a>クロージング/Closing</a>
@@ -663,7 +739,7 @@
       <a href="https://www.pykyushu.jp/" target="_blank">© PyCon Kyushu 実行委員会</a><br />
       <br />PyCon™ is a trademark for worldwide conference activities claimed by the Python Software foundation.
       <br />PyCon Kyushu is organized by volunteers from PyCon Kyushu in Japan.
-      <br />Copyright (c) PyCon Kyushu Executive Committee 2017-2024
+      <br />Copyright (c) PyCon Kyushu Executive Committee 2017-
     </div>
   </div>
 
