@@ -289,7 +289,7 @@
       <div id="session" class="bg-gray-100 py-6 sm:py-2 lg:py-12">
 
         <div class="flex flex-wrap">
-          <div v-for="(talk, index) in timetable" @click="openTimetableModal(talk)" class="w-full md:w-1/2 p-1 h-auto">
+          <div v-for="(talk, index) in timetable" @click="openSessionModal(talk)" class="w-full md:w-1/2 p-1 h-auto">
             <div class="bg-white rounded shadow p-6 overflow-wrap overflow-y-auto">
               <a v-bind:class="['talk-level', `talk-${talk.level}`]">{{ translateLevel(talk.level) }}</a>
               <h2 class="text-xl font-bold">{{ talk.title }}</h2>
@@ -302,7 +302,7 @@
       </div>
 
 
-      <div id="timetable-modal" class="puremodal" v-if="showModal && selectedTalk" v-bind:class="{ 'visible': showModal && selectedTalk }">
+      <div id="session-modal" class="puremodal" v-if="showModal && selectedTalk" v-bind:class="{ 'visible': showModal && selectedTalk }">
         <div class="overlay close"></div>
         <div class="window min-w-10">
           <header>
@@ -321,7 +321,6 @@
               <dd class="talk-subtitle text-gray-700 md:text-lg">{{ selectedTalk ? selectedTalk.subTitle : '' }}</dd>
               <dt>スピーカー</dt>
               <dd>
-                <!-- <a class="talk-speaker" target="_blank" rel="noopener noreferrer">{{ selectedTalk ? selectedTalk.name : '' }}</a> -->
                 <a class="talk-speaker" target="_blank" rel="noopener noreferrer" v-html="selectedTalk ? selectedTalk.name : ''"></a>
               </dd>
               <dt>トーク内容</dt>
@@ -618,6 +617,37 @@
           </div>
         </div>
       </section>
+
+      <div id="timetable-modal" class="puremodal" v-if="showModal && selectedTalk" v-bind:class="{ 'visible': showModal && selectedTalk }">
+        <div class="overlay close"></div>
+        <div class="window min-w-10">
+          <header>
+            <span>　</span>
+            <a class="close" @click="showModal = false">              
+              <span class="material-symbols-outlined">
+              close
+              </span></a>
+          </header>
+          <div>
+            <a v-bind:class="['talk-level', `talk-${ selectedTalk ? selectedTalk.level : ''}`]">{{ selectedTalk ? translateLevel(selectedTalk.level) : '' }}</a>
+            <br>
+            <dl>
+              <dt>トークタイトル</dt>
+              <dd class="talk-title text-gray-700 md:text-lg">{{ selectedTalk ? selectedTalk.title : '' }}</dd>
+              <dd class="talk-subtitle text-gray-700 md:text-lg">{{ selectedTalk ? selectedTalk.subTitle : '' }}</dd>
+              <dt>スピーカー</dt>
+              <dd>
+                <a class="talk-speaker" target="_blank" rel="noopener noreferrer" v-html="selectedTalk ? selectedTalk.name : ''"></a>
+              </dd>
+              <dt>トーク内容</dt>
+              <dd class="talk-description  text-gray-700 md:text-lg" v-html="selectedTalk ? linkify(selectedTalk.description.replace(/\n/g, '<br>')) : ''"></dd>
+              <dt>言語</dt>
+              <dd class="talk-language">{{ selectedTalk ? selectedTalk.language : '' }}</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div v-show="content5Visible">

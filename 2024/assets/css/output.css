@@ -1305,7 +1305,8 @@ video {
 
 #session a.talk-KeyNote,
 .timetable a.talk-KeyNote,
-#timetable-modal a.talk-KeyNote  {
+#timetable-modal a.talk-KeyNote,
+#session-modal a.talk-KeyNote {
   display: inline-block;
   margin: 0 .1em .6em 0;
   padding: .6em;
@@ -1317,7 +1318,8 @@ video {
 
 #session a.talk-Intermediate,
 .timetable a.talk-Intermediate,
-#timetable-modal a.talk-Intermediate  {
+#timetable-modal a.talk-Intermediate,
+#session-modal a.talk-Intermediate {
   display: inline-block;
   margin: 0 .1em .6em 0;
   padding: .6em;
@@ -1329,7 +1331,8 @@ video {
 
 #session a.talk-Advanced,
 .timetable a.talk-Advanced,
-#timetable-modal a.talk-Advanced  {
+#timetable-modal a.talk-Advanced,
+#session-modal a.talk-Advanced {
   display: inline-block;
   margin: 0 .1em .6em 0;
   padding: .6em;
@@ -1341,7 +1344,8 @@ video {
 
 #session a.talk-Beginner,
 .timetable a.talk-Beginner,
-#timetable-modal a.talk-Beginner  {
+#timetable-modal a.talk-Beginner,
+#session-modal a.talk-Beginner {
   display: inline-block;
   margin: 0 .1em .6em 0;
   padding: .6em;
@@ -1353,7 +1357,8 @@ video {
 
 #session a.talk-Sponsor,
 .timetable a.talk-Sponsor,
-#timetable-modal a.talk-Sponsor  {
+#timetable-modal a.talk-Sponsor,
+#session-modal a.talk-Sponsor {
   display: inline-block;
   margin: 0 .1em .6em 0;
   padding: .6em;
@@ -1385,7 +1390,8 @@ p.talk-description {
   height: 100px;
 }
 
-#timetable-modal {
+#timetable-modal,
+#session-modal  {
   display: none;
   position: fixed;
   top: 0;
@@ -1396,14 +1402,16 @@ p.talk-description {
   z-index: 9999;
 }
 
-#timetable-modal.visible {
+#timetable-modal.visible,
+#session-modal.visible {
   justify-content: center;
   align-items: center;
   display: flex;
   position: fixed;
 }
 
-#timetable-modal > .window {
+#timetable-modal > .window,
+#session-modal > .window {
   position: relative;
   background-color: #fff;
   padding: 20px;
@@ -1413,7 +1421,8 @@ p.talk-description {
   overflow: auto;
 }
 
-#timetable-modal > div.window > header {
+#timetable-modal > div.window > header,
+#session-modal > div.window > header {
   position: absolute;
   top: 0;
   left: 0;
@@ -1427,7 +1436,8 @@ p.talk-description {
   font-weight: bold;
 }
 
-#timetable-modal > .window > div {
+#timetable-modal > .window > div,
+#session-modal > .window > div {
   height: 100%;
   overflow-y: auto;
   /*padding: 1em;*/
@@ -1435,7 +1445,8 @@ p.talk-description {
   box-sizing: border-box;
 }
 
-#timetable-modal a.close {
+#timetable-modal a.close,
+#session-modal a.close {
   font-size: 2em;
   position: absolute;
   top: .2em;
@@ -1444,21 +1455,25 @@ p.talk-description {
   cursor: pointer;
 }
 
-#timetable-modal dl {
+#timetable-modal dl, 
+#session-modal dl{
   margin: 0;
 }
 
-#timetable-modal dl > dt {
+#timetable-modal dl > dt,
+#session-modal dl > dt {
   font-weight: bold;
   margin-top: 1em;
 }
 
-#timetable-modal dl > dd {
+#timetable-modal dl > dd,
+#session-modal dl > dd {
   margin-left: 1em;
   font-size: smaller;
 }
 
-#timetable-modal > div.window > div > dl > dd.talk-title {
+#timetable-modal > div.window > div > dl > dd.talk-title,
+#session-modal > div.window > div > dl > dd.talk-title {
   font-size: large;
   font-weight: bold;
 }
@@ -1468,7 +1483,8 @@ p.talk-description {
   font-weight: bold;
 }
 
-#timetable-modal > div.window > div > dl > dd:nth-child(4) > a {
+#timetable-modal > div.window > div > dl > dd:nth-child(4) > a,
+#session-modal > div.window > div > dl > dd:nth-child(4) > a {
   font-size: large;
   font-weight: bold;
 }

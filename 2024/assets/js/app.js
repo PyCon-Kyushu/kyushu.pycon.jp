@@ -89,41 +89,6 @@ const app = Vue.createApp({
       }
       window.history.pushState({}, '', newUrl);
     },
-    showContent1() {
-      this.content1Visible = true;
-      this.content2Visible = false;
-      this.content3Visible = false;
-      this.content4Visible = false;
-      this.content5Visible = false;
-    },
-    showContent2() {
-      this.content1Visible = false;
-      this.content2Visible = true;
-      this.content3Visible = false;
-      this.content4Visible = false;
-      this.content5Visible = false;
-    },
-    showContent3() {
-      this.content1Visible = false;
-      this.content2Visible = false;
-      this.content3Visible = true;
-      this.content4Visible = false;
-      this.content5Visible = false;
-    },
-    showContent4() {
-      this.content1Visible = false;
-      this.content2Visible = false;
-      this.content3Visible = false;
-      this.content4Visible = true;
-      this.content5Visible = false;
-    },
-    showContent5() {
-      this.content1Visible = false;
-      this.content2Visible = false;
-      this.content3Visible = false;
-      this.content4Visible = false;
-      this.content5Visible = true;
-    },
     translateLevel: translateLevel,
     toggleMenu() {
       this.isOpen = !this.isOpen;
@@ -153,8 +118,14 @@ const app = Vue.createApp({
   
       return replacedText;
     },
-    openTimetableModal(talk) {
+    openSessionModal(talk) {
+      console.log('openSessionModal is called');
+      this.selectedTalk = talk;
+      this.showModal = true;
+    },
+    openTimetableModal(id) {
       console.log('openTimetableModal is called');
+      const talk = this.timetable.find(t => t.id === id);
       this.selectedTalk = talk;
       this.showModal = true;
     },
@@ -188,6 +159,9 @@ axios.get('./assets/json/talks.json').then(function (res) {
     div.querySelector('h3').textContent = talk.subTitle;
     div.querySelector('p').innerHTML = talk.name;
     div.querySelector('.btn.btn-primary').textContent = talk.buttonText;
+    div.addEventListener('click', function() {
+      vm.openTimetableModal(this.id);
+    });
   }
 });
 
