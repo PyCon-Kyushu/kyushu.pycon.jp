@@ -37,6 +37,12 @@
             "logo": "becom.jpg",
             "url": "https://www.becom.co.jp/",
             "description": "福岡を中心に主にwebシステム、<br>通販システムの受託開発をメインに<br>活動しています。"
+          },
+          {
+            "name": "株式会社現場サポート",
+            "logo": "genba-support.png",
+            "url": "https://www.genbasupport.com/",
+            "description": "現場サポートは建設業向けのクラウドサービスを企画・開発・販売・サポートしている会社です。<br>社会インフラを支える建設業のお客様が10年後も良い仕事を残せるように、<br>「チームを活かす だれもが活きる」サービスを追求し貢献していきます。<br>当社の製品の多くはPythonで開発されています。<br>PyCon Kyushuが今後も大いに盛り上がっていくことを期待し、応援しております！！"
           }
     ]
   }
